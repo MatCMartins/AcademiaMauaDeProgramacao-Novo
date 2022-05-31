@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="painelEditarUsuario" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -33,14 +33,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
+              <Component id="painelEditarUsuario" max="32767" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="painelEditarUsuario">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="2d" green="0" red="0" type="rgb"/>
@@ -69,10 +69,10 @@
                                       <Component id="textTelefone" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
                                       <Component id="textIdade" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
                                       <Component id="textEmail" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
-                                      <Component id="jLabel1" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                                      <Component id="nomeLabel" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="emailLabel" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                                      <Component id="idadeLabel" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="telefoneLabel" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -83,7 +83,7 @@
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel5" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="nomeUsuarioLabel" min="-2" pref="85" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="377" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -106,35 +106,35 @@
                       <Component id="textNome" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="nomeLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="iconEmail" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="textEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="iconIdade" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="textIdade" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="idadeLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="iconTelefone" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="textTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="telefoneLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="iconUsuario" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="textUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="nomeUsuarioLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="bEditar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
@@ -167,9 +167,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconNome">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\bilzi\Documents\NetBeansProjects\telaConfiguracao\src\main\java\com\mycompany\telaconfiguracao\iconNome.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
@@ -182,9 +179,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconEmail">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\bilzi\Documents\NetBeansProjects\telaConfiguracao\src\main\java\com\mycompany\telaconfiguracao\iconEmail.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
         </Component>
@@ -197,9 +191,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconIdade">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\bilzi\Documents\NetBeansProjects\telaConfiguracao\src\main\java\com\mycompany\telaconfiguracao\iconIdade.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
         </Component>
@@ -212,9 +203,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconTelefone">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\bilzi\Documents\NetBeansProjects\telaConfiguracao\src\main\java\com\mycompany\telaconfiguracao\iconSmartphone.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel4"/>
           </Properties>
         </Component>
@@ -227,9 +215,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconUsuario">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\bilzi\Documents\NetBeansProjects\telaConfiguracao\src\main\java\com\mycompany\telaconfiguracao\iconUser.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>
         </Component>
@@ -240,7 +225,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="nomeLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dubai" size="12" style="0"/>
@@ -251,7 +236,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="emailLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dubai" size="12" style="0"/>
@@ -262,7 +247,7 @@
             <Property name="text" type="java.lang.String" value="E-mail"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="idadeLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dubai" size="12" style="0"/>
@@ -273,7 +258,7 @@
             <Property name="text" type="java.lang.String" value="Idade"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="telefoneLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dubai" size="12" style="0"/>
@@ -284,7 +269,7 @@
             <Property name="text" type="java.lang.String" value="Telefone"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="nomeUsuarioLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dubai" size="12" style="0"/>

@@ -26,15 +26,15 @@ public class TelaConfig extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        painelTelaConfig = new javax.swing.JPanel();
         editarUsuario = new javax.swing.JButton();
         removerUsuario = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        voltarLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1128, 720));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 45));
+        painelTelaConfig.setBackground(new java.awt.Color(0, 0, 45));
 
         editarUsuario.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         editarUsuario.setText("Editar Usuário");
@@ -47,28 +47,26 @@ public class TelaConfig extends javax.swing.JFrame {
         removerUsuario.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         removerUsuario.setText("Remover Usuário");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\bilzi\\Documents\\NetBeansProjects\\telaConfiguracao\\src\\main\\java\\com\\mycompany\\telaconfiguracao\\bVoltar.png")); // NOI18N
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout painelTelaConfigLayout = new javax.swing.GroupLayout(painelTelaConfig);
+        painelTelaConfig.setLayout(painelTelaConfigLayout);
+        painelTelaConfigLayout.setHorizontalGroup(
+            painelTelaConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaConfigLayout.createSequentialGroup()
                 .addContainerGap(445, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(painelTelaConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(removerUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(433, 433, 433))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(painelTelaConfigLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(voltarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        painelTelaConfigLayout.setVerticalGroup(
+            painelTelaConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTelaConfigLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(voltarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(171, 171, 171)
                 .addComponent(editarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(156, 156, 156)
@@ -80,11 +78,11 @@ public class TelaConfig extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelTelaConfig, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelTelaConfig, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -129,8 +127,8 @@ public class TelaConfig extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton editarUsuario;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel painelTelaConfig;
     private javax.swing.JButton removerUsuario;
+    private javax.swing.JLabel voltarLabel;
     // End of variables declaration//GEN-END:variables
 }
