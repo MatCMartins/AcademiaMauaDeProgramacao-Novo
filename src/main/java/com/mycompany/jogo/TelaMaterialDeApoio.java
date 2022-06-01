@@ -41,6 +41,7 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         painelMaterialDeApoio.setPreferredSize(new java.awt.Dimension(1128, 780));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 45));
+        jButton1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(187, 187, 187));
         jButton1.setText("Input");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -50,10 +51,12 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(0, 0, 45));
+        jButton2.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(187, 187, 187));
         jButton2.setText("If Elif Else");
 
         jButton3.setBackground(new java.awt.Color(0, 0, 45));
+        jButton3.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jButton3.setForeground(new java.awt.Color(187, 187, 187));
         jButton3.setText("Def");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -63,14 +66,17 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(new java.awt.Color(0, 0, 45));
+        jButton4.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jButton4.setForeground(new java.awt.Color(187, 187, 187));
         jButton4.setText("While");
 
         jButton5.setBackground(new java.awt.Color(0, 0, 45));
+        jButton5.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jButton5.setForeground(new java.awt.Color(187, 187, 187));
         jButton5.setText("For");
 
         jButton6.setBackground(new java.awt.Color(0, 0, 45));
+        jButton6.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jButton6.setForeground(new java.awt.Color(187, 187, 187));
         jButton6.setText("List");
 
@@ -96,7 +102,7 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(200, 200, 200))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialDeApoioLayout.createSequentialGroup()
-                .addContainerGap(427, Short.MAX_VALUE)
+                .addContainerGap(425, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(427, 427, 427))
         );

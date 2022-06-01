@@ -60,7 +60,6 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jogarButton.setText("Jogar");
 
-        logoMauaLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\othav\\Desktop\\Mauá\\2022\\1º Semestre\\Projeto Integrador\\NetBeans\\AcademiaMauaProgramacao\\src\\main\\java\\com\\mycompany\\academiamauaprogramacao\\logoMauaLabel.png")); // NOI18N
         logoMauaLabel.setLabelFor(logoMauaLabel);
 
         materialButton.setText("Material de Apoio");
@@ -114,16 +113,16 @@ public class TelaInicial extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(painelTelaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(painelTelaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
         pack();
