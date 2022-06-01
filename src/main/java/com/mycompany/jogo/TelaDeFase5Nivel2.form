@@ -24,7 +24,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="painelTelaFase5Nivel1" min="-2" max="-2" attributes="0"/>
+              <Component id="painelTelaFase5Nivel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -32,14 +32,14 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="painelTelaFase5Nivel1" min="-2" max="-2" attributes="0"/>
+              <Component id="painelTelaFase5Nivel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="painelTelaFase5Nivel1">
+    <Container class="javax.swing.JPanel" name="painelTelaFase5Nivel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="2d" green="0" red="0" type="rgb"/>
@@ -49,21 +49,22 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="primeiraResposta" min="-2" pref="370" max="-2" attributes="0"/>
-                              <Component id="terceiraResposta" min="-2" pref="370" max="-2" attributes="0"/>
+                      <Component id="perguntaLabel" min="-2" pref="922" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jButton3" min="-2" pref="370" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jButton4" min="-2" pref="370" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="segundaResposta" alignment="0" min="-2" pref="370" max="-2" attributes="0"/>
-                              <Component id="quartaResposta" alignment="1" min="-2" pref="370" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jButton1" min="-2" pref="370" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
+                              <Component id="jButton2" min="-2" pref="370" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="perguntaLabel" min="-2" pref="922" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="103" max="32767" attributes="0"/>
               </Group>
@@ -76,13 +77,13 @@
                   <Component id="perguntaLabel" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="primeiraResposta" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
-                      <Component id="segundaResposta" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
+                      <Component id="jButton2" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="quartaResposta" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
-                      <Component id="terceiraResposta" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
+                      <Component id="jButton3" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
+                      <Component id="jButton4" alignment="3" min="-2" pref="237" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="112" max="32767" attributes="0"/>
               </Group>
@@ -104,7 +105,7 @@
             <Property name="text" type="java.lang.String" value="Espa&#xe7;o para pergunta"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="primeiraResposta">
+        <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -118,7 +119,7 @@
             <Property name="text" type="java.lang.String" value="Espa&#xe7;o para respostas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="segundaResposta">
+        <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -132,7 +133,7 @@
             <Property name="text" type="java.lang.String" value="Espa&#xe7;o para respostas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="terceiraResposta">
+        <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -146,7 +147,7 @@
             <Property name="text" type="java.lang.String" value="Espa&#xe7;o para respostas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="quartaResposta">
+        <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
