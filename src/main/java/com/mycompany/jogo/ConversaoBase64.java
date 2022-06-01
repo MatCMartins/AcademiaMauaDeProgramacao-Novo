@@ -313,9 +313,205 @@ public class ConversaoBase64 {
         String item4Questao3Fase3String = Base64.getEncoder().encodeToString(item4Questao3Fase3);
         byte[] item4Questao3Fase3Foto = Base64.getDecoder().decode(item4Questao3Fase3String);
         
-
+        // Questao 1 Fase 4
+        
+        byte[] perguntaQuestao1Fase4 = FileUtils.readFileToByteArray(new File(perguntaQuestao1Fase4Caminho));
+        String perguntaQuestao1Fase4String = Base64.getEncoder().encodeToString(perguntaQuestao1Fase4);
+        byte[] perguntaQuestao1Fase4Foto = Base64.getDecoder().decode(perguntaQuestao1Fase4String);
+       
+        byte[] item1Questao1Fase4 = FileUtils.readFileToByteArray(new File(item1Questao1Fase4Caminho));
+        String item1Questao1Fase4String = Base64.getEncoder().encodeToString(item1Questao1Fase4);
+        byte[] item1Questao1Fase4Foto = Base64.getDecoder().decode(item1Questao1Fase4String);
+     
+        byte[] item2Questao1Fase4 = FileUtils.readFileToByteArray(new File(item2Questao1Fase3Caminho));
+        String item2Questao1Fase4String = Base64.getEncoder().encodeToString(item2Questao1Fase4);
+        byte[] item2Questao1Fase4Foto = Base64.getDecoder().decode(item2Questao1Fase4String);
+        
+        byte[] item3Questao1Fase4 = FileUtils.readFileToByteArray(new File(item3Questao1Fase3Caminho));
+        String item3Questao1Fase4String = Base64.getEncoder().encodeToString(item3Questao1Fase4);
+        byte[] item3Questao1Fase4Foto = Base64.getDecoder().decode(item3Questao1Fase4String);
+        
+        byte[] item4Questao1Fase4 = FileUtils.readFileToByteArray(new File(item4Questao1Fase4Caminho));
+        String item4Questao1Fase4String = Base64.getEncoder().encodeToString(item4Questao1Fase4);
+        byte[] item4Questao1Fase4Foto = Base64.getDecoder().decode(item4Questao1Fase4String);
+        
+        // Questao 2 Fase 4
+        
+        byte[] perguntaQuestao2Fase4 = FileUtils.readFileToByteArray(new File(perguntaQuestao2Fase4Caminho));
+        String perguntaQuestao2Fase4String = Base64.getEncoder().encodeToString(perguntaQuestao2Fase4);
+        byte[] perguntaQuestao2Fase4Foto = Base64.getDecoder().decode(perguntaQuestao2Fase4String);
+       
+        byte[] item1Questao2Fase4 = FileUtils.readFileToByteArray(new File(item1Questao2Fase4Caminho));
+        String item1Questao2Fase4String = Base64.getEncoder().encodeToString(item1Questao2Fase4);
+        byte[] item1Questao2Fase4Foto = Base64.getDecoder().decode(item1Questao2Fase4String);
+     
+        byte[] item2Questao2Fase4 = FileUtils.readFileToByteArray(new File(item2Questao2Fase4Caminho));
+        String item2Questao2Fase4String = Base64.getEncoder().encodeToString(item2Questao2Fase4);
+        byte[] item2Questao2Fase4Foto = Base64.getDecoder().decode(item2Questao2Fase4String);
+        
+        byte[] item3Questao2Fase4 = FileUtils.readFileToByteArray(new File(item3Questao2Fase4Caminho));
+        String item3Questao2Fase4String = Base64.getEncoder().encodeToString(item3Questao2Fase4);
+        byte[] item3Questao2Fase4Foto = Base64.getDecoder().decode(item3Questao2Fase4String);
+        
+        byte[] item4Questao2Fase4 = FileUtils.readFileToByteArray(new File(item4Questao2Fase4Caminho));
+        String item4Questao2Fase4String = Base64.getEncoder().encodeToString(item4Questao2Fase4);
+        byte[] item4Questao2Fase4Foto = Base64.getDecoder().decode(item4Questao2Fase4String);
+        
+        // Questao 3 Fase 4
+        
+        byte[] perguntaQuestao3Fase4 = FileUtils.readFileToByteArray(new File(perguntaQuestao3Fase4Caminho));
+        String perguntaQuestao3Fase4String = Base64.getEncoder().encodeToString(perguntaQuestao3Fase4);
+        byte[] perguntaQuestao3Fase4Foto = Base64.getDecoder().decode(perguntaQuestao3Fase4String);
+       
+        byte[] item1Questao3Fase4 = FileUtils.readFileToByteArray(new File(item1Questao3Fase4Caminho));
+        String item1Questao3Fase4String = Base64.getEncoder().encodeToString(item1Questao3Fase4);
+        byte[] item1Questao3Fase4Foto = Base64.getDecoder().decode(item1Questao3Fase4String);
+     
+        byte[] item2Questao3Fase4 = FileUtils.readFileToByteArray(new File(item2Questao3Fase4Caminho));
+        String item2Questao3Fase4String = Base64.getEncoder().encodeToString(item2Questao3Fase4);
+        byte[] item2Questao3Fase4Foto = Base64.getDecoder().decode(item2Questao3Fase4String);
+        
+        byte[] item3Questao3Fase4 = FileUtils.readFileToByteArray(new File(item3Questao3Fase4Caminho));
+        String item3Questao3Fase4String = Base64.getEncoder().encodeToString(item3Questao3Fase4);
+        byte[] item3Questao3Fase4Foto = Base64.getDecoder().decode(item3Questao3Fase4String);
+        
+        byte[] item4Questao3Fase4 = FileUtils.readFileToByteArray(new File(item4Questao3Fase4Caminho));
+        String item4Questao3Fase4String = Base64.getEncoder().encodeToString(item4Questao3Fase4);
+        byte[] item4Questao3Fase4Foto = Base64.getDecoder().decode(item4Questao3Fase4String);
+        
+        // Questao 1 Fase 5
+        
+        byte[] perguntaQuestao1Fase5 = FileUtils.readFileToByteArray(new File(perguntaQuestao1Fase5Caminho));
+        String perguntaQuestao1Fase5String = Base64.getEncoder().encodeToString(perguntaQuestao1Fase5);
+        byte[] perguntaQuestao1Fase5Foto = Base64.getDecoder().decode(perguntaQuestao1Fase5String);
+       
+        byte[] item1Questao1Fase5 = FileUtils.readFileToByteArray(new File(item1Questao1Fase5Caminho));
+        String item1Questao1Fase5String = Base64.getEncoder().encodeToString(item1Questao1Fase5);
+        byte[] item1Questao1Fase5Foto = Base64.getDecoder().decode(item1Questao1Fase5String);
+     
+        byte[] item2Questao1Fase5 = FileUtils.readFileToByteArray(new File(item2Questao1Fase5Caminho));
+        String item2Questao1Fase5String = Base64.getEncoder().encodeToString(item2Questao1Fase5);
+        byte[] item2Questao1Fase5Foto = Base64.getDecoder().decode(item2Questao1Fase5String);
+        
+        byte[] item3Questao1Fase5 = FileUtils.readFileToByteArray(new File(item3Questao1Fase5Caminho));
+        String item3Questao1Fase5String = Base64.getEncoder().encodeToString(item3Questao1Fase5);
+        byte[] item3Questao1Fase5Foto = Base64.getDecoder().decode(item3Questao1Fase5String);
+        
+        byte[] item4Questao1Fase5 = FileUtils.readFileToByteArray(new File(item4Questao1Fase5Caminho));
+        String item4Questao1Fase5String = Base64.getEncoder().encodeToString(item4Questao1Fase5);
+        byte[] item4Questao1Fase5Foto = Base64.getDecoder().decode(item4Questao1Fase5String);
         
         
+        // Questao 2 Fase 5
+        
+        byte[] perguntaQuestao2Fase5 = FileUtils.readFileToByteArray(new File(perguntaQuestao2Fase5Caminho));
+        String perguntaQuestao2Fase5String = Base64.getEncoder().encodeToString(perguntaQuestao2Fase5);
+        byte[] perguntaQuestao2Fase5Foto = Base64.getDecoder().decode(perguntaQuestao2Fase5String);
+       
+        byte[] item1Questao2Fase5 = FileUtils.readFileToByteArray(new File(item1Questao2Fase5Caminho));
+        String item1Questao2Fase5String = Base64.getEncoder().encodeToString(item1Questao2Fase5);
+        byte[] item1Questao2Fase5Foto = Base64.getDecoder().decode(item1Questao2Fase5String);
+     
+        byte[] item2Questao2Fase5 = FileUtils.readFileToByteArray(new File(item2Questao2Fase5Caminho));
+        String item2Questao2Fase5String = Base64.getEncoder().encodeToString(item2Questao2Fase5);
+        byte[] item2Questao2Fase5Foto = Base64.getDecoder().decode(item2Questao2Fase5String);
+        
+        byte[] item3Questao2Fase5 = FileUtils.readFileToByteArray(new File(item3Questao2Fase5Caminho));
+        String item3Questao2Fase5String = Base64.getEncoder().encodeToString(item3Questao2Fase5);
+        byte[] item3Questao2Fase5Foto = Base64.getDecoder().decode(item3Questao2Fase5String);
+        
+        byte[] item4Questao2Fase5 = FileUtils.readFileToByteArray(new File(item4Questao2Fase5Caminho));
+        String item4Questao2Fase5String = Base64.getEncoder().encodeToString(item4Questao2Fase5);
+        byte[] item4Questao2Fase5Foto = Base64.getDecoder().decode(item4Questao2Fase5String);
+        
+        // Questao 3 Fase 5
+        
+        byte[] perguntaQuestao3Fase5 = FileUtils.readFileToByteArray(new File(perguntaQuestao3Fase5Caminho));
+        String perguntaQuestao3Fase5String = Base64.getEncoder().encodeToString(perguntaQuestao3Fase5);
+        byte[] perguntaQuestao3Fase5Foto = Base64.getDecoder().decode(perguntaQuestao3Fase5String);
+       
+        byte[] item1Questao3Fase5 = FileUtils.readFileToByteArray(new File(item1Questao3Fase5Caminho));
+        String item1Questao3Fase5String = Base64.getEncoder().encodeToString(item1Questao3Fase5);
+        byte[] item1Questao3Fase5Foto = Base64.getDecoder().decode(item1Questao3Fase5String);
+     
+        byte[] item2Questao3Fase5 = FileUtils.readFileToByteArray(new File(item2Questao3Fase5Caminho));
+        String item2Questao3Fase5String = Base64.getEncoder().encodeToString(item2Questao3Fase5);
+        byte[] item2Questao3Fase5Foto = Base64.getDecoder().decode(item2Questao3Fase5String);
+        
+        byte[] item3Questao3Fase5 = FileUtils.readFileToByteArray(new File(item3Questao3Fase5Caminho));
+        String item3Questao3Fase5String = Base64.getEncoder().encodeToString(item3Questao3Fase5);
+        byte[] item3Questao3Fase5Foto = Base64.getDecoder().decode(item3Questao3Fase5String);
+        
+        byte[] item4Questao3Fase5 = FileUtils.readFileToByteArray(new File(item4Questao3Fase5Caminho));
+        String item4Questao3Fase5String = Base64.getEncoder().encodeToString(item4Questao3Fase5);
+        byte[] item4Questao3Fase5Foto = Base64.getDecoder().decode(item4Questao3Fase5String);
+        
+        // Questao 1 Fase 6
+        
+        byte[] perguntaQuestao1Fase6 = FileUtils.readFileToByteArray(new File(perguntaQuestao1Fase6Caminho));
+        String perguntaQuestao1Fase6String = Base64.getEncoder().encodeToString(perguntaQuestao1Fase6);
+        byte[] perguntaQuestao1Fase6Foto = Base64.getDecoder().decode(perguntaQuestao1Fase6String);
+       
+        byte[] item1Questao1Fase6 = FileUtils.readFileToByteArray(new File(item1Questao1Fase6Caminho));
+        String item1Questao1Fase6String = Base64.getEncoder().encodeToString(item1Questao1Fase6);
+        byte[] item1Questao1Fase6Foto = Base64.getDecoder().decode(item1Questao1Fase6String);
+     
+        byte[] item2Questao1Fase6 = FileUtils.readFileToByteArray(new File(item2Questao1Fase6Caminho));
+        String item2Questao1Fase6String = Base64.getEncoder().encodeToString(item2Questao1Fase6);
+        byte[] item2Questao1Fase6Foto = Base64.getDecoder().decode(item2Questao1Fase6String);
+        
+        byte[] item3Questao1Fase6 = FileUtils.readFileToByteArray(new File(item3Questao1Fase6Caminho));
+        String item3Questao1Fase6String = Base64.getEncoder().encodeToString(item3Questao1Fase6);
+        byte[] item3Questao1Fase6Foto = Base64.getDecoder().decode(item3Questao1Fase6String);
+        
+        byte[] item4Questao1Fase6 = FileUtils.readFileToByteArray(new File(item4Questao1Fase6Caminho));
+        String item4Questao1Fase6String = Base64.getEncoder().encodeToString(item4Questao1Fase6);
+        byte[] item4Questao1Fase6Foto = Base64.getDecoder().decode(item4Questao1Fase6String);
+        
+        
+        // Questao 2 Fase 6
+        
+        byte[] perguntaQuestao2Fase6 = FileUtils.readFileToByteArray(new File(perguntaQuestao2Fase6Caminho));
+        String perguntaQuestao2Fase6String = Base64.getEncoder().encodeToString(perguntaQuestao2Fase6);
+        byte[] perguntaQuestao2Fase6Foto = Base64.getDecoder().decode(perguntaQuestao2Fase6String);
+       
+        byte[] item1Questao2Fase6 = FileUtils.readFileToByteArray(new File(item1Questao2Fase6Caminho));
+        String item1Questao2Fase6String = Base64.getEncoder().encodeToString(item1Questao2Fase6);
+        byte[] item1Questao2Fase6Foto = Base64.getDecoder().decode(item1Questao2Fase6String);
+     
+        byte[] item2Questao2Fase6 = FileUtils.readFileToByteArray(new File(item2Questao2Fase6Caminho));
+        String item2Questao2Fase6String = Base64.getEncoder().encodeToString(item2Questao2Fase6);
+        byte[] item2Questao2Fase6Foto = Base64.getDecoder().decode(item2Questao2Fase6String);
+       
+        byte[] item3Questao2Fase6 = FileUtils.readFileToByteArray(new File(item3Questao2Fase6Caminho));
+        String item3Questao2Fase6String = Base64.getEncoder().encodeToString(item3Questao2Fase6);
+        byte[] item3Questao2Fase6Foto = Base64.getDecoder().decode(item3Questao2Fase6String);
+        
+        byte[] item4Questao2Fase6 = FileUtils.readFileToByteArray(new File(item4Questao2Fase6Caminho));
+        String item4Questao2Fase6String = Base64.getEncoder().encodeToString(item4Questao2Fase6);
+        byte[] item4Questao2Fase65Foto = Base64.getDecoder().decode(item4Questao2Fase6String);
+        
+        // Questao 3 Fase 6
+        
+        byte[] perguntaQuestao3Fase6 = FileUtils.readFileToByteArray(new File(perguntaQuestao3Fase6Caminho));
+        String perguntaQuestao3Fase6String = Base64.getEncoder().encodeToString(perguntaQuestao3Fase6);
+        byte[] perguntaQuestao3Fase6Foto = Base64.getDecoder().decode(perguntaQuestao3Fase6String);
+       
+        byte[] item1Questao3Fase6 = FileUtils.readFileToByteArray(new File(item1Questao3Fase6Caminho));
+        String item1Questao3Fase6String = Base64.getEncoder().encodeToString(item1Questao3Fase6);
+        byte[] item1Questao3Fase6Foto = Base64.getDecoder().decode(item1Questao3Fase6String);
+     
+        byte[] item2Questao3Fase6 = FileUtils.readFileToByteArray(new File(item2Questao3Fase6Caminho));
+        String item2Questao3Fase6String = Base64.getEncoder().encodeToString(item2Questao3Fase6);
+        byte[] item2Questao3Fase6Foto = Base64.getDecoder().decode(item2Questao3Fase6String);
+        
+        byte[] item3Questao3Fase6 = FileUtils.readFileToByteArray(new File(item3Questao3Fase6Caminho));
+        String item3Questao3Fase6String = Base64.getEncoder().encodeToString(item3Questao3Fase6);
+        byte[] item3Questao3Fase6Foto = Base64.getDecoder().decode(item3Questao3Fase6String);
+        
+        byte[] item4Questao3Fase6 = FileUtils.readFileToByteArray(new File(item4Questao3Fase6Caminho));
+        String item4Questao3Fase6String = Base64.getEncoder().encodeToString(item4Questao3Fase6);
+        byte[] item4Questao3Fase6Foto = Base64.getDecoder().decode(item4Questao3Fase6String);
     
     }
     
