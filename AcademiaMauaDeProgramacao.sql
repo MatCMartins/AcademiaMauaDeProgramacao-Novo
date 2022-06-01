@@ -46,7 +46,7 @@ DESCRIBE Jogador;
 CREATE TABLE MaterialDeApoio (
   nomeMaterial VARCHAR(15) NOT NULL,
   escopo VARCHAR(10) NOT NULL,
-  material BLOB	 NOT NULL,
+  material VARCHAR(64)	 NOT NULL,
   PRIMARY KEY(nomeMaterial));
 
 
@@ -83,12 +83,12 @@ DESCRIBE Fase;
 
 CREATE TABLE Pergunta(
   `numeroQuestao` INT NOT NULL,
-  `alternativaCorreta` BLOB NOT NULL,
-  `alternativa1` BLOB NOT NULL,
-  `alternativa2` BLOB NOT NULL,
-  `alternativa3` BLOB NOT NULL,
-  `alternativa4` BLOB NOT NULL,
-   `questao` BLOB NOT NULL,
+  `alternativaCorreta` VARCHAR(64) NOT NULL,
+  `alternativa1` VARCHAR(64) NOT NULL,
+  `alternativa2` VARCHAR(64) NOT NULL,
+  `alternativa3` VARCHAR(64) NOT NULL,
+  `alternativa4` VARCHAR(64) NOT NULL,
+   `questao` VARCHAR(64) NOT NULL,
   PRIMARY KEY (`numeroQuestao`));
 
 DESCRIBE Pergunta;
