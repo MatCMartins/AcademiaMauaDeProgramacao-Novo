@@ -54,8 +54,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="voltarLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="478" max="32767" attributes="0"/>
+                  <Component id="setaVoltar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="509" max="32767" attributes="0"/>
                   <Component id="defLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="500" max="-2" attributes="0"/>
               </Group>
@@ -72,7 +72,7 @@
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="defLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="voltarLabel" min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="setaVoltar" min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="materialDef" min="-2" pref="345" max="-2" attributes="0"/>
@@ -96,10 +96,10 @@
             <Property name="text" type="java.lang.String" value="Def"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="voltarLabel">
+        <Component class="javax.swing.JLabel" name="setaVoltar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/mycompany/jogo/bVoltar.png"/>
+              <Image iconType="3" name="/com/mycompany/jogo/setaVoltar.png"/>
             </Property>
           </Properties>
         </Component>

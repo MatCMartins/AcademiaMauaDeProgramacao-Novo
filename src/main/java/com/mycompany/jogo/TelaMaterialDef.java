@@ -28,7 +28,7 @@ public class TelaMaterialDef extends javax.swing.JFrame {
 
         painelDef = new javax.swing.JPanel();
         defLabel = new javax.swing.JLabel();
-        voltarLabel = new javax.swing.JLabel();
+        setaVoltar = new javax.swing.JLabel();
         materialDef = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,7 +41,7 @@ public class TelaMaterialDef extends javax.swing.JFrame {
         defLabel.setForeground(new java.awt.Color(187, 187, 187));
         defLabel.setText("Def");
 
-        voltarLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/bVoltar.png"))); // NOI18N
+        setaVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/setaVoltar.png"))); // NOI18N
 
         materialDef.setText("jLabel2");
 
@@ -51,8 +51,8 @@ public class TelaMaterialDef extends javax.swing.JFrame {
             painelDefLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelDefLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(voltarLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 478, Short.MAX_VALUE)
+                .addComponent(setaVoltar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 509, Short.MAX_VALUE)
                 .addComponent(defLabel)
                 .addGap(500, 500, 500))
             .addGroup(painelDefLayout.createSequentialGroup()
@@ -66,7 +66,7 @@ public class TelaMaterialDef extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(painelDefLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(defLabel)
-                    .addComponent(voltarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(setaVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60)
                 .addComponent(materialDef, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(242, Short.MAX_VALUE))
@@ -129,6 +129,6 @@ public class TelaMaterialDef extends javax.swing.JFrame {
     private javax.swing.JLabel defLabel;
     private javax.swing.JLabel materialDef;
     private javax.swing.JPanel painelDef;
-    private javax.swing.JLabel voltarLabel;
+    private javax.swing.JLabel setaVoltar;
     // End of variables declaration//GEN-END:variables
 }
