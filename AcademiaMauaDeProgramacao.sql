@@ -4,11 +4,9 @@
 -- MySQL Workbench Forward Engineering
 
 
+
 CREATE DATABASE AcademiaMauaDeProgramacao;
 USE AcademiaMauaDeProgramacao;
-
-
-
 
 CREATE TABLE Ranking(
   `posicao` INT NOT NULL,
@@ -48,7 +46,7 @@ DESCRIBE Jogador;
 CREATE TABLE MaterialDeApoio (
   nomeMaterial VARCHAR(15) NOT NULL,
   escopo VARCHAR(10) NOT NULL,
-  material MEDIUMTEXT NOT NULL,
+  material BLOB	 NOT NULL,
   PRIMARY KEY(nomeMaterial));
 
 
@@ -84,13 +82,13 @@ DESCRIBE Fase;
 -- -----------------------------------------------------
 
 CREATE TABLE Pergunta(
-  `questao` TEXT NOT NULL,
-  `alternativaCorreta` TEXT NOT NULL,
-  `alternativa1` TEXT NOT NULL,
-  `alternativa2` TEXT NOT NULL,
-  `alternativa3` TEXT NOT NULL,
-  `alternativa4` TEXT NOT NULL,
   `numeroQuestao` INT NOT NULL,
+  `alternativaCorreta` BLOB NOT NULL,
+  `alternativa1` BLOB NOT NULL,
+  `alternativa2` BLOB NOT NULL,
+  `alternativa3` BLOB NOT NULL,
+  `alternativa4` BLOB NOT NULL,
+   `questao` BLOB NOT NULL,
   PRIMARY KEY (`numeroQuestao`));
 
 DESCRIBE Pergunta;
@@ -188,6 +186,8 @@ CREATE TABLE Jogador_has_Premio (
 
 DESCRIBE Jogador_has_Premio;
 
-
+INSERT INTO Pergunta(`numeroQuestao`,`alternativaCorreta`,`alternativa1`,`alternativa2`,`alternativa3`,`alternativa4`,`questao`) VALUES
+(1, LOAD_FILE('D:\\Item1Questao1Fase1.png'),LOAD_FILE('D:\\Item2Questao1Fase1.png'),LOAD_FILE('D:\\Item1Questao4Fase1.png'),
+LOAD_FILE('D:\\Item1Questao1Fase1.png'),LOAD_FILE('D:\\Item1Questao3Fase1.png'),LOAD_FILE('D:\\PerguntaoQuestao1Fase1.png'));
 
 DROP DATABASE AcademiaMauaDeProgramacao;
