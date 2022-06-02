@@ -186,8 +186,6 @@ CREATE TABLE Jogador_has_Premio (
 
 DESCRIBE Jogador_has_Premio;
 
-INSERT INTO Pergunta(`numeroQuestao`,`alternativaCorreta`,`alternativa1`,`alternativa2`,`alternativa3`,`alternativa4`,`questao`) VALUES
-(1, LOAD_FILE('D:\\Item1Questao1Fase1.png'),LOAD_FILE('D:\\Item2Questao1Fase1.png'),LOAD_FILE('D:\\Item1Questao4Fase1.png'),
-LOAD_FILE('D:\\Item1Questao1Fase1.png'),LOAD_FILE('D:\\Item1Questao3Fase1.png'),LOAD_FILE('D:\\PerguntaoQuestao1Fase1.png'));
+SELECT * FROM Pergunta;
 
 DROP DATABASE AcademiaMauaDeProgramacao;
