@@ -39,6 +39,7 @@ public class TelaInicial extends javax.swing.JFrame {
         painelTelaInicial.setBackground(new java.awt.Color(0, 0, 45));
         painelTelaInicial.setPreferredSize(new java.awt.Dimension(1128, 720));
 
+        configButton.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         configButton.setText("Configurações");
         configButton.setPreferredSize(new java.awt.Dimension(110, 25));
         configButton.addActionListener(new java.awt.event.ActionListener() {
@@ -47,6 +48,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        regraButton.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         regraButton.setText("Regras");
         regraButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,10 +60,12 @@ public class TelaInicial extends javax.swing.JFrame {
         nomeJogoLabel.setForeground(new java.awt.Color(255, 255, 255));
         nomeJogoLabel.setText("Academia Mauá de Programação");
 
+        jogarButton.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jogarButton.setText("Jogar");
 
         logoMauaLabel.setLabelFor(logoMauaLabel);
 
+        materialButton.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         materialButton.setText("Material de Apoio");
         materialButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
