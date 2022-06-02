@@ -44,7 +44,7 @@ public class TEditarUsuario extends javax.swing.JFrame {
             }
         });
 
-        iconNome.setText("jLabel1");
+        iconNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/name.png"))); // NOI18N
 
         textNome.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
 
@@ -97,10 +97,10 @@ public class TEditarUsuario extends javax.swing.JFrame {
                             .addComponent(iconTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(iconIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(iconEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(iconNome, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(iconNome))
                         .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelEditarUsuarioLayout.createSequentialGroup()
-                                .addGap(54, 54, 54)
+                                .addGap(40, 40, 40)
                                 .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(textNome, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(textTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -126,9 +126,9 @@ public class TEditarUsuario extends javax.swing.JFrame {
         painelEditarUsuarioLayout.setVerticalGroup(
             painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelEditarUsuarioLayout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
+                .addContainerGap(38, Short.MAX_VALUE)
                 .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iconNome, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(iconNome)
                     .addComponent(textNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0)
                 .addComponent(nomeLabel)
