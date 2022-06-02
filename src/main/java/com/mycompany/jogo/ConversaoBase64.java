@@ -138,9 +138,7 @@ public class ConversaoBase64 {
         byte[] item4Questao1Fase1 = FileUtils.readFileToByteArray(new File(item4Questao1Fase1Caminho));
         String item4Questao1Fase1String = Base64.getEncoder().encodeToString(item4Questao1Fase1);
         byte[] item4Questao1Fase1Foto = Base64.getDecoder().decode(item4Questao1Fase1String);
-        
-        new EnviarBase64MySQL(1,item1Questao1Fase1String,item2Questao1Fase1String,item3Questao1Fase1String,item4Questao1Fase1String,perguntaQuestao1Fase1String).cadastrar();
-                
+                        
         //Questao 2 Fase 1  
         
         byte[] perguntaQuestao2Fase1 = FileUtils.readFileToByteArray(new File(perguntaQuestao2Fase1Caminho));
@@ -519,6 +517,41 @@ public class ConversaoBase64 {
     
     }
     
+public void main(String[] args) throws IOException{
+    
+            //Questao 1 Fase 1
+        
+        byte[] perguntaQuestao1Fase1 = FileUtils.readFileToByteArray(new File(perguntaQuestao1Fase1Caminho));
+        String perguntaQuestao1Fase1String = Base64.getEncoder().encodeToString(perguntaQuestao1Fase1);
+        byte[] perguntaQuestao1Fase1Foto = Base64.getDecoder().decode(perguntaQuestao1Fase1String);
+        
+        
+        byte[] item1Questao1Fase1 = FileUtils.readFileToByteArray(new File(item1Questao1Fase1Caminho));
+        String item1Questao1Fase1String = Base64.getEncoder().encodeToString(item1Questao1Fase1);
+        byte[] item1Questao1Fase1Foto = Base64.getDecoder().decode(item1Questao1Fase1String);
+        
+        byte[] item2Questao1Fase1 = FileUtils.readFileToByteArray(new File(item2Questao1Fase1Caminho));
+        String item2Questao1Fase1String = Base64.getEncoder().encodeToString(item2Questao1Fase1);
+        byte[] item2Questao1Fase1Foto = Base64.getDecoder().decode(item2Questao1Fase1String);
+        
+        byte[] item3Questao1Fase1 = FileUtils.readFileToByteArray(new File(item3Questao1Fase1Caminho));
+        String item3Questao1Fase1String = Base64.getEncoder().encodeToString(item3Questao1Fase1);
+        byte[] item3Questao1Fase1Foto = Base64.getDecoder().decode(item3Questao1Fase1String);
+        
+        byte[] item4Questao1Fase1 = FileUtils.readFileToByteArray(new File(item4Questao1Fase1Caminho));
+        String item4Questao1Fase1String = Base64.getEncoder().encodeToString(item4Questao1Fase1);
+        byte[] item4Questao1Fase1Foto = Base64.getDecoder().decode(item4Questao1Fase1String);
     
     
+    try{
+        new EnviarBase64MySQL(1,item1Questao1Fase1String,item2Questao1Fase1String,item3Questao1Fase1String,item4Questao1Fase1String,perguntaQuestao1Fase1String).cadastrar();
+        System.out.println(1);
+    }
+    catch(Exception e){
+        System.out.printf("Exceção: %s", e.getMessage());
+    }
+    
+    
+
+}
 }

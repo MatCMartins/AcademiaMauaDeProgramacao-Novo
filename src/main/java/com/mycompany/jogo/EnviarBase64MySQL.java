@@ -45,19 +45,20 @@ public class EnviarBase64MySQL {
        "LU1yo8Dqc**4^YVr7cFCkzR#TN!3Kexp"
        );
        
-       String sql = "INSERT INTO AcademiaMauaDeProgramacao(numeroQuestao,alternativaCorreta,alternativa1,alternativa2,alternativa3,alternativa4,questao) VALUES(?,?,?,?,?,?,?)";
+       String sql = "INSERT INTO Pergunta(numeroQuestao,alternativaCorreta,alternativa1,alternativa2,alternativa3,alternativa4,questao) VALUES(?,?,?,?,?,?,?)";
        PreparedStatement ps = conexao.prepareStatement(sql);
        ps.setInt(1,numeroQuestao);
        ps.setString(2,item1Questao1Fase1);
-       ps.setString(3, item2Questao1Fase1);
-       ps.setString(4,item3Questao1Fase1);
-       ps.setString(5,item4Questao1Fase1);
-       ps.setString(6,pergunta1Questao1Fase1);
+       ps.setString(3,item1Questao1Fase1);
+       ps.setString(4, item2Questao1Fase1);
+       ps.setString(5,item3Questao1Fase1);
+       ps.setString(6,item4Questao1Fase1);
+       ps.setString(7,pergunta1Questao1Fase1);
        
-       ps.execute();
+       ps.executeUpdate();
        ps.close();
        conexao.close();
-               
+      
        }        
        catch(Exception e){
            System.out.printf("Exceção: %s", e.getMessage());
@@ -112,8 +113,7 @@ public class EnviarBase64MySQL {
         this.pergunta1Questao1Fase1 = pergunta1Questao1Fase1;
     }
     
-    
-    public static void main(String[] args){
-            }
+   
+         
    
 }
