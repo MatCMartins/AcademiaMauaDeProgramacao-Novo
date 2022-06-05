@@ -4,6 +4,7 @@ public class TEditarUsuario extends javax.swing.JFrame {
 
     public TEditarUsuario() {
         initComponents();
+        setResizable(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -185,8 +186,9 @@ public class TEditarUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
+        new TelaInicial().setVisible(true);
         this.dispose();
-        TelaConfig telaConfig = new TelaConfig();
+        
     }//GEN-LAST:event_bCancelarActionPerformed
 
     public static void main(String args[]) {

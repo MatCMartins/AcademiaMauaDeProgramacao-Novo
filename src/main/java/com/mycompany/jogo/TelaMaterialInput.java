@@ -15,6 +15,7 @@ public class TelaMaterialInput extends javax.swing.JFrame {
      */
     public TelaMaterialInput() {
         initComponents();
+        setResizable(false);
     }
 
     /**

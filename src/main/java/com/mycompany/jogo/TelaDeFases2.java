@@ -41,6 +41,7 @@ public class TelaDeFases2 extends javax.swing.JFrame {
         explicacaoQuartaFase = new javax.swing.JTextField();
         explicacaoQuintaFase = new javax.swing.JTextField();
         explicacaoSextaFase = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -164,15 +165,24 @@ public class TelaDeFases2 extends javax.swing.JFrame {
         explicacaoSextaFase.setText("Listas");
         explicacaoSextaFase.setBorder(null);
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 45));
+        jButton1.setForeground(new java.awt.Color(0, 0, 45));
+        jButton1.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\bVoltar.png")); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelTelaDeFasesLayout = new javax.swing.GroupLayout(painelTelaDeFases);
         painelTelaDeFases.setLayout(painelTelaDeFasesLayout);
         painelTelaDeFasesLayout.setHorizontalGroup(
             painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTelaDeFasesLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tituloFases)
+                .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(painelTelaDeFasesLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
                         .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(faseFor, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                             .addComponent(faseDeFuncoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -185,7 +195,12 @@ public class TelaDeFases2 extends javax.swing.JFrame {
                                     .addComponent(explicacaoQuintaFase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(painelTelaDeFasesLayout.createSequentialGroup()
                                 .addGap(12, 12, 12)
-                                .addComponent(explicacaoPrimeiraFase, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(explicacaoPrimeiraFase, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(painelTelaDeFasesLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tituloFases)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(explicacaoSegundaFase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -204,7 +219,9 @@ public class TelaDeFases2 extends javax.swing.JFrame {
                 .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelTelaDeFasesLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(tituloFases)
+                        .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tituloFases)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(73, 73, 73)
                         .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -235,7 +252,7 @@ public class TelaDeFases2 extends javax.swing.JFrame {
                         .addGroup(painelTelaDeFasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(explicacaoQuintaFase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(explicacaoSextaFase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -300,6 +317,11 @@ public class TelaDeFases2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_faseListasActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new TelaInicial().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -348,6 +370,7 @@ public class TelaDeFases2 extends javax.swing.JFrame {
     private javax.swing.JButton faseInicial;
     private javax.swing.JButton faseListas;
     private javax.swing.JButton faseWhile;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel painelTelaDeFases;
     private javax.swing.JLabel tituloFases;
     // End of variables declaration//GEN-END:variables

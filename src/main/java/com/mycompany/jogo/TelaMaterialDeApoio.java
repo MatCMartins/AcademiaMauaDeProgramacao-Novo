@@ -15,6 +15,7 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
      */
     public TelaMaterialDeApoio() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -34,6 +35,7 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         botaoMaterialFor = new javax.swing.JButton();
         botaoMaterialList = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,6 +107,16 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(187, 187, 187));
         jLabel1.setText("Material de Apoio");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 45));
+        jButton1.setForeground(new java.awt.Color(0, 0, 45));
+        jButton1.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\bVoltar.png")); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelMaterialDeApoioLayout = new javax.swing.GroupLayout(painelMaterialDeApoio);
         painelMaterialDeApoio.setLayout(painelMaterialDeApoioLayout);
         painelMaterialDeApoioLayout.setHorizontalGroup(
@@ -122,7 +134,9 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
                     .addComponent(botaoMaterialList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(200, 200, 200))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialDeApoioLayout.createSequentialGroup()
-                .addContainerGap(427, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 331, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(427, 427, 427))
         );
@@ -130,7 +144,9 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
             painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelMaterialDeApoioLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addComponent(jLabel1)
+                .addGroup(painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
                 .addGroup(painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoMaterialInput, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -195,6 +211,10 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_botaoMaterialListActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new TelaInicial().setVisible(true);
+        this.dispose();    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -237,6 +257,7 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
     private javax.swing.JButton botaoMaterialInput;
     private javax.swing.JButton botaoMaterialList;
     private javax.swing.JButton botaoMaterialWhile;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel painelMaterialDeApoio;
     // End of variables declaration//GEN-END:variables

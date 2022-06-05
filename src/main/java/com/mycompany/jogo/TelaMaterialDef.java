@@ -15,6 +15,7 @@ public class TelaMaterialDef extends javax.swing.JFrame {
      */
     public TelaMaterialDef() {
         initComponents();
+        setResizable(false);
     }
 
     /**

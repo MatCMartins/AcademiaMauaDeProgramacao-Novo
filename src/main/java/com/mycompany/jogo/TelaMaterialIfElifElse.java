@@ -15,6 +15,7 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
      */
     public TelaMaterialIfElifElse() {
         initComponents();
+        setResizable(false);
     }
 
     /**

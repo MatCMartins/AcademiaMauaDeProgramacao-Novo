@@ -15,6 +15,7 @@ public class TelaConfig extends javax.swing.JFrame {
      */
     public TelaConfig() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -29,7 +30,7 @@ public class TelaConfig extends javax.swing.JFrame {
         painelTelaConfig = new javax.swing.JPanel();
         editarUsuario = new javax.swing.JButton();
         removerUsuario = new javax.swing.JButton();
-        voltarLabel = new javax.swing.JLabel();
+        botaoVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1128, 720));
@@ -47,31 +48,42 @@ public class TelaConfig extends javax.swing.JFrame {
         removerUsuario.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         removerUsuario.setText("Remover Usuário");
 
+        botaoVoltar.setBackground(new java.awt.Color(0, 0, 45));
+        botaoVoltar.setForeground(new java.awt.Color(0, 0, 45));
+        botaoVoltar.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\bVoltar.png")); // NOI18N
+        botaoVoltar.setText("jButton1");
+        botaoVoltar.setBorder(null);
+        botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelTelaConfigLayout = new javax.swing.GroupLayout(painelTelaConfig);
         painelTelaConfig.setLayout(painelTelaConfigLayout);
         painelTelaConfigLayout.setHorizontalGroup(
             painelTelaConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaConfigLayout.createSequentialGroup()
-                .addContainerGap(445, Short.MAX_VALUE)
+                .addContainerGap(448, Short.MAX_VALUE)
                 .addGroup(painelTelaConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(removerUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(433, 433, 433))
+                .addGap(430, 430, 430))
             .addGroup(painelTelaConfigLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(voltarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelTelaConfigLayout.setVerticalGroup(
             painelTelaConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTelaConfigLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(voltarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(171, 171, 171)
+                .addGap(25, 25, 25)
+                .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(157, 157, 157)
                 .addComponent(editarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(156, 156, 156)
                 .addComponent(removerUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -89,9 +101,14 @@ public class TelaConfig extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void editarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarUsuarioActionPerformed
+        new TEditarUsuario().setVisible(true);
         this.dispose();
-        TEditarUsuario tEditarUsuario = new TEditarUsuario();
     }//GEN-LAST:event_editarUsuarioActionPerformed
+
+    private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
+        new TelaInicial().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoVoltarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -126,9 +143,9 @@ public class TelaConfig extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoVoltar;
     private javax.swing.JButton editarUsuario;
     private javax.swing.JPanel painelTelaConfig;
     private javax.swing.JButton removerUsuario;
-    private javax.swing.JLabel voltarLabel;
     // End of variables declaration//GEN-END:variables
 }

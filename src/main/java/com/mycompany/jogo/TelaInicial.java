@@ -144,7 +144,8 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_configButtonActionPerformed
 
     private void regraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regraButtonActionPerformed
-        // TODO add your handling code here:
+        new TelaDeRegras().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_regraButtonActionPerformed
 
     private void materialButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_materialButtonActionPerformed
