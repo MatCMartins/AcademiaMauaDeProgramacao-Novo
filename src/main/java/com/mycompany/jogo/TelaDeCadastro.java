@@ -15,6 +15,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
      */
     public TelaDeCadastro() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -26,221 +27,210 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        painelTelaDeCadastro = new javax.swing.JPanel();
+        textoSenha = new javax.swing.JPasswordField();
+        textoNome = new javax.swing.JTextField();
+        textoEmail = new javax.swing.JTextField();
+        textoIdade = new javax.swing.JTextField();
+        textoTelefone = new javax.swing.JTextField();
+        textoUsuario = new javax.swing.JTextField();
+        fotoNome = new javax.swing.JLabel();
+        fotoEmail = new javax.swing.JLabel();
+        fotoIdade = new javax.swing.JLabel();
+        fotoCelular = new javax.swing.JLabel();
+        fotoUsuario = new javax.swing.JLabel();
+        fotoSenha = new javax.swing.JLabel();
+        botaoEntrar = new javax.swing.JButton();
+        descricaoNome = new javax.swing.JLabel();
+        descricaoTelefone = new javax.swing.JLabel();
+        descricaoUsuario = new javax.swing.JLabel();
+        descricaoSenha = new javax.swing.JLabel();
+        tituloPaginaCadastro = new javax.swing.JLabel();
+        tituloCadastro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 45));
+        painelTelaDeCadastro.setBackground(new java.awt.Color(0, 0, 45));
 
-        jPasswordField1.setBackground(new java.awt.Color(0, 0, 45));
-        jPasswordField1.setForeground(new java.awt.Color(187, 187, 187));
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        textoSenha.setBackground(new java.awt.Color(0, 0, 45));
+        textoSenha.setForeground(new java.awt.Color(187, 187, 187));
+        textoSenha.setText("jPasswordField1");
+        textoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                textoSenhaActionPerformed(evt);
             }
         });
 
-        jTextField1.setBackground(new java.awt.Color(0, 0, 45));
-        jTextField1.setForeground(new java.awt.Color(187, 187, 187));
-        jTextField1.setText("name");
+        textoNome.setBackground(new java.awt.Color(0, 0, 45));
+        textoNome.setForeground(new java.awt.Color(187, 187, 187));
+        textoNome.setText("name");
 
-        jTextField2.setBackground(new java.awt.Color(0, 0, 45));
-        jTextField2.setForeground(new java.awt.Color(187, 187, 187));
-        jTextField2.setText("email");
+        textoEmail.setBackground(new java.awt.Color(0, 0, 45));
+        textoEmail.setForeground(new java.awt.Color(187, 187, 187));
+        textoEmail.setText("email");
 
-        jTextField3.setBackground(new java.awt.Color(0, 0, 45));
-        jTextField3.setForeground(new java.awt.Color(187, 187, 187));
-        jTextField3.setText("age");
+        textoIdade.setBackground(new java.awt.Color(0, 0, 45));
+        textoIdade.setForeground(new java.awt.Color(187, 187, 187));
+        textoIdade.setText("age");
 
-        jTextField4.setBackground(new java.awt.Color(0, 0, 45));
-        jTextField4.setForeground(new java.awt.Color(187, 187, 187));
-        jTextField4.setText("phone");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        textoTelefone.setBackground(new java.awt.Color(0, 0, 45));
+        textoTelefone.setForeground(new java.awt.Color(187, 187, 187));
+        textoTelefone.setText("phone");
+        textoTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                textoTelefoneActionPerformed(evt);
             }
         });
 
-        jTextField5.setEditable(false);
-        jTextField5.setBackground(new java.awt.Color(0, 0, 45));
-        jTextField5.setForeground(new java.awt.Color(187, 187, 187));
-        jTextField5.setText("username");
+        textoUsuario.setEditable(false);
+        textoUsuario.setBackground(new java.awt.Color(0, 0, 45));
+        textoUsuario.setForeground(new java.awt.Color(187, 187, 187));
+        textoUsuario.setText("username");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/name.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        fotoNome.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\name.png")); // NOI18N
+        fotoNome.setText("jLabel1");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/email.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        fotoEmail.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\email.png")); // NOI18N
+        fotoEmail.setText("jLabel2");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/age.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
+        fotoIdade.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\age.png")); // NOI18N
+        fotoIdade.setText("jLabel3");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/phone.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
+        fotoCelular.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\phone.png")); // NOI18N
+        fotoCelular.setText("jLabel4");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/Usuario.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
+        fotoUsuario.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Usuario.png")); // NOI18N
+        fotoUsuario.setText("jLabel5");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/Cadeado.png"))); // NOI18N
-        jLabel6.setText("jLabel6");
+        fotoSenha.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Cadeado.png")); // NOI18N
+        fotoSenha.setText("jLabel6");
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 45));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(187, 187, 187));
-        jButton1.setText("Sign Up");
-        jButton1.setToolTipText("");
+        botaoEntrar.setBackground(new java.awt.Color(0, 0, 45));
+        botaoEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botaoEntrar.setForeground(new java.awt.Color(187, 187, 187));
+        botaoEntrar.setText("Sign Up");
+        botaoEntrar.setToolTipText("");
 
-        jLabel8.setBackground(new java.awt.Color(0, 0, 45));
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(187, 187, 187));
-        jLabel8.setText("Nome Completo");
+        descricaoNome.setBackground(new java.awt.Color(0, 0, 45));
+        descricaoNome.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        descricaoNome.setForeground(new java.awt.Color(187, 187, 187));
+        descricaoNome.setText("Nome Completo");
 
-        jLabel9.setBackground(new java.awt.Color(0, 0, 45));
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(187, 187, 187));
-        jLabel9.setText("DDD + 9 digitos");
+        descricaoTelefone.setBackground(new java.awt.Color(0, 0, 45));
+        descricaoTelefone.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        descricaoTelefone.setForeground(new java.awt.Color(187, 187, 187));
+        descricaoTelefone.setText("DDD + 9 digitos");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(187, 187, 187));
-        jLabel10.setText("Min - 4 Caracteres");
+        descricaoUsuario.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        descricaoUsuario.setForeground(new java.awt.Color(187, 187, 187));
+        descricaoUsuario.setText("Min - 4 Caracteres");
 
-        jLabel11.setText("jLabel11");
+        descricaoSenha.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
+        descricaoSenha.setForeground(new java.awt.Color(187, 187, 187));
+        descricaoSenha.setText("Min - 4 , Max - 20,1 Letra Maiuscula, 1 Número, 1 Caracter Especial");
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(187, 187, 187));
-        jLabel12.setText("Min - 4 , Max - 20,1 Letra Maiuscula, 1 Número, 1 Caracter Especial");
+        tituloPaginaCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        tituloPaginaCadastro.setForeground(new java.awt.Color(187, 187, 187));
+        tituloPaginaCadastro.setText("ACADEMIA MAUÁ DE PROGRAMAÇÃO");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(187, 187, 187));
-        jLabel7.setText("ACADEMIA MAUÁ DE PROGRAMAÇÃO");
+        tituloCadastro.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tituloCadastro.setForeground(new java.awt.Color(187, 187, 187));
+        tituloCadastro.setText("Cadastro");
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(187, 187, 187));
-        jLabel13.setText("Cadastro");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout painelTelaDeCadastroLayout = new javax.swing.GroupLayout(painelTelaDeCadastro);
+        painelTelaDeCadastro.setLayout(painelTelaDeCadastroLayout);
+        painelTelaDeCadastroLayout.setHorizontalGroup(
+            painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTelaDeCadastroLayout.createSequentialGroup()
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelTelaDeCadastroLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(jLabel7))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(tituloPaginaCadastro))
+                    .addGroup(painelTelaDeCadastroLayout.createSequentialGroup()
                         .addGap(152, 152, 152)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botaoEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(descricaoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(16, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaDeCadastroLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaDeCadastroLayout.createSequentialGroup()
+                        .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaDeCadastroLayout.createSequentialGroup()
+                                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(fotoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fotoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(descricaoUsuario)
+                                    .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaDeCadastroLayout.createSequentialGroup()
+                                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(painelTelaDeCadastroLayout.createSequentialGroup()
+                                        .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(fotoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fotoIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fotoCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(10, 10, 10))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(painelTelaDeCadastroLayout.createSequentialGroup()
+                                        .addComponent(fotoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jTextField2)
-                                        .addComponent(jTextField1)
-                                        .addComponent(jTextField3)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE))
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(154, 154, 154)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel13)
+                                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(descricaoTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(textoEmail)
+                                        .addComponent(textoNome)
+                                        .addComponent(textoIdade)
+                                        .addComponent(textoTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE))
+                                    .addComponent(descricaoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(224, 224, 224))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaDeCadastroLayout.createSequentialGroup()
+                        .addComponent(tituloCadastro)
                         .addGap(295, 295, 295))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        painelTelaDeCadastroLayout.setVerticalGroup(
+            painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTelaDeCadastroLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jLabel7)
+                .addComponent(tituloPaginaCadastro)
                 .addGap(43, 43, 43)
-                .addComponent(jLabel13)
+                .addComponent(tituloCadastro)
                 .addGap(51, 51, 51)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fotoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
-                .addComponent(jLabel8)
+                .addComponent(descricaoNome)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fotoEmail))
                 .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel9)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11)
-                        .addGap(27, 27, 27)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fotoIdade))
+                .addGap(35, 35, 35)
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fotoCelular))
+                .addGap(1, 1, 1)
+                .addComponent(descricaoTelefone)
+                .addGap(18, 18, 18)
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fotoUsuario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
+                .addComponent(descricaoUsuario)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fotoSenha))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(descricaoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(botaoEntrar)
                 .addGap(16, 16, 16))
         );
 
@@ -248,25 +238,25 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelTelaDeCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelTelaDeCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel1.getAccessibleContext().setAccessibleName("");
+        painelTelaDeCadastro.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void textoTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoTelefoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_textoTelefoneActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void textoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_textoSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,26 +294,25 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JButton botaoEntrar;
+    private javax.swing.JLabel descricaoNome;
+    private javax.swing.JLabel descricaoSenha;
+    private javax.swing.JLabel descricaoTelefone;
+    private javax.swing.JLabel descricaoUsuario;
+    private javax.swing.JLabel fotoCelular;
+    private javax.swing.JLabel fotoEmail;
+    private javax.swing.JLabel fotoIdade;
+    private javax.swing.JLabel fotoNome;
+    private javax.swing.JLabel fotoSenha;
+    private javax.swing.JLabel fotoUsuario;
+    private javax.swing.JPanel painelTelaDeCadastro;
+    private javax.swing.JTextField textoEmail;
+    private javax.swing.JTextField textoIdade;
+    private javax.swing.JTextField textoNome;
+    private javax.swing.JPasswordField textoSenha;
+    private javax.swing.JTextField textoTelefone;
+    private javax.swing.JTextField textoUsuario;
+    private javax.swing.JLabel tituloCadastro;
+    private javax.swing.JLabel tituloPaginaCadastro;
     // End of variables declaration//GEN-END:variables
 }

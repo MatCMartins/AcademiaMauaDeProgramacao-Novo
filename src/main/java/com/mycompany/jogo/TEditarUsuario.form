@@ -52,62 +52,58 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="265" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="iconUsuario" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="iconTelefone" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="iconIdade" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="iconEmail" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="iconNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="textNome" min="-2" pref="462" max="-2" attributes="0"/>
-                                      <Component id="textTelefone" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
-                                      <Component id="textIdade" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
-                                      <Component id="textEmail" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
-                                      <Component id="nomeLabel" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <Component id="emailLabel" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Component id="idadeLabel" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Component id="telefoneLabel" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textUsuario" min="-2" pref="462" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="nomeUsuarioLabel" min="-2" pref="85" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="377" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="nomeUsuarioLabel" min="-2" pref="85" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="377" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bEditar" min="-2" pref="165" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="bCancelar" min="-2" pref="165" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="iconNome" alignment="0" max="32767" attributes="0"/>
+                              <Component id="iconEmail" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="iconIdade" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="iconTelefone" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="iconUsuario" alignment="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bEditar" min="-2" pref="165" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="bCancelar" min="-2" pref="165" max="-2" attributes="0"/>
+                          <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textNome" min="-2" pref="462" max="-2" attributes="0"/>
+                              <Component id="textTelefone" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
+                              <Component id="textIdade" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
+                              <Component id="textEmail" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
+                              <Component id="nomeLabel" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="emailLabel" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="idadeLabel" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="telefoneLabel" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                              <Component id="textUsuario" alignment="0" min="-2" pref="462" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="266" max="32767" attributes="0"/>
+                  <EmptySpace pref="311" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="38" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iconNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="textNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="textNome" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="iconNome" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="nomeLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="iconEmail" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="textEmail" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -116,21 +112,21 @@
                   <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iconIdade" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="iconIdade" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="textIdade" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="idadeLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iconTelefone" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="iconTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="textTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="telefoneLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iconUsuario" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="iconUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="textUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -168,7 +164,7 @@
         <Component class="javax.swing.JLabel" name="iconNome">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/mycompany/jogo/name.png"/>
+              <Image iconType="2" name="D:\Documentos\Mau&#xe1;\Primeiro Semestre\Projeto Integrador Interdisciplinar\Codigos\src\main\java\com\mycompany\jogo\name.png"/>
             </Property>
           </Properties>
         </Component>
@@ -181,6 +177,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconEmail">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="D:\Documentos\Mau&#xe1;\Primeiro Semestre\Projeto Integrador Interdisciplinar\Codigos\src\main\java\com\mycompany\jogo\email.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
         </Component>
@@ -193,6 +192,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconIdade">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="D:\Documentos\Mau&#xe1;\Primeiro Semestre\Projeto Integrador Interdisciplinar\Codigos\src\main\java\com\mycompany\jogo\age.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
         </Component>
@@ -205,6 +207,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconTelefone">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="D:\Documentos\Mau&#xe1;\Primeiro Semestre\Projeto Integrador Interdisciplinar\Codigos\src\main\java\com\mycompany\jogo\phone.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel4"/>
           </Properties>
         </Component>
@@ -217,6 +222,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="iconUsuario">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="D:\Documentos\Mau&#xe1;\Primeiro Semestre\Projeto Integrador Interdisciplinar\Codigos\src\main\java\com\mycompany\jogo\Usuario.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>
         </Component>

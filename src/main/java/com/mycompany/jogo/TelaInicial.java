@@ -15,6 +15,7 @@ public class TelaInicial extends javax.swing.JFrame {
      */
     public TelaInicial() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -62,6 +63,11 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jogarButton.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jogarButton.setText("Jogar");
+        jogarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jogarButtonActionPerformed(evt);
+            }
+        });
 
         logoMauaLabel.setLabelFor(logoMauaLabel);
 
@@ -80,14 +86,14 @@ public class TelaInicial extends javax.swing.JFrame {
             .addGroup(painelTelaInicialLayout.createSequentialGroup()
                 .addGap(229, 229, 229)
                 .addComponent(nomeJogoLabel)
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaInicialLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(painelTelaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(materialButton)
-                    .addComponent(jogarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(regraButton, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(configButton, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(painelTelaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jogarButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                    .addComponent(regraButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                    .addComponent(configButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                    .addComponent(materialButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(502, 502, 502))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaInicialLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -99,7 +105,7 @@ public class TelaInicial extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaInicialLayout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addComponent(nomeJogoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 234, Short.MAX_VALUE)
                 .addComponent(jogarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(materialButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,7 +139,8 @@ public class TelaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void configButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configButtonActionPerformed
-        // TODO add your handling code here:
+        new TelaConfig().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_configButtonActionPerformed
 
     private void regraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regraButtonActionPerformed
@@ -141,8 +148,14 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_regraButtonActionPerformed
 
     private void materialButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_materialButtonActionPerformed
-        // TODO add your handling code here:
+        new TelaMaterialDeApoio().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_materialButtonActionPerformed
+
+    private void jogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarButtonActionPerformed
+        new TelaDeFases2().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jogarButtonActionPerformed
 
     /**
      * @param args the command line arguments

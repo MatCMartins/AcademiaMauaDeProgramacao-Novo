@@ -148,15 +148,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="textoCadastro" min="-2" pref="33" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="separador1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="fotoUsuario" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="senhaTexto" min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="fotoCadeado" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="fotoCadeado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="senhaTexto" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="separador2" min="-2" pref="10" max="-2" attributes="0"/>
@@ -241,6 +241,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sign Up"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarUsuarioActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="resetUsuario">
               <Properties>
@@ -259,7 +262,7 @@
             <Component class="javax.swing.JLabel" name="fotoCadeado">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/mycompany/jogo/Cadeado.png"/>
+                  <Image iconType="2" name="D:\Documentos\Mau&#xe1;\Primeiro Semestre\Projeto Integrador Interdisciplinar\Codigos\src\main\java\com\mycompany\jogo\Cadeado.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel2"/>
               </Properties>
@@ -267,7 +270,7 @@
             <Component class="javax.swing.JLabel" name="fotoUsuario">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/mycompany/jogo/Usuario.png"/>
+                  <Image iconType="2" name="D:\Documentos\Mau&#xe1;\Primeiro Semestre\Projeto Integrador Interdisciplinar\Codigos\src\main\java\com\mycompany\jogo\Usuario.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel3"/>
               </Properties>

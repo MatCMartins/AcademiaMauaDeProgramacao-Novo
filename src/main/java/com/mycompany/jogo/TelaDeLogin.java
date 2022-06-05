@@ -23,6 +23,7 @@ public class TelaDeLogin extends javax.swing.JFrame {
      */
     public TelaDeLogin() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -98,16 +99,21 @@ public class TelaDeLogin extends javax.swing.JFrame {
         cadastrarUsuario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         cadastrarUsuario.setForeground(new java.awt.Color(187, 187, 187));
         cadastrarUsuario.setText("Sign Up");
+        cadastrarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarUsuarioActionPerformed(evt);
+            }
+        });
 
         resetUsuario.setBackground(new java.awt.Color(0, 0, 45));
         resetUsuario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         resetUsuario.setForeground(new java.awt.Color(187, 187, 187));
         resetUsuario.setText("Reset");
 
-        fotoCadeado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/Cadeado.png"))); // NOI18N
+        fotoCadeado.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Cadeado.png")); // NOI18N
         fotoCadeado.setText("jLabel2");
 
-        fotoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/jogo/Usuario.png"))); // NOI18N
+        fotoUsuario.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Usuario.png")); // NOI18N
         fotoUsuario.setText("jLabel3");
 
         jLabel2.setFont(new java.awt.Font("Dubai", 1, 30)); // NOI18N
@@ -152,13 +158,13 @@ public class TelaDeLogin extends javax.swing.JFrame {
                 .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLayout.createSequentialGroup()
                         .addComponent(textoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(fotoUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(senhaTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fotoCadeado))
+                .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fotoCadeado)
+                    .addComponent(senhaTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separador2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
@@ -207,6 +213,11 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private void textoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoCadastroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textoCadastroActionPerformed
+
+    private void cadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarUsuarioActionPerformed
+        new TelaDeCadastro().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cadastrarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

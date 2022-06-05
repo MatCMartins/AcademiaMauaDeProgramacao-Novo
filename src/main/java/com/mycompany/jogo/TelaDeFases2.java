@@ -15,6 +15,7 @@ public class TelaDeFases2 extends javax.swing.JFrame {
      */
     public TelaDeFases2() {
         initComponents();
+        setResizable(false);
     }
 
     /**
