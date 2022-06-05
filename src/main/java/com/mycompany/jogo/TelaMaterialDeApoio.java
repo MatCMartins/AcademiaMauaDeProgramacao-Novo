@@ -27,12 +27,12 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
     private void initComponents() {
 
         painelMaterialDeApoio = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        botaoMaterialInput = new javax.swing.JButton();
+        botaoMaterialIfElifElse = new javax.swing.JButton();
+        botaoMaterialDef = new javax.swing.JButton();
+        botaoMaterialWhile = new javax.swing.JButton();
+        botaoMaterialFor = new javax.swing.JButton();
+        botaoMaterialList = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,45 +40,65 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         painelMaterialDeApoio.setBackground(new java.awt.Color(0, 0, 45));
         painelMaterialDeApoio.setPreferredSize(new java.awt.Dimension(1128, 780));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 45));
-        jButton1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(187, 187, 187));
-        jButton1.setText("Input");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botaoMaterialInput.setBackground(new java.awt.Color(0, 0, 45));
+        botaoMaterialInput.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        botaoMaterialInput.setForeground(new java.awt.Color(187, 187, 187));
+        botaoMaterialInput.setText("Input");
+        botaoMaterialInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botaoMaterialInputActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 45));
-        jButton2.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(187, 187, 187));
-        jButton2.setText("If Elif Else");
-
-        jButton3.setBackground(new java.awt.Color(0, 0, 45));
-        jButton3.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(187, 187, 187));
-        jButton3.setText("Def");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        botaoMaterialIfElifElse.setBackground(new java.awt.Color(0, 0, 45));
+        botaoMaterialIfElifElse.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        botaoMaterialIfElifElse.setForeground(new java.awt.Color(187, 187, 187));
+        botaoMaterialIfElifElse.setText("If Elif Else");
+        botaoMaterialIfElifElse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                botaoMaterialIfElifElseActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 45));
-        jButton4.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(187, 187, 187));
-        jButton4.setText("While");
+        botaoMaterialDef.setBackground(new java.awt.Color(0, 0, 45));
+        botaoMaterialDef.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        botaoMaterialDef.setForeground(new java.awt.Color(187, 187, 187));
+        botaoMaterialDef.setText("Def");
+        botaoMaterialDef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMaterialDefActionPerformed(evt);
+            }
+        });
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 45));
-        jButton5.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(187, 187, 187));
-        jButton5.setText("For");
+        botaoMaterialWhile.setBackground(new java.awt.Color(0, 0, 45));
+        botaoMaterialWhile.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        botaoMaterialWhile.setForeground(new java.awt.Color(187, 187, 187));
+        botaoMaterialWhile.setText("While");
+        botaoMaterialWhile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMaterialWhileActionPerformed(evt);
+            }
+        });
 
-        jButton6.setBackground(new java.awt.Color(0, 0, 45));
-        jButton6.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(187, 187, 187));
-        jButton6.setText("List");
+        botaoMaterialFor.setBackground(new java.awt.Color(0, 0, 45));
+        botaoMaterialFor.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        botaoMaterialFor.setForeground(new java.awt.Color(187, 187, 187));
+        botaoMaterialFor.setText("For");
+        botaoMaterialFor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMaterialForActionPerformed(evt);
+            }
+        });
+
+        botaoMaterialList.setBackground(new java.awt.Color(0, 0, 45));
+        botaoMaterialList.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        botaoMaterialList.setForeground(new java.awt.Color(187, 187, 187));
+        botaoMaterialList.setText("List");
+        botaoMaterialList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMaterialListActionPerformed(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 45));
         jLabel1.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
@@ -92,17 +112,17 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
             .addGroup(painelMaterialDeApoioLayout.createSequentialGroup()
                 .addGap(200, 200, 200)
                 .addGroup(painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
+                    .addComponent(botaoMaterialFor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botaoMaterialDef, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botaoMaterialInput, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botaoMaterialIfElifElse, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                    .addComponent(botaoMaterialWhile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botaoMaterialList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(200, 200, 200))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialDeApoioLayout.createSequentialGroup()
-                .addContainerGap(425, Short.MAX_VALUE)
+                .addContainerGap(427, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(427, 427, 427))
         );
@@ -113,16 +133,16 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(59, 59, 59)
                 .addGroup(painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botaoMaterialInput, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoMaterialIfElifElse, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(88, 88, 88)
                 .addGroup(painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE))
+                    .addComponent(botaoMaterialWhile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botaoMaterialDef, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE))
                 .addGap(88, 88, 88)
                 .addGroup(painelMaterialDeApoioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botaoMaterialList, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                    .addComponent(botaoMaterialFor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(177, Short.MAX_VALUE))
         );
 
@@ -145,13 +165,35 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void botaoMaterialInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMaterialInputActionPerformed
+        new TelaMaterialInput().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoMaterialInputActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void botaoMaterialDefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMaterialDefActionPerformed
+        new TelaMaterialDef().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoMaterialDefActionPerformed
+
+    private void botaoMaterialIfElifElseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMaterialIfElifElseActionPerformed
+        new TelaMaterialIfElifElse().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoMaterialIfElifElseActionPerformed
+
+    private void botaoMaterialWhileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMaterialWhileActionPerformed
+        new TelaMaterialWhile().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoMaterialWhileActionPerformed
+
+    private void botaoMaterialForActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMaterialForActionPerformed
+        new TelaMaterialFor().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoMaterialForActionPerformed
+
+    private void botaoMaterialListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMaterialListActionPerformed
+        new TelaMaterialList().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoMaterialListActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,12 +231,12 @@ public class TelaMaterialDeApoio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton botaoMaterialDef;
+    private javax.swing.JButton botaoMaterialFor;
+    private javax.swing.JButton botaoMaterialIfElifElse;
+    private javax.swing.JButton botaoMaterialInput;
+    private javax.swing.JButton botaoMaterialList;
+    private javax.swing.JButton botaoMaterialWhile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel painelMaterialDeApoio;
     // End of variables declaration//GEN-END:variables

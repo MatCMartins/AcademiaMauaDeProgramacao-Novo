@@ -73,10 +73,20 @@ public class TelaDeFases2 extends javax.swing.JFrame {
         faseDeFuncoes.setBackground(new java.awt.Color(0, 0, 45));
         faseDeFuncoes.setForeground(new java.awt.Color(187, 187, 187));
         faseDeFuncoes.setText("Def");
+        faseDeFuncoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                faseDeFuncoesActionPerformed(evt);
+            }
+        });
 
         faseWhile.setBackground(new java.awt.Color(0, 0, 45));
         faseWhile.setForeground(new java.awt.Color(187, 187, 187));
         faseWhile.setText("While");
+        faseWhile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                faseWhileActionPerformed(evt);
+            }
+        });
 
         faseFor.setBackground(new java.awt.Color(0, 0, 45));
         faseFor.setForeground(new java.awt.Color(187, 187, 187));
@@ -90,6 +100,11 @@ public class TelaDeFases2 extends javax.swing.JFrame {
         faseListas.setBackground(new java.awt.Color(0, 0, 45));
         faseListas.setForeground(new java.awt.Color(187, 187, 187));
         faseListas.setText("List");
+        faseListas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                faseListasActionPerformed(evt);
+            }
+        });
 
         explicacaoPrimeiraFase.setBackground(new java.awt.Color(0, 0, 45));
         explicacaoPrimeiraFase.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -240,15 +255,18 @@ public class TelaDeFases2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void faseInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faseInicialActionPerformed
-        // TODO add your handling code here:
+        new TelaMaterialInput().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_faseInicialActionPerformed
 
     private void faseEstruturasCondicionaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faseEstruturasCondicionaisActionPerformed
-        // TODO add your handling code here:
+        new TelaMaterialIfElifElse().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_faseEstruturasCondicionaisActionPerformed
 
     private void faseForActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faseForActionPerformed
-        // TODO add your handling code here:
+        new TelaMaterialFor().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_faseForActionPerformed
 
     private void explicacaoPrimeiraFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_explicacaoPrimeiraFaseActionPerformed
@@ -266,6 +284,21 @@ public class TelaDeFases2 extends javax.swing.JFrame {
     private void explicacaoQuintaFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_explicacaoQuintaFaseActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_explicacaoQuintaFaseActionPerformed
+
+    private void faseDeFuncoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faseDeFuncoesActionPerformed
+        new TelaMaterialDef().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_faseDeFuncoesActionPerformed
+
+    private void faseWhileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faseWhileActionPerformed
+        new TelaMaterialWhile().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_faseWhileActionPerformed
+
+    private void faseListasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faseListasActionPerformed
+        new TelaMaterialList().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_faseListasActionPerformed
 
     /**
      * @param args the command line arguments

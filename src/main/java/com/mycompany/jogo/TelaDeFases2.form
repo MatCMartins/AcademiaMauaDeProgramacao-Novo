@@ -199,6 +199,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Def"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="faseDeFuncoesActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="faseWhile">
           <Properties>
@@ -210,6 +213,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="While"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="faseWhileActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="faseFor">
           <Properties>
@@ -235,6 +241,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="List"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="faseListasActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="explicacaoPrimeiraFase">
           <Properties>
