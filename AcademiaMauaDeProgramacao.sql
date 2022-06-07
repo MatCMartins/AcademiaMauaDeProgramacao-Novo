@@ -16,7 +16,7 @@ CREATE TABLE Ranking(
   PRIMARY KEY (`posicao`));
 
 
-DESCRIBE Ranking;
+#DESCRIBE Ranking;
 
 CREATE TABLE Jogador(
   `nome` VARCHAR(30) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE Jogador(
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
-DESCRIBE Jogador;
+#DESCRIBE Jogador;
 -- -----------------------------------------------------
 -- Table `Material de Apoio`
 -- -----------------------------------------------------
@@ -50,7 +50,7 @@ CREATE TABLE MaterialDeApoio (
   PRIMARY KEY(nomeMaterial));
 
 
-DESCRIBE MaterialDeApoio;
+#DESCRIBE MaterialDeApoio;
 
 -- -----------------------------------------------------
 -- Table `Premio`
@@ -62,7 +62,7 @@ CREATE TABLE Premio (
   PRIMARY KEY (`nomePremio`),
   UNIQUE INDEX `nomePremio_UNIQUE` (`nomePremio` ASC));
 
-describe Premio;
+#describe Premio;
 
 -- -----------------------------------------------------
 -- Table `Fase`
@@ -76,22 +76,22 @@ CREATE TABLE Fase(
   UNIQUE INDEX `escopoFase_UNIQUE` (`escopoFase` ASC) ,
   UNIQUE INDEX `numeroFase_UNIQUE` (`numeroFase` ASC));
 
-DESCRIBE Fase;
+#DESCRIBE Fase;
 -- -----------------------------------------------------
 -- Table `Pergunta`
 -- -----------------------------------------------------
 
 CREATE TABLE Pergunta(
   `numeroQuestao` INT NOT NULL,
-  `alternativaCorreta` VARCHAR(64) NOT NULL,
-  `alternativa1` VARCHAR(64) NOT NULL,
-  `alternativa2` VARCHAR(64) NOT NULL,
-  `alternativa3` VARCHAR(64) NOT NULL,
-  `alternativa4` VARCHAR(64) NOT NULL,
-   `questao` VARCHAR(64) NOT NULL,
+  `alternativaCorreta` LONGTEXT NOT NULL,
+  `alternativa1` LONGTEXT NOT NULL,
+  `alternativa2` LONGTEXT NOT NULL,
+  `alternativa3` LONGTEXT NOT NULL,
+  `alternativa4` LONGTEXT NOT NULL,
+   `questao` LONGTEXT NOT NULL,
   PRIMARY KEY (`numeroQuestao`));
 
-DESCRIBE Pergunta;
+#DESCRIBE Pergunta;
 -- -----------------------------------------------------
 -- Table `Jogador_has_Material de Apoio`
 -- -----------------------------------------------------
@@ -113,7 +113,7 @@ CREATE TABLE Jogador_has_MaterialDeApoio (
     ON DELETE RESTRICT
     ON UPDATE RESTRICT);
 
-DESCRIBE Jogador_has_MaterialDeApoio;
+#DESCRIBE Jogador_has_MaterialDeApoio;
 
 -- -----------------------------------------------------
 -- Table `Jogador_has_Fase`
@@ -137,7 +137,7 @@ CREATE TABLE Jogador_has_Fase  (
     ON DELETE RESTRICT
     ON UPDATE RESTRICT);
 
-DESCRIBE Jogador_has_Fase;
+#DESCRIBE Jogador_has_Fase;
 
 -- -----------------------------------------------------
 -- Table `Fase_has_Pergunta`
@@ -160,7 +160,7 @@ CREATE TABLE Fase_has_Pergunta (
     ON DELETE RESTRICT
     ON UPDATE RESTRICT);
 
-describe Fase_has_Pergunta;
+#describe Fase_has_Pergunta;
 
 -- -----------------------------------------------------
 -- Table `Jogador_has_Premio`
@@ -184,8 +184,8 @@ CREATE TABLE Jogador_has_Premio (
     ON DELETE RESTRICT
     ON UPDATE RESTRICT);
 
-DESCRIBE Jogador_has_Premio;
+#DESCRIBE Jogador_has_Premio;
 
 SELECT * FROM Pergunta;
 
-DROP DATABASE AcademiaMauaDeProgramacao;
+#DROP DATABASE AcademiaMauaDeProgramacao;

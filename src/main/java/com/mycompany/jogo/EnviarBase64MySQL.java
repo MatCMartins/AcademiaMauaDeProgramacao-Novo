@@ -9,110 +9,70 @@ package com.mycompany.jogo;
  * @author mateu
  */
 
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
 import java.sql.*;
 
 public class EnviarBase64MySQL {
    
-   private int numeroQuestao; 
-   private String item1Questao1Fase1;
-   private String item2Questao1Fase1;
-   private String item3Questao1Fase1;
-   private String item4Questao1Fase1;
-   private String pergunta1Questao1Fase1;
-
-    public EnviarBase64MySQL(int numeroQuestao, String item1Questao1Fase1, String item2Questao1Fase1, String item3Questao1Fase1, String item4Questao1Fase1, String pergunta1Questao1Fase1) {
-        this.numeroQuestao = numeroQuestao;
-        this.item1Questao1Fase1 = item1Questao1Fase1;
-        this.item2Questao1Fase1 = item2Questao1Fase1;
-        this.item3Questao1Fase1 = item3Questao1Fase1;
-        this.item4Questao1Fase1 = item4Questao1Fase1;
-        this.pergunta1Questao1Fase1 = pergunta1Questao1Fase1;
-    }
-   
-   public void cadastrar(){
-       
-       try{
-       String host = "localhost";
-       String port = "3306";
-       String bd = "AcademiaMauaDeProgramacao";
-       Connection conexao = DriverManager.getConnection(
-           String.format("jdbc:mysql://%s%s/%s?useTimezone=true&serverTimezone=UTC",
-            host,
-            port,
-            bd
-       ),
-       "root",
-       "LU1yo8Dqc**4^YVr7cFCkzR#TN!3Kexp"
-       );
-       
-       String sql = "INSERT INTO Pergunta(numeroQuestao,alternativaCorreta,alternativa1,alternativa2,alternativa3,alternativa4,questao) VALUES(?,?,?,?,?,?,?)";
-       PreparedStatement ps = conexao.prepareStatement(sql);
-       ps.setInt(1,numeroQuestao);
-       ps.setString(2,item1Questao1Fase1);
-       ps.setString(3,item1Questao1Fase1);
-       ps.setString(4, item2Questao1Fase1);
-       ps.setString(5,item3Questao1Fase1);
-       ps.setString(6,item4Questao1Fase1);
-       ps.setString(7,pergunta1Questao1Fase1);
-       
-       ps.executeUpdate();
-       ps.close();
-       conexao.close();
-      
-       }        
-       catch(Exception e){
-           System.out.printf("Exceção: %s", e.getMessage());
-       }
-   } 
-
-    public int getNumeroQuestao() {
-        return numeroQuestao;
-    }
-
-    public void setNumeroQuestao(int numeroQuestao) {
-        this.numeroQuestao = numeroQuestao;
-    }
-
-    public String getItem1Questao1Fase1() {
-        return item1Questao1Fase1;
-    }
-
-    public void setItem1Questao1Fase1(String item1Questao1Fase1) {
-        this.item1Questao1Fase1 = item1Questao1Fase1;
-    }
-
-    public String getItem2Questao1Fase1() {
-        return item2Questao1Fase1;
-    }
-
-    public void setItem2Questao1Fase1(String item2Questao1Fase1) {
-        this.item2Questao1Fase1 = item2Questao1Fase1;
-    }
-
-    public String getItem3Questao1Fase1() {
-        return item3Questao1Fase1;
-    }
-
-    public void setItem3Questao1Fase1(String item3Questao1Fase1) {
-        this.item3Questao1Fase1 = item3Questao1Fase1;
-    }
-
-    public String getItem4Questao1Fase1() {
-        return item4Questao1Fase1;
-    }
-
-    public void setItem4Questao1Fase1(String item4Questao1Fase1) {
-        this.item4Questao1Fase1 = item4Questao1Fase1;
-    }
-
-    public String getPergunta1Questao1Fase1() {
-        return pergunta1Questao1Fase1;
-    }
-
-    public void setPergunta1Questao1Fase1(String pergunta1Questao1Fase1) {
-        this.pergunta1Questao1Fase1 = pergunta1Questao1Fase1;
-    }
+    private static String perguntaQuestao1Fase1Caminho = "D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\PerguntaQuestao1Fase1.png";
+    private static String item1Questao1Fase1Caminho = "D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Item1Questao1Fase1.png";
+    private static String item2Questao1Fase1Caminho = "D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Item2Questao1Fase1.png";
+    private static String item3Questao1Fase1Caminho = "D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Item3Questao1Fase1.png";
+    private static String item4Questao1Fase1Caminho = "D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Item4Questao1Fase1.png";
+    private static int numeroQuestao1Fase1 = 1;
     
+    public void cadastrar(QuestoesJogo q) throws Exception{
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+
+        String sql = "INSERT INTO Pergunta(numeroQuestao,alternativaCorreta,alternativa1,alternativa2,alternativa3,alternativa4,questao) VALUES(?,?,?,?,?,?,?)";
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ps.setInt(1,q.getNumeroQuestao());
+        ps.setString(2,q.getItem1Questao());
+        ps.setString(3,q.getItem1Questao());
+        ps.setString(4,q.getItem2Questao());
+        ps.setString(5,q.getItem3Questao());
+        ps.setString(6,q.getItem4Questao());
+        ps.setString(7,q.getPerguntaQuestao());
+
+        ps.execute();
+        ps.close();
+        conexao.close();
+    } 
+    
+    
+    public static void main(String[] args){
+        try{
+            byte[] pergunta1Questao1 = FileUtils.readFileToByteArray(new File(perguntaQuestao1Fase1Caminho));
+            String perguntaQuestaoString = Base64.getEncoder().encodeToString(pergunta1Questao1);
+
+            byte[] item1Questao = FileUtils.readFileToByteArray(new File(item1Questao1Fase1Caminho));
+            String item1QuestaoString = Base64.getEncoder().encodeToString(item1Questao);
+
+            byte[] item2Questao = FileUtils.readFileToByteArray(new File(item2Questao1Fase1Caminho));
+            String item2QuestaoString = Base64.getEncoder().encodeToString(item2Questao);
+
+            byte[] item3Questao = FileUtils.readFileToByteArray(new File(item3Questao1Fase1Caminho));
+            String item3QuestaoString = Base64.getEncoder().encodeToString(item3Questao);
+
+            byte[] item4Questao = FileUtils.readFileToByteArray(new File(item4Questao1Fase1Caminho));
+            String item4QuestaoString = Base64.getEncoder().encodeToString(item4Questao);
+            
+            QuestoesJogo questoes = new QuestoesJogo(1,perguntaQuestaoString,item1QuestaoString,item2QuestaoString,item3QuestaoString,item4QuestaoString);
+            EnviarBase64MySQL envio = new EnviarBase64MySQL();
+            envio.cadastrar(questoes);
+
+                
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
    
          
    

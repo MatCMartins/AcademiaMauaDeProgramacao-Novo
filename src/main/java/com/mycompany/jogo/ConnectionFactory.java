@@ -16,7 +16,7 @@ public class ConnectionFactory {
     private static String port = "3306";
     private static String db = "AcademiaMauaDeProgramacao";
     private static String user = "root";
-    private static String password = "LU1yo8Dqc**4^YVr7cFCkzR#TN!3Kexp";
+    private static String password = "2Q2weC%^iMGh%JauT7jBWTG2V&9mcSzF";
     
     public static Connection getConnection() throws Exception{
         //jdbc:mysql://localhost:3306/banco_de_dados?useTimezone=true%serverTimezone=UTC
