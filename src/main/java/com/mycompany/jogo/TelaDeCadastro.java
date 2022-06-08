@@ -33,7 +33,6 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         textoEmail = new javax.swing.JTextField();
         textoIdade = new javax.swing.JTextField();
         textoTelefone = new javax.swing.JTextField();
-        textoUsuario = new javax.swing.JTextField();
         fotoNome = new javax.swing.JLabel();
         fotoEmail = new javax.swing.JLabel();
         fotoIdade = new javax.swing.JLabel();
@@ -47,6 +46,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         descricaoSenha = new javax.swing.JLabel();
         tituloPaginaCadastro = new javax.swing.JLabel();
         tituloCadastro = new javax.swing.JLabel();
+        textoUsuario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,7 +54,15 @@ public class TelaDeCadastro extends javax.swing.JFrame {
 
         textoSenha.setBackground(new java.awt.Color(0, 0, 45));
         textoSenha.setForeground(new java.awt.Color(187, 187, 187));
-        textoSenha.setText("jPasswordField1");
+        textoSenha.setText("senha");
+        textoSenha.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoSenhaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textoSenhaFocusLost(evt);
+            }
+        });
         textoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoSenhaActionPerformed(evt);
@@ -63,29 +71,56 @@ public class TelaDeCadastro extends javax.swing.JFrame {
 
         textoNome.setBackground(new java.awt.Color(0, 0, 45));
         textoNome.setForeground(new java.awt.Color(187, 187, 187));
-        textoNome.setText("name");
+        textoNome.setText("nome");
+        textoNome.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoNomeFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textoNomeFocusLost(evt);
+            }
+        });
 
         textoEmail.setBackground(new java.awt.Color(0, 0, 45));
         textoEmail.setForeground(new java.awt.Color(187, 187, 187));
         textoEmail.setText("email");
+        textoEmail.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoEmailFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textoEmailFocusLost(evt);
+            }
+        });
 
         textoIdade.setBackground(new java.awt.Color(0, 0, 45));
         textoIdade.setForeground(new java.awt.Color(187, 187, 187));
-        textoIdade.setText("age");
+        textoIdade.setText("idade");
+        textoIdade.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoIdadeFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textoIdadeFocusLost(evt);
+            }
+        });
 
         textoTelefone.setBackground(new java.awt.Color(0, 0, 45));
         textoTelefone.setForeground(new java.awt.Color(187, 187, 187));
-        textoTelefone.setText("phone");
+        textoTelefone.setText("telefone");
+        textoTelefone.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoTelefoneFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textoTelefoneFocusLost(evt);
+            }
+        });
         textoTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoTelefoneActionPerformed(evt);
             }
         });
-
-        textoUsuario.setEditable(false);
-        textoUsuario.setBackground(new java.awt.Color(0, 0, 45));
-        textoUsuario.setForeground(new java.awt.Color(187, 187, 187));
-        textoUsuario.setText("username");
 
         fotoNome.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\name.png")); // NOI18N
         fotoNome.setText("jLabel1");
@@ -110,6 +145,11 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         botaoEntrar.setForeground(new java.awt.Color(187, 187, 187));
         botaoEntrar.setText("Sign Up");
         botaoEntrar.setToolTipText("");
+        botaoEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoEntrarActionPerformed(evt);
+            }
+        });
 
         descricaoNome.setBackground(new java.awt.Color(0, 0, 45));
         descricaoNome.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
@@ -137,6 +177,16 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         tituloCadastro.setForeground(new java.awt.Color(187, 187, 187));
         tituloCadastro.setText("Cadastro");
 
+        textoUsuario.setBackground(new java.awt.Color(0, 0, 45));
+        textoUsuario.setForeground(new java.awt.Color(187, 187, 187));
+        textoUsuario.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        textoUsuario.setText("username");
+        textoUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoUsuarioFocusGained(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelTelaDeCadastroLayout = new javax.swing.GroupLayout(painelTelaDeCadastro);
         painelTelaDeCadastro.setLayout(painelTelaDeCadastroLayout);
         painelTelaDeCadastroLayout.setHorizontalGroup(
@@ -162,10 +212,10 @@ public class TelaDeCadastro extends javax.swing.JFrame {
                                     .addComponent(fotoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(fotoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(descricaoUsuario)
-                                    .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(textoSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                                    .addComponent(textoUsuario)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaDeCadastroLayout.createSequentialGroup()
                                 .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(painelTelaDeCadastroLayout.createSequentialGroup()
@@ -219,8 +269,8 @@ public class TelaDeCadastro extends javax.swing.JFrame {
                 .addComponent(descricaoTelefone)
                 .addGap(18, 18, 18)
                 .addGroup(painelTelaDeCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fotoUsuario))
+                    .addComponent(fotoUsuario)
+                    .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(descricaoUsuario)
                 .addGap(18, 18, 18)
@@ -258,6 +308,77 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textoSenhaActionPerformed
 
+    private void textoNomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoNomeFocusGained
+        textoNome.setText("");
+    }//GEN-LAST:event_textoNomeFocusGained
+
+    private void textoEmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoEmailFocusGained
+        textoEmail.setText("");
+    }//GEN-LAST:event_textoEmailFocusGained
+
+    private void textoIdadeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoIdadeFocusGained
+        textoIdade.setText("");
+    }//GEN-LAST:event_textoIdadeFocusGained
+
+    private void textoTelefoneFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoTelefoneFocusGained
+        textoTelefone.setText("");
+    }//GEN-LAST:event_textoTelefoneFocusGained
+
+    private void textoSenhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoSenhaFocusGained
+        textoSenha.setText("");
+    }//GEN-LAST:event_textoSenhaFocusGained
+
+    private void textoNomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoNomeFocusLost
+
+    }//GEN-LAST:event_textoNomeFocusLost
+
+    private void textoEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoEmailFocusLost
+
+    }//GEN-LAST:event_textoEmailFocusLost
+
+    private void textoIdadeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoIdadeFocusLost
+
+    }//GEN-LAST:event_textoIdadeFocusLost
+
+    private void textoTelefoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoTelefoneFocusLost
+
+    }//GEN-LAST:event_textoTelefoneFocusLost
+
+    private void textoSenhaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoSenhaFocusLost
+
+    }//GEN-LAST:event_textoSenhaFocusLost
+
+    private void textoUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoUsuarioFocusGained
+        textoUsuario.setText("");
+    }//GEN-LAST:event_textoUsuarioFocusGained
+
+    private void botaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarActionPerformed
+        
+        try{
+        String stringTextoNome = textoNome.getText();
+        String stringTextoEmail = textoEmail.getText();
+        String stringTextoIdade = textoIdade.getText();
+        String stringTextoTelefone = textoTelefone.getText();
+        String stringTextoUsuario = textoUsuario.getText();
+        String stringTextoSenha = new String(textoSenha.getPassword());
+        
+        int intTextoIdade = Integer.parseInt(stringTextoIdade);
+        
+        JogadorDAO envio = new JogadorDAO();
+        
+        Jogador jogador = new Jogador(stringTextoNome,stringTextoEmail,intTextoIdade,stringTextoTelefone, stringTextoUsuario,stringTextoSenha);
+        envio.criar(jogador);
+        
+        new TelaInicial().setVisible(true);
+        this.dispose();
+        
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    }//GEN-LAST:event_botaoEntrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -284,7 +405,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -306,12 +427,12 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     private javax.swing.JLabel fotoSenha;
     private javax.swing.JLabel fotoUsuario;
     private javax.swing.JPanel painelTelaDeCadastro;
-    private javax.swing.JTextField textoEmail;
-    private javax.swing.JTextField textoIdade;
-    private javax.swing.JTextField textoNome;
-    private javax.swing.JPasswordField textoSenha;
-    private javax.swing.JTextField textoTelefone;
-    private javax.swing.JTextField textoUsuario;
+    private static javax.swing.JTextField textoEmail;
+    private static javax.swing.JTextField textoIdade;
+    private static javax.swing.JTextField textoNome;
+    private static javax.swing.JPasswordField textoSenha;
+    private static javax.swing.JTextField textoTelefone;
+    private static javax.swing.JTextField textoUsuario;
     private javax.swing.JLabel tituloCadastro;
     private javax.swing.JLabel tituloPaginaCadastro;
     // End of variables declaration//GEN-END:variables

@@ -40,8 +40,8 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         painel = new javax.swing.JPanel();
-        textoCadastro = new javax.swing.JTextField();
-        senhaTexto = new javax.swing.JPasswordField();
+        textoUsuario = new javax.swing.JTextField();
+        textoSenha = new javax.swing.JPasswordField();
         separador1 = new javax.swing.JSeparator();
         separador2 = new javax.swing.JSeparator();
         confirmarUsuario = new javax.swing.JButton();
@@ -72,28 +72,49 @@ public class TelaDeLogin extends javax.swing.JFrame {
         painel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         painel.setPreferredSize(new java.awt.Dimension(570, 580));
 
-        textoCadastro.setBackground(new java.awt.Color(0, 0, 45));
-        textoCadastro.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        textoCadastro.setForeground(new java.awt.Color(187, 187, 187));
-        textoCadastro.setText("username");
-        textoCadastro.setBorder(null);
-        textoCadastro.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        textoCadastro.addActionListener(new java.awt.event.ActionListener() {
+        textoUsuario.setBackground(new java.awt.Color(0, 0, 45));
+        textoUsuario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        textoUsuario.setForeground(new java.awt.Color(187, 187, 187));
+        textoUsuario.setText("username");
+        textoUsuario.setBorder(null);
+        textoUsuario.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        textoUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoUsuarioFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textoUsuarioFocusLost(evt);
+            }
+        });
+        textoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoCadastroActionPerformed(evt);
+                textoUsuarioActionPerformed(evt);
             }
         });
 
-        senhaTexto.setBackground(new java.awt.Color(0, 0, 45));
-        senhaTexto.setForeground(new java.awt.Color(187, 187, 187));
-        senhaTexto.setText("password");
-        senhaTexto.setBorder(null);
+        textoSenha.setBackground(new java.awt.Color(0, 0, 45));
+        textoSenha.setForeground(new java.awt.Color(187, 187, 187));
+        textoSenha.setText("senha");
+        textoSenha.setBorder(null);
+        textoSenha.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textoSenhaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textoSenhaFocusLost(evt);
+            }
+        });
 
         confirmarUsuario.setBackground(new java.awt.Color(0, 0, 45));
         confirmarUsuario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         confirmarUsuario.setForeground(new java.awt.Color(187, 187, 187));
         confirmarUsuario.setText("Sign in");
         confirmarUsuario.setToolTipText("");
+        confirmarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarUsuarioActionPerformed(evt);
+            }
+        });
 
         cadastrarUsuario.setBackground(new java.awt.Color(0, 0, 45));
         cadastrarUsuario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
@@ -109,6 +130,11 @@ public class TelaDeLogin extends javax.swing.JFrame {
         resetUsuario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         resetUsuario.setForeground(new java.awt.Color(187, 187, 187));
         resetUsuario.setText("Reset");
+        resetUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetUsuarioActionPerformed(evt);
+            }
+        });
 
         fotoCadeado.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Cadeado.png")); // NOI18N
         fotoCadeado.setText("jLabel2");
@@ -132,9 +158,9 @@ public class TelaDeLogin extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(senhaTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(separador2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(137, 137, 137))
             .addGroup(painelLayout.createSequentialGroup()
                 .addGap(182, 182, 182)
@@ -157,14 +183,14 @@ public class TelaDeLogin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLayout.createSequentialGroup()
-                        .addComponent(textoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(fotoUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fotoCadeado)
-                    .addComponent(senhaTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separador2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
@@ -210,14 +236,60 @@ public class TelaDeLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoCadastroActionPerformed
+    private void textoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textoCadastroActionPerformed
+    }//GEN-LAST:event_textoUsuarioActionPerformed
 
     private void cadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarUsuarioActionPerformed
         new TelaDeCadastro().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_cadastrarUsuarioActionPerformed
+
+    private void textoUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoUsuarioFocusGained
+        textoUsuario.setText("");
+    }//GEN-LAST:event_textoUsuarioFocusGained
+
+    private void textoSenhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoSenhaFocusGained
+        textoSenha.setText("");
+    }//GEN-LAST:event_textoSenhaFocusGained
+
+    private void textoSenhaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoSenhaFocusLost
+
+    }//GEN-LAST:event_textoSenhaFocusLost
+
+    private void textoUsuarioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textoUsuarioFocusLost
+
+    }//GEN-LAST:event_textoUsuarioFocusLost
+
+    private void resetUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetUsuarioActionPerformed
+        textoUsuario.setText("");
+        textoSenha.setText("");
+    }//GEN-LAST:event_resetUsuarioActionPerformed
+
+    private void confirmarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarUsuarioActionPerformed
+        try{
+        
+        JogadorDAO dao = new JogadorDAO();
+        
+        String stringTextoUsuario = textoUsuario.getText();
+        String stringTextoSenha = new String(textoSenha.getPassword());
+ 
+        Jogador jogador = new Jogador(stringTextoUsuario,stringTextoSenha);
+        if (dao.verificar(jogador) == true){
+            this.dispose();
+            new TelaInicial().setVisible(true);
+            }
+        else{
+            textoUsuario.setText("");
+            textoSenha.setText("");
+            JOptionPane.showMessageDialog(null, "Usuario ou senha estão incorretos! Tente novamente.");
+        }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            
+        }
+    }//GEN-LAST:event_confirmarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,9 +338,9 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JPanel painel;
     private javax.swing.JButton resetUsuario;
-    private javax.swing.JPasswordField senhaTexto;
     private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
-    private javax.swing.JTextField textoCadastro;
+    private javax.swing.JPasswordField textoSenha;
+    private javax.swing.JTextField textoUsuario;
     // End of variables declaration//GEN-END:variables
 }

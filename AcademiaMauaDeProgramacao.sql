@@ -22,22 +22,15 @@ CREATE TABLE Jogador(
   `nome` VARCHAR(30) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `idade` INT NOT NULL,
-  `telefone` VARCHAR(11) NOT NULL,
+  `telefone` VARCHAR(20) NOT NULL,
   `nomeUsuario` VARCHAR(20) NOT NULL,
   `senhaUsuario` VARCHAR(20) NOT NULL,
-  `tentativas` INT NOT NULL,
-  `pontuacao` INT NOT NULL,
-  `Ranking_posicao` INT NOT NULL,
+  `tentativas` INT NOT NULL DEFAULT(0),
+  `pontuacao` INT NOT NULL DEFAULT(0),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) ,
   UNIQUE INDEX `telefone_UNIQUE` (`telefone` ASC),
   UNIQUE INDEX `nomeUsuario_UNIQUE` (`nomeUsuario` ASC),
-  PRIMARY KEY (`nomeUsuario`),
-  INDEX `fk_Jogador_Ranking1_idx` (`Ranking_posicao` ASC),
-  CONSTRAINT `fk_Jogador_Ranking1`
-    FOREIGN KEY (`Ranking_posicao`)
-    REFERENCES Ranking(`posicao`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE);
+  PRIMARY KEY (`nomeUsuario`));
 
 #DESCRIBE Jogador;
 -- -----------------------------------------------------
@@ -186,6 +179,8 @@ CREATE TABLE Jogador_has_Premio (
 
 #DESCRIBE Jogador_has_Premio;
 
+
+SELECT * FROM Jogador;
 SELECT * FROM Pergunta;
 
 #DROP DATABASE AcademiaMauaDeProgramacao;

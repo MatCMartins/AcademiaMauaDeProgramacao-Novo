@@ -9,9 +9,6 @@ package com.mycompany.jogo;
  * @author mateu
  */
 
-import java.io.*;
-import java.util.*; 
-import org.apache.commons.io.FileUtils;
 import java.sql.*;
 
 public class EnviarBase64MySQL {

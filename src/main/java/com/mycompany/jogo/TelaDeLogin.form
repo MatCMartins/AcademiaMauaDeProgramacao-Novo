@@ -117,9 +117,9 @@
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="separador1" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
-                          <Component id="senhaTexto" min="-2" pref="183" max="-2" attributes="0"/>
+                          <Component id="textoSenha" min="-2" pref="183" max="-2" attributes="0"/>
                           <Component id="separador2" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
-                          <Component id="textoCadastro" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
+                          <Component id="textoUsuario" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
                   </Group>
@@ -147,7 +147,7 @@
                       <EmptySpace pref="136" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="textoCadastro" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="textoUsuario" min="-2" pref="33" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="separador1" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -156,7 +156,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="fotoCadeado" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="senhaTexto" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="textoSenha" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="separador2" min="-2" pref="10" max="-2" attributes="0"/>
@@ -172,7 +172,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="textoCadastro">
+            <Component class="javax.swing.JTextField" name="textoUsuario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2d" green="0" red="0" type="rgb"/>
@@ -192,10 +192,12 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoCadastroActionPerformed"/>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="textoUsuarioFocusGained"/>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="textoUsuarioFocusLost"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoUsuarioActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="senhaTexto">
+            <Component class="javax.swing.JPasswordField" name="textoSenha">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2d" green="0" red="0" type="rgb"/>
@@ -203,11 +205,15 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bb" green="bb" red="bb" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="password"/>
+                <Property name="text" type="java.lang.String" value="senha"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="textoSenhaFocusGained"/>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="textoSenhaFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JSeparator" name="separador1">
             </Component>
@@ -227,6 +233,9 @@
                 <Property name="text" type="java.lang.String" value="Sign in"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmarUsuarioActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="cadastrarUsuario">
               <Properties>
@@ -258,6 +267,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Reset"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetUsuarioActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="fotoCadeado">
               <Properties>
