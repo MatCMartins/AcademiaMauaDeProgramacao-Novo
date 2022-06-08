@@ -83,12 +83,12 @@ CREATE TABLE Fase(
 
 CREATE TABLE Pergunta(
   `numeroQuestao` INT NOT NULL,
-  `alternativaCorreta` LONGTEXT NOT NULL,
-  `alternativa1` LONGTEXT NOT NULL,
-  `alternativa2` LONGTEXT NOT NULL,
-  `alternativa3` LONGTEXT NOT NULL,
-  `alternativa4` LONGTEXT NOT NULL,
-   `questao` LONGTEXT NOT NULL,
+  `alternativaCorreta` TEXT NOT NULL,
+  `alternativa1` TEXT NOT NULL,
+  `alternativa2` TEXT NOT NULL,
+  `alternativa3` TEXT NOT NULL,
+  `alternativa4` TEXT NOT NULL,
+   `questao` TEXT NOT NULL,
   PRIMARY KEY (`numeroQuestao`));
 
 #DESCRIBE Pergunta;

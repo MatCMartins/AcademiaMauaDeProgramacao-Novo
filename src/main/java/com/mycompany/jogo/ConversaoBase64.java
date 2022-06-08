@@ -141,7 +141,7 @@ public class ConversaoBase64 {
         String item4Questao1Fase1String = Base64.getEncoder().encodeToString(item4Questao1Fase1);
         byte[] item4Questao1Fase1Foto = Base64.getDecoder().decode(item4Questao1Fase1String);
         
-        QuestoesJogo questao1 = new QuestoesJogo(1,perguntaQuestao1Fase1String,item1Questao1Fase1String,item2Questao1Fase1String,item3Questao1Fase1String,item4Questao1Fase1String);
+        QuestoesJogo questao1 = new QuestoesJogo(1,item3Questao1Fase1String,item2Questao1Fase1String,item1Questao1Fase1String,item4Questao1Fase1String,perguntaQuestao1Fase1String);
         envio.cadastrar(questao1);
         
 
@@ -168,7 +168,7 @@ public class ConversaoBase64 {
         byte[] item4Questao2Fase1Foto = Base64.getDecoder().decode(item4Questao2Fase1String);
         
         
-        QuestoesJogo questao2 = new QuestoesJogo(2,perguntaQuestao2Fase1String,item1Questao2Fase1String,item2Questao2Fase1String,item3Questao2Fase1String,item4Questao2Fase1String);
+        QuestoesJogo questao2 = new QuestoesJogo(2,item1Questao2Fase1String,item2Questao2Fase1String,item3Questao2Fase1String,item4Questao2Fase1String,perguntaQuestao2Fase1String);
         envio.cadastrar(questao2);
         //Questao 3 Fase 1
         
@@ -192,7 +192,7 @@ public class ConversaoBase64 {
         String item4Questao3Fase1String = Base64.getEncoder().encodeToString(item4Questao3Fase1);
         byte[] item4Questao3Fase1Foto = Base64.getDecoder().decode(item4Questao3Fase1String);
         
-        QuestoesJogo questao3 = new QuestoesJogo(3,perguntaQuestao3Fase1String,item1Questao3Fase1String,item2Questao3Fase1String,item3Questao3Fase1String,item4Questao3Fase1String);
+        QuestoesJogo questao3 = new QuestoesJogo(3,item2Questao3Fase1String,item1Questao3Fase1String,item3Questao3Fase1String,item4Questao3Fase1String,perguntaQuestao3Fase1String);
         envio.cadastrar(questao3);
         //Questao 1 Fase 2
         
@@ -217,7 +217,7 @@ public class ConversaoBase64 {
         byte[] item4Questao1Fase2Foto = Base64.getDecoder().decode(item4Questao1Fase2String);
         
         
-        QuestoesJogo questao4 = new QuestoesJogo(4,perguntaQuestao1Fase2String,item1Questao1Fase2String,item2Questao1Fase2String,item3Questao1Fase2String,item4Questao1Fase2String);
+        QuestoesJogo questao4 = new QuestoesJogo(4,item2Questao1Fase2String,item1Questao1Fase2String,item3Questao1Fase2String,item4Questao1Fase2String,perguntaQuestao1Fase2String);
         envio.cadastrar(questao4);
         //Questao 2 Fase 2
         
@@ -242,7 +242,7 @@ public class ConversaoBase64 {
         byte[] item4Questao2Fase2Foto = Base64.getDecoder().decode(item4Questao2Fase2String);
         
         
-        QuestoesJogo questao5 = new QuestoesJogo(5,perguntaQuestao2Fase2String,item1Questao2Fase2String,item2Questao2Fase2String,item3Questao2Fase2String,item4Questao2Fase2String);
+        QuestoesJogo questao5 = new QuestoesJogo(5,item4Questao2Fase2String,item2Questao2Fase2String,item3Questao2Fase2String,item1Questao2Fase2String,perguntaQuestao2Fase2String);
         envio.cadastrar(questao5);
         //Questao 3 Fase 2
         
@@ -267,7 +267,7 @@ public class ConversaoBase64 {
         byte[] item4Questao3Fase2Foto = Base64.getDecoder().decode(item4Questao3Fase2String);
         
         
-        QuestoesJogo questao6 = new QuestoesJogo(6,perguntaQuestao3Fase2String,item1Questao3Fase2String,item2Questao3Fase2String,item3Questao3Fase2String,item4Questao3Fase2String);
+        QuestoesJogo questao6 = new QuestoesJogo(6,item3Questao3Fase2String,item2Questao3Fase2String,item1Questao3Fase2String,item4Questao3Fase2String,perguntaQuestao3Fase2String);
         envio.cadastrar(questao6);
         //Questao 1 Fase 3
         
@@ -292,7 +292,7 @@ public class ConversaoBase64 {
         byte[] item4Questao1Fase3Foto = Base64.getDecoder().decode(item4Questao1Fase3String);
        
         
-        QuestoesJogo questao7 = new QuestoesJogo(7,perguntaQuestao1Fase3String,item1Questao1Fase3String,item2Questao1Fase3String,item3Questao1Fase3String,item4Questao1Fase3String);
+        QuestoesJogo questao7 = new QuestoesJogo(7,item2Questao1Fase3String,item1Questao1Fase3String,item3Questao1Fase3String,item4Questao1Fase3String,perguntaQuestao1Fase3String);
         envio.cadastrar(questao7);
         
         //Questao 2 Fase 3
@@ -318,7 +318,7 @@ public class ConversaoBase64 {
         byte[] item4Questao2Fase3Foto = Base64.getDecoder().decode(item4Questao2Fase3String);
         
         
-        QuestoesJogo questao8 = new QuestoesJogo(8,perguntaQuestao2Fase3String,item1Questao2Fase3String,item2Questao2Fase3String,item3Questao2Fase3String,item4Questao2Fase3String);
+        QuestoesJogo questao8 = new QuestoesJogo(8,item1Questao2Fase3String,item2Questao2Fase3String,item3Questao2Fase3String,item4Questao2Fase3String,perguntaQuestao2Fase3String);
         envio.cadastrar(questao8);
         
         //Questao 3 Fase 3
@@ -344,7 +344,7 @@ public class ConversaoBase64 {
         byte[] item4Questao3Fase3Foto = Base64.getDecoder().decode(item4Questao3Fase3String);
         
         
-        QuestoesJogo questao9 = new QuestoesJogo(9,perguntaQuestao3Fase3String,item1Questao3Fase3String,item2Questao3Fase3String,item3Questao3Fase3String,item4Questao3Fase3String);
+        QuestoesJogo questao9 = new QuestoesJogo(9,item1Questao3Fase3String,item2Questao3Fase3String,item3Questao3Fase3String,item4Questao3Fase3String,perguntaQuestao3Fase3String);
         envio.cadastrar(questao9);
         
         // Questao 1 Fase 4
@@ -369,7 +369,7 @@ public class ConversaoBase64 {
         String item4Questao1Fase4String = Base64.getEncoder().encodeToString(item4Questao1Fase4);
         byte[] item4Questao1Fase4Foto = Base64.getDecoder().decode(item4Questao1Fase4String);
         
-        QuestoesJogo questao10 = new QuestoesJogo(10,perguntaQuestao1Fase4String,item1Questao1Fase4String,item2Questao1Fase4String,item3Questao1Fase4String,item4Questao1Fase4String);
+        QuestoesJogo questao10 = new QuestoesJogo(10,item4Questao1Fase4String,item2Questao1Fase4String,item3Questao1Fase4String,item1Questao1Fase4String,perguntaQuestao1Fase4String);
         envio.cadastrar(questao10);
         
         // Questao 2 Fase 4
@@ -395,7 +395,7 @@ public class ConversaoBase64 {
         byte[] item4Questao2Fase4Foto = Base64.getDecoder().decode(item4Questao2Fase4String);
         
         
-        QuestoesJogo questao11 = new QuestoesJogo(11,perguntaQuestao2Fase4String,item1Questao2Fase4String,item2Questao2Fase4String,item3Questao2Fase4String,item4Questao2Fase4String);
+        QuestoesJogo questao11 = new QuestoesJogo(11,item2Questao2Fase4String,item1Questao2Fase4String,item3Questao2Fase4String,item4Questao2Fase4String,perguntaQuestao2Fase4String);
         envio.cadastrar(questao11);
         
         // Questao 3 Fase 4
@@ -421,7 +421,7 @@ public class ConversaoBase64 {
         byte[] item4Questao3Fase4Foto = Base64.getDecoder().decode(item4Questao3Fase4String);
         
         
-        QuestoesJogo questao12 = new QuestoesJogo(12,perguntaQuestao3Fase4String,item1Questao3Fase4String,item2Questao3Fase4String,item3Questao3Fase4String,item4Questao3Fase4String);
+        QuestoesJogo questao12 = new QuestoesJogo(12,item3Questao3Fase4String,item2Questao3Fase4String,item1Questao3Fase4String,item4Questao3Fase4String,perguntaQuestao3Fase4String);
         envio.cadastrar(questao12);
         
         // Questao 1 Fase 5
@@ -447,7 +447,7 @@ public class ConversaoBase64 {
         byte[] item4Questao1Fase5Foto = Base64.getDecoder().decode(item4Questao1Fase5String);
 
         
-        QuestoesJogo questao13 = new QuestoesJogo(13,perguntaQuestao1Fase5String,item1Questao1Fase5String,item2Questao1Fase5String,item3Questao1Fase5String,item4Questao1Fase5String);
+        QuestoesJogo questao13 = new QuestoesJogo(13,item4Questao1Fase5String,item2Questao1Fase5String,item3Questao1Fase5String,item1Questao1Fase5String,perguntaQuestao1Fase5String);
         envio.cadastrar(questao13);
         
         // Questao 2 Fase 5
@@ -473,7 +473,7 @@ public class ConversaoBase64 {
         byte[] item4Questao2Fase5Foto = Base64.getDecoder().decode(item4Questao2Fase5String);
         
         
-        QuestoesJogo questao14 = new QuestoesJogo(14,perguntaQuestao2Fase5String,item1Questao2Fase5String,item2Questao2Fase5String,item3Questao2Fase5String,item4Questao2Fase5String);
+        QuestoesJogo questao14 = new QuestoesJogo(14,item1Questao2Fase5String,item2Questao2Fase5String,item3Questao2Fase5String,item4Questao2Fase5String,perguntaQuestao2Fase5String);
         envio.cadastrar(questao14);
         
         // Questao 3 Fase 5
@@ -499,7 +499,7 @@ public class ConversaoBase64 {
         byte[] item4Questao3Fase5Foto = Base64.getDecoder().decode(item4Questao3Fase5String);
         
         
-        QuestoesJogo questao15 = new QuestoesJogo(15,perguntaQuestao3Fase5String,item1Questao3Fase5String,item2Questao3Fase5String,item3Questao3Fase5String,item4Questao3Fase5String);
+        QuestoesJogo questao15 = new QuestoesJogo(15,item4Questao3Fase5String,item2Questao3Fase5String,item3Questao3Fase5String,item1Questao3Fase5String,perguntaQuestao3Fase5String);
         envio.cadastrar(questao15);
         
         // Questao 1 Fase 6
@@ -525,7 +525,7 @@ public class ConversaoBase64 {
         byte[] item4Questao1Fase6Foto = Base64.getDecoder().decode(item4Questao1Fase6String);
 
         
-        QuestoesJogo questao16 = new QuestoesJogo(16,perguntaQuestao1Fase6String,item1Questao1Fase6String,item2Questao1Fase6String,item3Questao1Fase6String,item4Questao1Fase6String);
+        QuestoesJogo questao16 = new QuestoesJogo(16,item2Questao1Fase6String,item1Questao1Fase6String,item3Questao1Fase6String,item4Questao1Fase6String,perguntaQuestao1Fase6String);
         envio.cadastrar(questao16);
         
         // Questao 2 Fase 6
@@ -551,7 +551,7 @@ public class ConversaoBase64 {
         byte[] item4Questao2Fase65Foto = Base64.getDecoder().decode(item4Questao2Fase6String);
         
         
-        QuestoesJogo questao17 = new QuestoesJogo(17,perguntaQuestao2Fase6String,item1Questao2Fase6String,item2Questao2Fase6String,item3Questao2Fase6String,item4Questao2Fase6String);
+        QuestoesJogo questao17 = new QuestoesJogo(17,item3Questao2Fase6String,item2Questao2Fase6String,item1Questao2Fase6String,item4Questao2Fase6String,perguntaQuestao2Fase6String);
         envio.cadastrar(questao17);
         
         // Questao 3 Fase 6
@@ -577,7 +577,7 @@ public class ConversaoBase64 {
         byte[] item4Questao3Fase6Foto = Base64.getDecoder().decode(item4Questao3Fase6String);
 
         
-        QuestoesJogo questao18 = new QuestoesJogo(18,perguntaQuestao3Fase6String,item1Questao3Fase6String,item2Questao3Fase6String,item3Questao3Fase6String,item4Questao3Fase6String);
+        QuestoesJogo questao18 = new QuestoesJogo(18,item3Questao3Fase6String,item2Questao3Fase6String,item1Questao3Fase6String,item4Questao3Fase6String,perguntaQuestao3Fase6String);
         envio.cadastrar(questao18);
             
         }
