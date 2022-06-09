@@ -29,6 +29,9 @@ public class TEditarUsuario extends javax.swing.JFrame {
         idadeLabel = new javax.swing.JLabel();
         telefoneLabel = new javax.swing.JLabel();
         nomeUsuarioLabel = new javax.swing.JLabel();
+        iconSenha = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        textSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,21 +97,25 @@ public class TEditarUsuario extends javax.swing.JFrame {
         nomeUsuarioLabel.setForeground(new java.awt.Color(255, 255, 255));
         nomeUsuarioLabel.setText("Nome de usuário");
 
+        iconSenha.setIcon(new javax.swing.ImageIcon("D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\src\\main\\java\\com\\mycompany\\jogo\\Cadeado.png")); // NOI18N
+        iconSenha.setText("jLabel1");
+
+        jLabel1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Senha");
+
         javax.swing.GroupLayout painelEditarUsuarioLayout = new javax.swing.GroupLayout(painelEditarUsuario);
         painelEditarUsuario.setLayout(painelEditarUsuarioLayout);
         painelEditarUsuarioLayout.setHorizontalGroup(
             painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelEditarUsuarioLayout.createSequentialGroup()
                 .addGap(265, 265, 265)
-                .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelEditarUsuarioLayout.createSequentialGroup()
-                        .addComponent(nomeUsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(377, 377, 377))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelEditarUsuarioLayout.createSequentialGroup()
                         .addComponent(bEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelEditarUsuarioLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelEditarUsuarioLayout.createSequentialGroup()
                         .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(iconNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(iconEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
@@ -125,13 +132,23 @@ public class TEditarUsuario extends javax.swing.JFrame {
                             .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(idadeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(telefoneLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(311, Short.MAX_VALUE))
+                            .addComponent(textUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelEditarUsuarioLayout.createSequentialGroup()
+                        .addComponent(iconSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addGap(40, 40, 40)
+                        .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(painelEditarUsuarioLayout.createSequentialGroup()
+                                    .addComponent(nomeUsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(377, 377, 377))
+                                .addComponent(textSenha)))))
+                .addGap(311, 311, 311))
         );
         painelEditarUsuarioLayout.setVerticalGroup(
             painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelEditarUsuarioLayout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
                 .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelEditarUsuarioLayout.createSequentialGroup()
                         .addComponent(textNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -164,7 +181,13 @@ public class TEditarUsuario extends javax.swing.JFrame {
                     .addComponent(textUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0)
                 .addComponent(nomeUsuarioLabel)
-                .addGap(113, 113, 113)
+                .addGap(32, 32, 32)
+                .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(iconSenha))
+                .addGap(0, 0, 0)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(painelEditarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -183,7 +206,7 @@ public class TEditarUsuario extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(painelEditarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(painelEditarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 721, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -198,9 +221,22 @@ public class TEditarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void bEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEditarActionPerformed
-//        Jogador nome = new Jogador();
-//        String nomeUsuario = nome.getNomeUsuario();
-//        System.out.println(nomeUsuario);
+        try{
+            String novoNomeUsuario = textNome.getText();
+            String novoEmailUsuario = textEmail.getText();
+            int novoIdadeUsuario = Integer.parseInt(textIdade.getText());
+            String novaTelefoneUsuario = textTelefone.getText();
+            String novoUserUsuario = textUsuario.getText();
+            String novaSenhaUsuario = new String(textSenha.getPassword());
+            JogadorDAO dao = new JogadorDAO();
+            Jogador jogador = new Jogador(novoNomeUsuario,novoEmailUsuario,novoIdadeUsuario,novaTelefoneUsuario,novoUserUsuario,novaSenhaUsuario,Jogador.nomeDoUsuario);
+            dao.atualizar(jogador);
+            this.dispose();
+            new TelaInicial().setVisible(true);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_bEditarActionPerformed
 
     public static void main(String args[]) {
@@ -242,9 +278,11 @@ public class TEditarUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel iconEmail;
     private javax.swing.JLabel iconIdade;
     private javax.swing.JLabel iconNome;
+    private javax.swing.JLabel iconSenha;
     private javax.swing.JLabel iconTelefone;
     private javax.swing.JLabel iconUsuario;
     private javax.swing.JLabel idadeLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel nomeLabel;
     private javax.swing.JLabel nomeUsuarioLabel;
     private javax.swing.JPanel painelEditarUsuario;
@@ -252,6 +290,7 @@ public class TEditarUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField textEmail;
     private javax.swing.JTextField textIdade;
     private javax.swing.JTextField textNome;
+    private javax.swing.JPasswordField textSenha;
     private javax.swing.JTextField textTelefone;
     private javax.swing.JTextField textUsuario;
     // End of variables declaration//GEN-END:variables

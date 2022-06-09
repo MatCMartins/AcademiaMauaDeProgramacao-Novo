@@ -8,6 +8,12 @@ package com.mycompany.jogo;
  *
  * @author bilzi
  */
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
+import javax.swing.*;
+
+
 public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
 
     /**
@@ -27,7 +33,7 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
     private void initComponents() {
 
         painelFase4Nivel3 = new javax.swing.JPanel();
-        perguntadoFase4Nivel3 = new javax.swing.JLabel();
+        perguntaFase4Nivel3 = new javax.swing.JLabel();
         primeiraResposta = new javax.swing.JButton();
         segundaResposta = new javax.swing.JButton();
         terceiraResposta = new javax.swing.JButton();
@@ -38,19 +44,17 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
         painelFase4Nivel3.setBackground(new java.awt.Color(0, 0, 45));
         painelFase4Nivel3.setPreferredSize(new java.awt.Dimension(1128, 720));
 
-        perguntadoFase4Nivel3.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        perguntadoFase4Nivel3.setForeground(new java.awt.Color(255, 255, 255));
-        perguntadoFase4Nivel3.setText("Espaco para pergunta");
-        perguntadoFase4Nivel3.setToolTipText("");
+        perguntaFase4Nivel3.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        perguntaFase4Nivel3.setForeground(new java.awt.Color(255, 255, 255));
+        perguntaFase4Nivel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        perguntaFase4Nivel3.setToolTipText("");
 
-        primeiraResposta.setBackground(new java.awt.Color(0, 0, 0));
         primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
-        primeiraResposta.setText("Espaco para resposta");
+        primeiraResposta.setToolTipText("");
         primeiraResposta.setPreferredSize(new java.awt.Dimension(370, 237));
 
-        segundaResposta.setBackground(new java.awt.Color(0, 0, 0));
         segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
-        segundaResposta.setText("Espaco para resposta");
+        segundaResposta.setToolTipText("");
         segundaResposta.setPreferredSize(new java.awt.Dimension(370, 237));
         segundaResposta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,14 +62,12 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
             }
         });
 
-        terceiraResposta.setBackground(new java.awt.Color(0, 0, 0));
         terceiraResposta.setForeground(new java.awt.Color(255, 255, 255));
-        terceiraResposta.setText("Espaco para resposta");
+        terceiraResposta.setToolTipText("");
         terceiraResposta.setPreferredSize(new java.awt.Dimension(370, 237));
 
-        quartaResposta.setBackground(new java.awt.Color(0, 0, 0));
         quartaResposta.setForeground(new java.awt.Color(255, 255, 255));
-        quartaResposta.setText("Espaco para resposta");
+        quartaResposta.setToolTipText("");
         quartaResposta.setPreferredSize(new java.awt.Dimension(370, 237));
         quartaResposta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,47 +80,75 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
         painelFase4Nivel3Layout.setHorizontalGroup(
             painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
-                .addGap(103, 103, 103)
                 .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(perguntadoFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
-                        .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(182, 182, 182)
-                        .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(103, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                        .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(7, Short.MAX_VALUE))
+            .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
+                .addGap(249, 249, 249)
+                .addComponent(perguntaFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelFase4Nivel3Layout.setVerticalGroup(
             painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(perguntadoFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addGap(56, 56, 56)
+                .addComponent(perguntaFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
+
+        Fases numero = new Fases(12);
+        FasesDAO dao = new FasesDAO();
+        String questao = dao.questao(numero);
+        byte[] fotoQuestao = Base64.getDecoder().decode(questao);
+        Icon iconQuestao = new ImageIcon(fotoQuestao);
+        perguntaFase4Nivel3.setIcon(iconQuestao);
+        String alternativa1 = dao.alternativa1(numero);
+        byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);
+        Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);
+        primeiraResposta.setIcon(iconAlternativa1);
+        String alternativa2 = dao.alternativa2(numero);
+        byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);
+        Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);
+        segundaResposta.setIcon(iconAlternativa2);
+        String alternativa3 = dao.alternativa3(numero);
+        byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);
+        Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);
+        terceiraResposta.setIcon(iconAlternativa3);
+        String alternativa4 = dao.alternativa4(numero);
+        byte[] fotoAlternativa4 = Base64.getDecoder().decode(alternativa4);
+        Icon iconAlternativa4 = new ImageIcon(fotoAlternativa4);
+        quartaResposta.setIcon(iconAlternativa4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(painelFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painelFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1450, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(painelFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painelFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -170,7 +200,7 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel painelFase4Nivel3;
-    private javax.swing.JLabel perguntadoFase4Nivel3;
+    private javax.swing.JLabel perguntaFase4Nivel3;
     private javax.swing.JButton primeiraResposta;
     private javax.swing.JButton quartaResposta;
     private javax.swing.JButton segundaResposta;

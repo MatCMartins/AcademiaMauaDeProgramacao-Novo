@@ -8,6 +8,13 @@ package com.mycompany.jogo;
  *
  * @author Othavio
  */
+        
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
+import javax.swing.*;
+
+        
 public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
 
     /**
@@ -27,7 +34,7 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
     private void initComponents() {
 
         painelTelaFase5Nivel1 = new javax.swing.JPanel();
-        perguntaLabel = new javax.swing.JLabel();
+        perguntaFase5Nivel1 = new javax.swing.JLabel();
         primeiraResposta = new javax.swing.JButton();
         segundaResposta = new javax.swing.JButton();
         terceiraResposta = new javax.swing.JButton();
@@ -37,30 +44,25 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
 
         painelTelaFase5Nivel1.setBackground(new java.awt.Color(0, 0, 45));
 
-        perguntaLabel.setBackground(new java.awt.Color(0, 0, 45));
-        perguntaLabel.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        perguntaLabel.setForeground(new java.awt.Color(255, 255, 255));
-        perguntaLabel.setText("Espaço para pergunta");
+        perguntaFase5Nivel1.setBackground(new java.awt.Color(0, 0, 45));
+        perguntaFase5Nivel1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        perguntaFase5Nivel1.setForeground(new java.awt.Color(255, 255, 255));
 
         primeiraResposta.setBackground(new java.awt.Color(0, 0, 0));
         primeiraResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
-        primeiraResposta.setText("Espaço para respostas");
 
         segundaResposta.setBackground(new java.awt.Color(0, 0, 0));
         segundaResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
-        segundaResposta.setText("Espaço para respostas");
 
         terceiraResposta.setBackground(new java.awt.Color(0, 0, 0));
         terceiraResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         terceiraResposta.setForeground(new java.awt.Color(255, 255, 255));
-        terceiraResposta.setText("Espaço para respostas");
 
         quartaResposta.setBackground(new java.awt.Color(0, 0, 0));
         quartaResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         quartaResposta.setForeground(new java.awt.Color(255, 255, 255));
-        quartaResposta.setText("Espaço para respostas");
 
         javax.swing.GroupLayout painelTelaFase5Nivel1Layout = new javax.swing.GroupLayout(painelTelaFase5Nivel1);
         painelTelaFase5Nivel1.setLayout(painelTelaFase5Nivel1Layout);
@@ -77,14 +79,14 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
                         .addGroup(painelTelaFase5Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(quartaResposta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(perguntaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(perguntaFase5Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         painelTelaFase5Nivel1Layout.setVerticalGroup(
             painelTelaFase5Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTelaFase5Nivel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(perguntaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(perguntaFase5Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addGroup(painelTelaFase5Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -95,6 +97,29 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
                     .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
+
+        Fases numero = new Fases(13);
+        FasesDAO dao = new FasesDAO();
+        String questao = dao.questao(numero);
+        byte[] fotoQuestao = Base64.getDecoder().decode(questao);
+        Icon iconQuestao = new ImageIcon(fotoQuestao);
+        perguntaFase5Nivel1.setIcon(iconQuestao);
+        String alternativa1 = dao.alternativa1(numero);
+        byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);
+        Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);
+        primeiraResposta.setIcon(iconAlternativa1);
+        String alternativa2 = dao.alternativa2(numero);
+        byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);
+        Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);
+        segundaResposta.setIcon(iconAlternativa2);
+        String alternativa3 = dao.alternativa3(numero);
+        byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);
+        Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);
+        terceiraResposta.setIcon(iconAlternativa3);
+        String alternativa4 = dao.alternativa4(numero);
+        byte[] fotoAlternativa4 = Base64.getDecoder().decode(alternativa4);
+        Icon iconAlternativa4 = new ImageIcon(fotoAlternativa4);
+        quartaResposta.setIcon(iconAlternativa4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,7 +167,7 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLatperguntaFase5Nivel1le() {
             public void run() {
                 new TelaDeFase5Nivel1().setVisible(true);
             }
@@ -151,7 +176,7 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel painelTelaFase5Nivel1;
-    private javax.swing.JLabel perguntaLabel;
+    private javax.swing.JLabel perguntaFase5Nivel1;
     private javax.swing.JButton primeiraResposta;
     private javax.swing.JButton quartaResposta;
     private javax.swing.JButton segundaResposta;

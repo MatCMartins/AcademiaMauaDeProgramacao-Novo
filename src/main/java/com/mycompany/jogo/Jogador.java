@@ -38,9 +38,21 @@ public class Jogador {
         this.nomeUsuario = nomeUsuario;
         this.senhaUsuario = senhaUsuario;
     }
-
+    
+    //Tela de Config
     public Jogador(String nomeUsuario) {
         this.nomeUsuario = nomeUsuario;
+    }
+    
+    //Tela de Editar
+    public Jogador(String nome, String email, int idade, String telefone, String nomeUsuario, String senhaUsuario, String nomeDoUsuario) {
+        this.nome = nome;
+        this.email = email;
+        this.idade = idade;
+        this.telefone = telefone;
+        this.nomeUsuario = nomeUsuario;
+        this.senhaUsuario = senhaUsuario;
+        this.nomeDoUsuario = nomeDoUsuario;
     }
     
     

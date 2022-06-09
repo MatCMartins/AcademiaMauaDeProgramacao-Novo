@@ -30,6 +30,7 @@ public class TelaMaterialInput extends javax.swing.JFrame {
         painelMaterialInput = new javax.swing.JPanel();
         inputLabel = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +53,16 @@ public class TelaMaterialInput extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 45));
+        jButton1.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("PLAY");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelMaterialInputLayout = new javax.swing.GroupLayout(painelMaterialInput);
         painelMaterialInput.setLayout(painelMaterialInputLayout);
         painelMaterialInputLayout.setHorizontalGroup(
@@ -62,6 +73,10 @@ public class TelaMaterialInput extends javax.swing.JFrame {
                 .addGap(395, 395, 395)
                 .addComponent(inputLabel)
                 .addContainerGap(534, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialInputLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
         );
         painelMaterialInputLayout.setVerticalGroup(
             painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,7 +85,9 @@ public class TelaMaterialInput extends javax.swing.JFrame {
                 .addGroup(painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputLabel)
                     .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(635, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 551, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -95,6 +112,12 @@ public class TelaMaterialInput extends javax.swing.JFrame {
         new TelaMaterialDeApoio().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new TelaDeFase1Nivel1().setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,6 +157,7 @@ public class TelaMaterialInput extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel inputLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel painelMaterialInput;
     // End of variables declaration//GEN-END:variables
 }

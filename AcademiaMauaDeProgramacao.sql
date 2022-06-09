@@ -76,12 +76,12 @@ CREATE TABLE Fase(
 
 CREATE TABLE Pergunta(
   `numeroQuestao` INT NOT NULL,
-  `alternativaCorreta` TEXT NOT NULL,
-  `alternativa1` TEXT NOT NULL,
-  `alternativa2` TEXT NOT NULL,
-  `alternativa3` TEXT NOT NULL,
-  `alternativa4` TEXT NOT NULL,
-   `questao` TEXT NOT NULL,
+  `alternativaCorreta` MEDIUMTEXT NOT NULL,
+  `alternativa1` MEDIUMTEXT NOT NULL,
+  `alternativa2` MEDIUMTEXT NOT NULL,
+  `alternativa3` MEDIUMTEXT NOT NULL,
+  `alternativa4` MEDIUMTEXT NOT NULL,
+   `questao` MEDIUMTEXT NOT NULL,
   PRIMARY KEY (`numeroQuestao`));
 
 #DESCRIBE Pergunta;
@@ -183,4 +183,4 @@ CREATE TABLE Jogador_has_Premio (
 SELECT * FROM Jogador;
 SELECT * FROM Pergunta;
 
-#DROP DATABASE AcademiaMauaDeProgramacao;
+#DROP DATABASE AcademiaMauaDeProgramacao;S

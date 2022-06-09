@@ -98,6 +98,40 @@ public class JogadorDAO {
         e.printStackTrace();
     }
 }
+    public void atualizar(Jogador j) throws Exception{
+        try{
+        Connection conexao = ConnectionFactory.getConnection();
+        // Comando SQL
+        String sql = "UPDATE jogador  SET nome = ?, email = ?, idade = ?, telefone = ?, nomeUsuario = ?, senhaUsuario = ? WHERE nomeUsuario = ?";
     
     
+        // Prepared Statement
+        PreparedStatement ps = conexao.prepareStatement(sql);
+    
+    
+        // Substituir placeholder
+        ps.setString(1, j.getNome());
+        ps.setString(2, j.getEmail());
+        ps.setInt(3, j.getIdade());
+        ps.setString(4, j.getTelefone());
+        ps.setString(5, j.getNomeUsuario());
+        ps.setString(6,j.getSenhaUsuario());
+        ps.setString(7, j.nomeDoUsuario);
+
+
+        // Executar Comando
+        ps.execute();
+
+
+        // Fechar recursos
+        ps.close();
+        conexao.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 }
+    
+    
+    

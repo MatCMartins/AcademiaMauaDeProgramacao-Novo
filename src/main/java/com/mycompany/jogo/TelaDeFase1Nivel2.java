@@ -8,6 +8,12 @@ package com.mycompany.jogo;
  *
  * @author mateu
  */
+
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
+import javax.swing.*;
+
 public class TelaDeFase1Nivel2 extends javax.swing.JFrame {
 
     /**
@@ -26,39 +32,32 @@ public class TelaDeFase1Nivel2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jProgressBar1 = new javax.swing.JProgressBar();
         painelFase1Nivel2 = new javax.swing.JPanel();
-        perguntaDaFase1Nivel2 = new javax.swing.JLabel();
+        perguntaFase1Nivel2 = new javax.swing.JLabel();
         primeiraResposta = new javax.swing.JButton();
-        segundaFase = new javax.swing.JButton();
-        terceiraFase = new javax.swing.JButton();
-        quartaFase = new javax.swing.JButton();
+        segundaResposta = new javax.swing.JButton();
+        terceiraResposta = new javax.swing.JButton();
+        quartaResposta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         painelFase1Nivel2.setBackground(new java.awt.Color(0, 0, 45));
         painelFase1Nivel2.setPreferredSize(new java.awt.Dimension(1128, 720));
 
-        perguntaDaFase1Nivel2.setForeground(new java.awt.Color(255, 255, 255));
-        perguntaDaFase1Nivel2.setText("parte para pergunta");
+        perguntaFase1Nivel2.setForeground(new java.awt.Color(255, 255, 255));
+        perguntaFase1Nivel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        primeiraResposta.setBackground(new java.awt.Color(0, 0, 0));
         primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
-        primeiraResposta.setText("parte para resposta");
 
-        segundaFase.setBackground(new java.awt.Color(0, 0, 0));
-        segundaFase.setForeground(new java.awt.Color(255, 255, 255));
-        segundaFase.setText("parte para resposta");
+        segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
 
-        terceiraFase.setBackground(new java.awt.Color(0, 0, 0));
-        terceiraFase.setForeground(new java.awt.Color(255, 255, 255));
-        terceiraFase.setText("parte para resposta");
+        terceiraResposta.setForeground(new java.awt.Color(255, 255, 255));
 
-        quartaFase.setBackground(new java.awt.Color(0, 0, 0));
-        quartaFase.setForeground(new java.awt.Color(255, 255, 255));
-        quartaFase.setText("parte para resposta");
-        quartaFase.addActionListener(new java.awt.event.ActionListener() {
+        quartaResposta.setForeground(new java.awt.Color(255, 255, 255));
+        quartaResposta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quartaFaseActionPerformed(evt);
+                quartaRespostaActionPerformed(evt);
             }
         });
 
@@ -68,33 +67,57 @@ public class TelaDeFase1Nivel2 extends javax.swing.JFrame {
             painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFase1Nivel2Layout.createSequentialGroup()
                 .addGap(103, 103, 103)
-                .addGroup(painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(perguntaDaFase1Nivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(painelFase1Nivel2Layout.createSequentialGroup()
-                        .addGroup(painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(terceiraFase, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(182, 182, 182)
-                        .addGroup(painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(segundaFase, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
-                            .addComponent(quartaFase, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE))))
+                .addComponent(perguntaFase1Nivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(103, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFase1Nivel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(primeiraResposta, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
+                    .addComponent(terceiraResposta, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE))
+                .addGap(182, 182, 182)
+                .addGroup(painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(segundaResposta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(quartaResposta, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
         painelFase1Nivel2Layout.setVerticalGroup(
             painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFase1Nivel2Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(perguntaDaFase1Nivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(perguntaFase1Nivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
                 .addGroup(painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(segundaFase, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(138, 138, 138)
                 .addGroup(painelFase1Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(terceiraFase, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                    .addComponent(quartaFase, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE))
-                .addContainerGap(112, Short.MAX_VALUE))
+                    .addComponent(quartaResposta, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                    .addComponent(terceiraResposta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
+
+        Fases numero = new Fases(2);
+        FasesDAO dao = new FasesDAO();
+        String questao = dao.questao(numero);
+        byte[] fotoQuestao = Base64.getDecoder().decode(questao);
+        Icon iconQuestao = new ImageIcon(fotoQuestao);
+        perguntaFase1Nivel2.setIcon(iconQuestao);
+        String alternativa1 = dao.alternativa1(numero);
+        byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);
+        Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);
+        primeiraResposta.setIcon(iconAlternativa1);
+        String alternativa2 = dao.alternativa2(numero);
+        byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);
+        Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);
+        segundaResposta.setIcon(iconAlternativa2);
+        String alternativa3 = dao.alternativa3(numero);
+        byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);
+        Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);
+        terceiraResposta.setIcon(iconAlternativa3);
+        String alternativa4 = dao.alternativa4(numero);
+        byte[] fotoAlternativa4 = Base64.getDecoder().decode(alternativa4);
+        Icon iconAlternativa4 = new ImageIcon(fotoAlternativa4);
+        quartaResposta.setIcon(iconAlternativa4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,9 +137,9 @@ public class TelaDeFase1Nivel2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void quartaFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quartaFaseActionPerformed
+    private void quartaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quartaRespostaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_quartaFaseActionPerformed
+    }//GEN-LAST:event_quartaRespostaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,11 +177,12 @@ public class TelaDeFase1Nivel2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JPanel painelFase1Nivel2;
-    private javax.swing.JLabel perguntaDaFase1Nivel2;
+    private javax.swing.JLabel perguntaFase1Nivel2;
     private javax.swing.JButton primeiraResposta;
-    private javax.swing.JButton quartaFase;
-    private javax.swing.JButton segundaFase;
-    private javax.swing.JButton terceiraFase;
+    private javax.swing.JButton quartaResposta;
+    private javax.swing.JButton segundaResposta;
+    private javax.swing.JButton terceiraResposta;
     // End of variables declaration//GEN-END:variables
 }
