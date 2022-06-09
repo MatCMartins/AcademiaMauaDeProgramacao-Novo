@@ -36,6 +36,11 @@ public class TEditarUsuario extends javax.swing.JFrame {
 
         bEditar.setFont(new java.awt.Font("Dubai", 0, 18)); // NOI18N
         bEditar.setText("Aplicar alterações");
+        bEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bEditarActionPerformed(evt);
+            }
+        });
 
         bCancelar.setFont(new java.awt.Font("Dubai", 0, 18)); // NOI18N
         bCancelar.setText("Cancelar");
@@ -186,10 +191,17 @@ public class TEditarUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
+       
         new TelaInicial().setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_bCancelarActionPerformed
+
+    private void bEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEditarActionPerformed
+//        Jogador nome = new Jogador();
+//        String nomeUsuario = nome.getNomeUsuario();
+//        System.out.println(nomeUsuario);
+    }//GEN-LAST:event_bEditarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

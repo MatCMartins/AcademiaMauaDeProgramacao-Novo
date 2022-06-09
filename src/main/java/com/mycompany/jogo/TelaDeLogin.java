@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -269,21 +269,23 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private void confirmarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarUsuarioActionPerformed
         try{
         
-        JogadorDAO dao = new JogadorDAO();
-        
-        String stringTextoUsuario = textoUsuario.getText();
-        String stringTextoSenha = new String(textoSenha.getPassword());
- 
-        Jogador jogador = new Jogador(stringTextoUsuario,stringTextoSenha);
-        if (dao.verificar(jogador) == true){
-            this.dispose();
-            new TelaInicial().setVisible(true);
+            JogadorDAO dao = new JogadorDAO();
+
+            String stringTextoUsuario = textoUsuario.getText();
+            String stringTextoSenha = new String(textoSenha.getPassword());
+            
+            Jogador jogador = new Jogador(stringTextoUsuario,stringTextoSenha);
+            if (dao.verificar(jogador) == true){
+                dao.registrar(stringTextoUsuario,stringTextoSenha);
+
+                this.dispose();
+                new TelaInicial().setVisible(true);
+                }
+            else{
+                textoUsuario.setText("");
+                textoSenha.setText("");
+                JOptionPane.showMessageDialog(null, "Usuario ou senha estão incorretos! Tente novamente.");
             }
-        else{
-            textoUsuario.setText("");
-            textoSenha.setText("");
-            JOptionPane.showMessageDialog(null, "Usuario ou senha estão incorretos! Tente novamente.");
-        }
         }
         catch(Exception e){
             e.printStackTrace();

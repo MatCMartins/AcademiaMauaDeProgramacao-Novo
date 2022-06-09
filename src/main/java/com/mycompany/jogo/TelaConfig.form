@@ -94,6 +94,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Remover Usu&#xe1;rio"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removerUsuarioActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="botaoVoltar">
           <Properties>

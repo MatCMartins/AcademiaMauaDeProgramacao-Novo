@@ -17,6 +17,8 @@ public class Jogador {
     private String senhaUsuario;
     private int pontuacao;
     private int tentativas;
+    public static String nomeDoUsuario;
+    public static String senhaDoUsuario;
 
     
     //Tela de Cadastro
@@ -36,6 +38,14 @@ public class Jogador {
         this.nomeUsuario = nomeUsuario;
         this.senhaUsuario = senhaUsuario;
     }
+
+    public Jogador(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+    
+    
+    
+    
 
     public String getNome() {
         return nome;

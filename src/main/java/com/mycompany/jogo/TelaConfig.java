@@ -47,6 +47,11 @@ public class TelaConfig extends javax.swing.JFrame {
 
         removerUsuario.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         removerUsuario.setText("Remover Usuário");
+        removerUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerUsuarioActionPerformed(evt);
+            }
+        });
 
         botaoVoltar.setBackground(new java.awt.Color(0, 0, 45));
         botaoVoltar.setForeground(new java.awt.Color(0, 0, 45));
@@ -109,6 +114,18 @@ public class TelaConfig extends javax.swing.JFrame {
         new TelaInicial().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void removerUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerUsuarioActionPerformed
+        try{
+            JogadorDAO dao = new JogadorDAO();
+            Jogador jogador = new Jogador(Jogador.nomeDoUsuario);
+            dao.deletar(jogador);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_removerUsuarioActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
