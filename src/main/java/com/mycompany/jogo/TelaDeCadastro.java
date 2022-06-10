@@ -365,9 +365,12 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         int intTextoIdade = Integer.parseInt(stringTextoIdade);
         
         JogadorDAO envio = new JogadorDAO();
+//        RankingDAO envio2 = new RankingDAO();
+//        Ranking ranking = new Ranking(stringTextoNome);
         
         Jogador jogador = new Jogador(stringTextoNome,stringTextoEmail,intTextoIdade,stringTextoTelefone, stringTextoUsuario,stringTextoSenha);
         envio.criar(jogador);
+        
         
         new TelaInicial().setVisible(true);
         this.dispose();

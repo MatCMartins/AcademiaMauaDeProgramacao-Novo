@@ -102,6 +102,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="primeiraRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa1 = dao.alternativa1(numero);&#xa;byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);&#xa;Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);&#xa;primeiraResposta.setIcon(iconAlternativa1);"/>
           </AuxValues>
@@ -125,6 +128,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terceiraRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa3 = dao.alternativa3(numero);&#xa;byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);&#xa;Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);&#xa;terceiraResposta.setIcon(iconAlternativa3);"/>
           </AuxValues>
@@ -135,6 +141,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quartaRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa4 = dao.alternativa4(numero);&#xa;byte[] fotoAlternativa4 = Base64.getDecoder().decode(alternativa4);&#xa;Icon iconAlternativa4 = new ImageIcon(fotoAlternativa4);&#xa;quartaResposta.setIcon(iconAlternativa4);"/>
           </AuxValues>

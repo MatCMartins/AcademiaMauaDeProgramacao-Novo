@@ -53,38 +53,35 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="130" max="32767" attributes="0"/>
+                  <EmptySpace pref="132" max="32767" attributes="0"/>
+                  <Component id="perguntaFase2Nivel2" min="-2" pref="922" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="terceiraResposta" min="-2" pref="665" max="-2" attributes="0"/>
-                              <Component id="quartaResposta" min="-2" pref="665" max="-2" attributes="0"/>
-                              <Component id="segundaResposta" alignment="0" min="-2" pref="665" max="-2" attributes="0"/>
-                              <Component id="primeiraResposta" alignment="0" min="-2" pref="665" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="103" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="perguntaFase2Nivel2" alignment="1" min="-2" pref="922" max="-2" attributes="0"/>
+                      <Component id="quartaResposta" min="-2" pref="665" max="-2" attributes="0"/>
+                      <Component id="terceiraResposta" min="-2" pref="665" max="-2" attributes="0"/>
+                      <Component id="segundaResposta" min="-2" pref="665" max="-2" attributes="0"/>
+                      <Component id="primeiraResposta" min="-2" pref="665" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="perguntaFase2Nivel2" min="-2" pref="81" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="perguntaFase2Nivel2" min="-2" pref="48" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="primeiraResposta" min="-2" pref="180" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="segundaResposta" min="-2" pref="180" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="terceiraResposta" min="-2" pref="180" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="quartaResposta" min="-2" pref="180" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="58" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -107,6 +104,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="primeiraRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa1 = dao.alternativa1(numero);&#xa;byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);&#xa;Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);&#xa;primeiraResposta.setIcon(iconAlternativa1);"/>
           </AuxValues>
@@ -117,6 +117,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="segundaRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa2 = dao.alternativa2(numero);&#xa;byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);&#xa;Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);&#xa;segundaResposta.setIcon(iconAlternativa2);"/>
           </AuxValues>
@@ -127,6 +130,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terceiraRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa3 = dao.alternativa3(numero);&#xa;byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);&#xa;Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);&#xa;terceiraResposta.setIcon(iconAlternativa3);"/>
           </AuxValues>

@@ -8,11 +8,11 @@ package com.mycompany.jogo;
  *
  * @author mateu
  */
-
 import java.io.*;
-import java.util.*; 
+import java.util.*;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
+import javax.sound.sampled.*;
 
 public class TelaDeFase1Nivel3 extends javax.swing.JFrame {
 
@@ -47,6 +47,11 @@ public class TelaDeFase1Nivel3 extends javax.swing.JFrame {
         perguntaFase1Nivel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
+        primeiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primeiraRespostaActionPerformed(evt);
+            }
+        });
 
         segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
         segundaResposta.addActionListener(new java.awt.event.ActionListener() {
@@ -56,8 +61,18 @@ public class TelaDeFase1Nivel3 extends javax.swing.JFrame {
         });
 
         terceiraResposta.setForeground(new java.awt.Color(255, 255, 255));
+        terceiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terceiraRespostaActionPerformed(evt);
+            }
+        });
 
         quartaResposta.setForeground(new java.awt.Color(255, 255, 255));
+        quartaResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quartaRespostaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelFase1Nivel3Layout = new javax.swing.GroupLayout(painelFase1Nivel3);
         painelFase1Nivel3.setLayout(painelFase1Nivel3Layout);
@@ -134,8 +149,68 @@ public class TelaDeFase1Nivel3 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void segundaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundaRespostaActionPerformed
-        // TODO add your handling code here:
+        try {
+            String soundName = Ranking.audioCorreto;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+
+            if (Ranking.soma3 == 0) {
+                Ranking.pontuacao += 100;
+                Ranking.soma += 1;
+                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+                RankingDAO dao = new RankingDAO();
+                dao.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+                new TelaInicial().setVisible(true);
+                this.dispose();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_segundaRespostaActionPerformed
+
+    private void primeiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeiraRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioErrado;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaInicial().setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_primeiraRespostaActionPerformed
+
+    private void terceiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terceiraRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioErrado;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaInicial().setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_terceiraRespostaActionPerformed
+
+    private void quartaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quartaRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioErrado;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaInicial().setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_quartaRespostaActionPerformed
 
     /**
      * @param args the command line arguments

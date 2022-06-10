@@ -31,6 +31,7 @@ public class TelaMaterialDef extends javax.swing.JFrame {
         defLabel = new javax.swing.JLabel();
         materialDef = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
+        jogarBotao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,6 +55,16 @@ public class TelaMaterialDef extends javax.swing.JFrame {
             }
         });
 
+        jogarBotao.setBackground(new java.awt.Color(0, 0, 45));
+        jogarBotao.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        jogarBotao.setForeground(new java.awt.Color(255, 255, 255));
+        jogarBotao.setText("JOGAR");
+        jogarBotao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jogarBotaoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelDefLayout = new javax.swing.GroupLayout(painelDef);
         painelDef.setLayout(painelDefLayout);
         painelDefLayout.setHorizontalGroup(
@@ -67,7 +78,9 @@ public class TelaMaterialDef extends javax.swing.JFrame {
                         .addComponent(defLabel)
                         .addGap(500, 500, 500))
                     .addGroup(painelDefLayout.createSequentialGroup()
-                        .addComponent(materialDef, javax.swing.GroupLayout.PREFERRED_SIZE, 1023, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(painelDefLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jogarBotao, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(materialDef, javax.swing.GroupLayout.PREFERRED_SIZE, 1023, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(49, Short.MAX_VALUE))))
         );
         painelDefLayout.setVerticalGroup(
@@ -79,7 +92,9 @@ public class TelaMaterialDef extends javax.swing.JFrame {
                     .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60)
                 .addComponent(materialDef, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addComponent(jogarBotao, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -104,6 +119,11 @@ public class TelaMaterialDef extends javax.swing.JFrame {
         new TelaMaterialDeApoio().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void jogarBotaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarBotaoActionPerformed
+        new TelaDeFase3Nivel1().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jogarBotaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +163,7 @@ public class TelaMaterialDef extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel defLabel;
+    private javax.swing.JButton jogarBotao;
     private javax.swing.JLabel materialDef;
     private javax.swing.JPanel painelDef;
     // End of variables declaration//GEN-END:variables

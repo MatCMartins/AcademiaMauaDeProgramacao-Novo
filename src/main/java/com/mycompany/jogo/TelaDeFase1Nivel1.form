@@ -62,13 +62,13 @@
                       <Component id="perguntaFase1Nivel1" min="-2" pref="922" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="primeiraResposta" min="-2" pref="400" max="-2" attributes="0"/>
-                              <Component id="terceiraResposta" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="primeiraResposta" min="-2" pref="420" max="-2" attributes="0"/>
+                              <Component id="terceiraResposta" min="-2" pref="420" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="quartaResposta" alignment="1" min="-2" pref="400" max="-2" attributes="0"/>
-                              <Component id="segundaResposta" alignment="1" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="quartaResposta" alignment="1" min="-2" pref="420" max="-2" attributes="0"/>
+                              <Component id="segundaResposta" alignment="1" min="-2" pref="420" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -83,13 +83,13 @@
                   <Component id="perguntaFase1Nivel1" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="primeiraResposta" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="segundaResposta" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="primeiraResposta" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="segundaResposta" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="terceiraResposta" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="quartaResposta" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="terceiraResposta" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="quartaResposta" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="150" max="32767" attributes="0"/>
               </Group>
@@ -129,6 +129,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="espa&#xe7;o para resposta"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="segundaRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa2 = dao.alternativa2(numero);&#xa;byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);&#xa;Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);&#xa;segundaResposta.setIcon(iconAlternativa2);"/>
           </AuxValues>
@@ -140,6 +143,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="espa&#xe7;o para resposta"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terceiraRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa3 = dao.alternativa3(numero);&#xa;byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);&#xa;Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);&#xa;terceiraResposta.setIcon(iconAlternativa3);"/>
           </AuxValues>
@@ -151,6 +157,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="espa&#xe7;o para resposta"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quartaRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa4 = dao.alternativa4(numero);&#xa;byte[] fotoAlternativa4 = Base64.getDecoder().decode(alternativa4);&#xa;Icon iconAlternativa4 = new ImageIcon(fotoAlternativa4);&#xa;quartaResposta.setIcon(iconAlternativa4);"/>
           </AuxValues>

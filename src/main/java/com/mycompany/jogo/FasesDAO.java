@@ -58,11 +58,11 @@ public class FasesDAO {
             ResultSet rs = ps.executeQuery();
             
             if (rs.next()){
-                String questaoFase = rs.getString(1); 
+                String alternativa1 = rs.getString(1); 
                     rs.close();
                     ps.close();
                     conexao.close();
-                    return questaoFase;
+                    return alternativa1;
             }
             else{
                 return null;
@@ -88,11 +88,11 @@ public class FasesDAO {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()){
-                String questaoFase = rs.getString(1); 
+                String alternativa2 = rs.getString(1); 
                     rs.close();
                     ps.close();
                     conexao.close();
-                    return questaoFase;
+                    return alternativa2;
             }
             else{
                 return null;
@@ -118,11 +118,11 @@ public class FasesDAO {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()){
-                String questaoFase = rs.getString(1); 
+                String alternativa3 = rs.getString(1); 
                     rs.close();
                     ps.close();
                     conexao.close();
-                    return questaoFase;
+                    return alternativa3;
             }
             else{
                 return null;
@@ -148,11 +148,11 @@ public class FasesDAO {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()){
-                String questaoFase = rs.getString(1); 
+                String alternativa4 = rs.getString(1); 
                     rs.close();
                     ps.close();
                     conexao.close();
-                    return questaoFase;
+                    return alternativa4;
             }
             else{
                 return null;

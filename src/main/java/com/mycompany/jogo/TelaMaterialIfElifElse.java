@@ -30,6 +30,7 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
         painelMaterialIfElifElse = new javax.swing.JPanel();
         ifElifElseLabel = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
+        botaoJogar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +53,16 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
             }
         });
 
+        botaoJogar.setBackground(new java.awt.Color(0, 0, 45));
+        botaoJogar.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        botaoJogar.setForeground(new java.awt.Color(255, 255, 255));
+        botaoJogar.setText("JOGAR");
+        botaoJogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoJogarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelMaterialIfElifElseLayout = new javax.swing.GroupLayout(painelMaterialIfElifElse);
         painelMaterialIfElifElse.setLayout(painelMaterialIfElifElseLayout);
         painelMaterialIfElifElseLayout.setHorizontalGroup(
@@ -62,6 +73,10 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
                 .addGap(335, 335, 335)
                 .addComponent(ifElifElseLabel)
                 .addContainerGap(496, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialIfElifElseLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
         painelMaterialIfElifElseLayout.setVerticalGroup(
             painelMaterialIfElifElseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,7 +85,9 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
                 .addGroup(painelMaterialIfElifElseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ifElifElseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(635, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 538, Short.MAX_VALUE)
+                .addComponent(botaoJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -97,6 +114,11 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
         new TelaMaterialDeApoio().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void botaoJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoJogarActionPerformed
+        new TelaDeFase2Nivel1().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoJogarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,6 +156,7 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoJogar;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel ifElifElseLabel;
     private javax.swing.JPanel painelMaterialIfElifElse;

@@ -8,11 +8,11 @@ package com.mycompany.jogo;
  *
  * @author bilzi
  */
-
 import java.io.*;
-import java.util.*; 
+import java.util.*;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
+import javax.sound.sampled.*;
 
 public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
 
@@ -21,7 +21,7 @@ public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
      */
     public TelaDeFase3Nivel2() {
         initComponents();
-         
+
     }
 
     /**
@@ -34,8 +34,8 @@ public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
     private void initComponents() {
 
         painelFase3Nivel2 = new javax.swing.JPanel();
-        primeiraResposta = new javax.swing.JButton();
         segundaResposta = new javax.swing.JButton();
+        primeiraResposta = new javax.swing.JButton();
         perguntaFase3Nivel2 = new javax.swing.JLabel();
         terceiraResposta = new javax.swing.JButton();
         quartaResposta = new javax.swing.JButton();
@@ -44,11 +44,21 @@ public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
 
         painelFase3Nivel2.setBackground(new java.awt.Color(0, 0, 45));
 
-        primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
-        primeiraResposta.setPreferredSize(new java.awt.Dimension(370, 237));
-
         segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
         segundaResposta.setPreferredSize(new java.awt.Dimension(370, 237));
+        segundaResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                segundaRespostaActionPerformed(evt);
+            }
+        });
+
+        primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
+        primeiraResposta.setPreferredSize(new java.awt.Dimension(370, 237));
+        primeiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primeiraRespostaActionPerformed(evt);
+            }
+        });
 
         perguntaFase3Nivel2.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         perguntaFase3Nivel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -79,10 +89,10 @@ public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
                 .addGroup(painelFase3Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFase3Nivel2Layout.createSequentialGroup()
                         .addGroup(painelFase3Nivel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(412, 412, 412))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFase3Nivel2Layout.createSequentialGroup()
                         .addComponent(perguntaFase3Nivel2, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -94,9 +104,9 @@ public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(perguntaFase3Nivel2, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -109,11 +119,11 @@ public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
         String alternativa1 = dao.alternativa1(numero);
         byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);
         Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);
-        primeiraResposta.setIcon(iconAlternativa1);
+        segundaResposta.setIcon(iconAlternativa1);
         String alternativa2 = dao.alternativa2(numero);
         byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);
         Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);
-        segundaResposta.setIcon(iconAlternativa2);
+        primeiraResposta.setIcon(iconAlternativa2);
         String questao = dao.questao(numero);
         byte[] fotoQuestao = Base64.getDecoder().decode(questao);
         Icon iconQuestao = new ImageIcon(fotoQuestao);
@@ -149,12 +159,68 @@ public class TelaDeFase3Nivel2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void quartaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quartaRespostaActionPerformed
-        // TODO add your handling code here:
+        try {
+            String soundName = Ranking.audioErrado;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase3Nivel3().setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_quartaRespostaActionPerformed
 
     private void terceiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terceiraRespostaActionPerformed
-        // TODO add your handling code here:
+        try {
+            String soundName = Ranking.audioErrado;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase3Nivel3().setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_terceiraRespostaActionPerformed
+
+    private void primeiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeiraRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioErrado;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase3Nivel3().setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_primeiraRespostaActionPerformed
+
+    private void segundaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundaRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioCorreto;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+
+            if (Ranking.soma8 == 0) {
+                Ranking.pontuacao += 100;
+                Ranking.soma8 += 1;
+                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+                RankingDAO dao = new RankingDAO();
+                dao.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+                new TelaDeFase3Nivel3().setVisible(true);
+                this.dispose();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_segundaRespostaActionPerformed
 
     /**
      * @param args the command line arguments
