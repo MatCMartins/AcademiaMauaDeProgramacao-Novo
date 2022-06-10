@@ -8,6 +8,14 @@ package com.mycompany.jogo;
  *
  * @author Othavio
  */
+
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
+import javax.swing.*;
+import java.io.File;
+
+
 public class TelaMaterialFor extends javax.swing.JFrame {
 
     /**
@@ -30,6 +38,8 @@ public class TelaMaterialFor extends javax.swing.JFrame {
         painelMaterialFor = new javax.swing.JPanel();
         forLabel = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
+        materialFor = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,16 +62,37 @@ public class TelaMaterialFor extends javax.swing.JFrame {
             }
         });
 
+        materialFor.setText("jLabel1");
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 45));
+        jButton1.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("JOGAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelMaterialForLayout = new javax.swing.GroupLayout(painelMaterialFor);
         painelMaterialFor.setLayout(painelMaterialForLayout);
         painelMaterialForLayout.setHorizontalGroup(
             painelMaterialForLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelMaterialForLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(428, 428, 428)
-                .addComponent(forLabel)
-                .addContainerGap(514, Short.MAX_VALUE))
+                .addGroup(painelMaterialForLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelMaterialForLayout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(428, 428, 428)
+                        .addComponent(forLabel))
+                    .addGroup(painelMaterialForLayout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(materialFor, javax.swing.GroupLayout.PREFERRED_SIZE, 848, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(127, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialForLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(55, 55, 55))
         );
         painelMaterialForLayout.setVerticalGroup(
             painelMaterialForLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,8 +101,19 @@ public class TelaMaterialFor extends javax.swing.JFrame {
                 .addGroup(painelMaterialForLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(forLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(625, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(materialFor, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton1)
+                .addContainerGap(97, Short.MAX_VALUE))
         );
+
+        MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
+
+        String material = dao.material(5);
+        byte[] fotoMaterial = Base64.getDecoder().decode(material);
+        Icon iconMaterial = new ImageIcon(fotoMaterial);
+        materialFor.setIcon(iconMaterial);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,6 +138,11 @@ public class TelaMaterialFor extends javax.swing.JFrame {
         new TelaMaterialDeApoio().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new TelaDeFase5Nivel1().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,6 +182,8 @@ public class TelaMaterialFor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel forLabel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel materialFor;
     private javax.swing.JPanel painelMaterialFor;
     // End of variables declaration//GEN-END:variables
 }

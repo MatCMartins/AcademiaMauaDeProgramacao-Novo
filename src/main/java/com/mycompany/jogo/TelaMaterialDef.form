@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -106,8 +106,14 @@
         </Component>
         <Component class="javax.swing.JLabel" name="materialDef">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel2"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="MaterialDeApoioDAO dao = new MaterialDeApoioDAO();&#xa;        &#xa;String material = dao.material(3);&#xa;byte[] fotoMaterial = Base64.getDecoder().decode(material);&#xa;Icon iconMaterial = new ImageIcon(fotoMaterial);&#xa;materialDef.setIcon(iconMaterial);"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botaoVoltar">
           <Properties>

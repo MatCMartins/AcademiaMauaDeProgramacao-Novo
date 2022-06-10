@@ -7,14 +7,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `mydb` ;
 
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `AcademiaMauaDeProgramacao` DEFAULT CHARACTER SET utf8 ;
 USE `AcademiaMauaDeProgramacao` ;
 
@@ -29,15 +22,15 @@ CREATE TABLE IF NOT EXISTS `Jogador` (
   `telefone` VARCHAR(11) NOT NULL,
   `nomeUsuario` VARCHAR(30) NOT NULL,
   `senhaUsuario` VARCHAR(20) NOT NULL,
-  `tentativas` INT NOT NULL,
-  `pontuacao` INT NOT NULL,
+  `tentativas` INT DEFAULT 0 NOT NULL,
+  `pontuacao` INT DEFAULT 0 NOT NULL,
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
   UNIQUE INDEX `telefone_UNIQUE` (`telefone` ASC) VISIBLE,
   UNIQUE INDEX `nomeUsuario_UNIQUE` (`nomeUsuario` ASC) VISIBLE,
   PRIMARY KEY (`nomeUsuario`))
 ENGINE = InnoDB;
 
-
+DESCRIBE jogador;
 -- -----------------------------------------------------
 -- Table `mydb`.`MaterialDeApoio`
 -- -----------------------------------------------------
@@ -46,7 +39,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `MaterialDeApoio` (
   `escopo` VARCHAR(10) NOT NULL,
   `material` MEDIUMTEXT NOT NULL,
-  `idMaterial` INT NOT NULL,
+  `idMaterial` INT AUTO_INCREMENT NOT NULL,
   PRIMARY KEY (`idMaterial`))
 ENGINE = InnoDB;
 
@@ -57,9 +50,9 @@ ENGINE = InnoDB;
 
 
 CREATE TABLE IF NOT EXISTS `Ranking` (
-  `posicao` INT NOT NULL,
-  `pontuacao` INT NOT NULL,
-  `tentativas` INT NOT NULL,
+  `posicao` INT AUTO_INCREMENT NOT NULL,
+  `pontuacao` INT DEFAULT 0 NOT NULL,
+  `tentativas` INT DEFAULT 0 NOT NULL,
   `Jogador_nomeUsuario` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`posicao`, `Jogador_nomeUsuario`),
   INDEX `fk_Ranking_Jogador1_idx` (`Jogador_nomeUsuario` ASC) VISIBLE,
@@ -140,7 +133,7 @@ ENGINE = InnoDB;
 
 SELECT * FROM Jogador;
 SELECT * FROM Pergunta;
-
+SELECT * FROM MaterialDeApoio;
 #DROP DATABASE AcademiaMauaDeProgramacao;
 
 SET SQL_MODE=@OLD_SQL_MODE;

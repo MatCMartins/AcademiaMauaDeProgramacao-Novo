@@ -15,24 +15,6 @@ public class Ranking {
     public static int tentativas;
     public static String audioCorreto = "D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\Audios\\RespostaCorreta.wav";
     public static String audioErrado = "D:\\Documentos\\Mauá\\Primeiro Semestre\\Projeto Integrador Interdisciplinar\\Codigos\\Audios\\RespostaErrada.wav";
-    public static int soma = 0;
-    public static int soma2 = 0;
-    public static int soma3 = 0;
-    public static int soma4 = 0;
-    public static int soma5 = 0;
-    public static int soma6 = 0;
-    public static int soma7 = 0;
-    public static int soma8 = 0;
-    public static int soma9 = 0;
-    public static int soma10 = 0;
-    public static int soma11 = 0;
-    public static int soma12 = 0;
-    public static int soma13 = 0;
-    public static int soma14 = 0;
-    public static int soma15 = 0;
-    public static int soma16 = 0;
-    public static int soma17 = 0;
-    public static int soma18 = 0;
     
     public int getPosicao() {
         return posicao;

@@ -9,9 +9,10 @@ package com.mycompany.jogo;
  * @author bilzi
  */
 import java.io.*;
-import java.util.*; 
+import java.util.*;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
+import javax.sound.sampled.*;
 
 
 public class TelaDeFase4Nivel2 extends javax.swing.JFrame {

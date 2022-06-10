@@ -75,9 +75,10 @@ public class JogadorDAO {
         if(rs.next()){
             Jogador.nomeDoUsuario = rs.getString(1);
             Jogador.senhaDoUsuario = rs.getString(2);
-            System.out.println(Jogador.nomeDoUsuario);
-            System.out.println(Jogador.senhaDoUsuario);
         }
+        rs.close();
+        ps.close();
+        conexao.close();
     
     }
     public void deletar(Jogador j) throws Exception{
@@ -131,6 +132,44 @@ public class JogadorDAO {
             e.printStackTrace();
         }
     }
+    public void pegarPontuacao(String nomeUsuario) throws Exception{
+        
+        Connection conexao = ConnectionFactory.getConnection();   
+
+        String sql = "select pontuacao, tentativas from Jogador where nomeUsuario = ?";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+
+        ps.setString(1, Jogador.nomeDoUsuario);
+
+        ResultSet rs = ps.executeQuery();
+        if(rs.next()){
+            Ranking.pontuacao = rs.getInt(1);
+            Ranking.tentativas = rs.getInt(2);
+        }
+        rs.close();
+        ps.close();
+        conexao.close();
+    }
+    public void atualizarPontuacao(String nomeUsuario, int tentativas, int pontuacao) throws Exception{
+        
+        Connection conexao = ConnectionFactory.getConnection();   
+
+        String sql = "UPDATE jogador SET pontuacao = ?, tentativas = ? WHERE nomeUsuario = ?";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        
+        ps.setInt(1, Ranking.pontuacao);
+        ps.setInt(2, Ranking.tentativas);
+        ps.setString(3, Jogador.nomeDoUsuario);
+
+        ps.execute();
+        
+        ps.close();
+        conexao.close();
+        }
+           
+
 }
     
     

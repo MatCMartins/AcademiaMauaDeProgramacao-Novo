@@ -160,15 +160,13 @@ public class TelaDeFase2Nivel1 extends javax.swing.JFrame {
             clip.open(audioInputStream);
             clip.start();
 
-            if (Ranking.soma4 == 0) {
-                Ranking.pontuacao += 100;
-                Ranking.soma4 += 1;
-                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
-                RankingDAO dao = new RankingDAO();
-                dao.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
-                new TelaDeFase2Nivel2().setVisible(true);
-                this.dispose();
-            }
+            Ranking.pontuacao += 100;
+            Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+            RankingDAO dao = new RankingDAO();
+            dao.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+            new TelaDeFase2Nivel2().setVisible(true);
+            this.dispose();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

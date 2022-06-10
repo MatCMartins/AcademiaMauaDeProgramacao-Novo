@@ -11,9 +11,10 @@ package com.mycompany.jogo;
 
 
 import java.io.*;
-import java.util.*; 
+import java.util.*;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
+import javax.sound.sampled.*;
 
 public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
 
@@ -47,20 +48,17 @@ public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
         perguntaFase6Nivel3.setBackground(new java.awt.Color(0, 0, 45));
         perguntaFase6Nivel3.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         perguntaFase6Nivel3.setForeground(new java.awt.Color(255, 255, 255));
+        perguntaFase6Nivel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        primeiraResposta.setBackground(new java.awt.Color(0, 0, 0));
         primeiraResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
 
-        segundaResposta.setBackground(new java.awt.Color(0, 0, 0));
         segundaResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
 
-        terceiraResposta.setBackground(new java.awt.Color(0, 0, 0));
         terceiraResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         terceiraResposta.setForeground(new java.awt.Color(255, 255, 255));
 
-        quartaResposta.setBackground(new java.awt.Color(0, 0, 0));
         quartaResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         quartaResposta.setForeground(new java.awt.Color(255, 255, 255));
         quartaResposta.addActionListener(new java.awt.event.ActionListener() {
@@ -75,17 +73,16 @@ public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
             painelTelaFase6Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTelaFase6Nivel3Layout.createSequentialGroup()
                 .addGap(103, 103, 103)
-                .addGroup(painelTelaFase6Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(perguntaFase6Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(painelTelaFase6Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(painelTelaFase6Nivel3Layout.createSequentialGroup()
-                            .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(painelTelaFase6Nivel3Layout.createSequentialGroup()
-                            .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(182, 182, 182)
-                            .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(painelTelaFase6Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(painelTelaFase6Nivel3Layout.createSequentialGroup()
+                        .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelTelaFase6Nivel3Layout.createSequentialGroup()
+                        .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(182, 182, 182)
+                        .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(perguntaFase6Nivel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         painelTelaFase6Nivel3Layout.setVerticalGroup(
@@ -95,12 +92,12 @@ public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
                 .addComponent(perguntaFase6Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addGroup(painelTelaFase6Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(painelTelaFase6Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
 
@@ -166,7 +163,7 @@ public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLoggerperguntaFase6Nivel3ivel3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeFase6Nivel3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(TelaDeFase6Nivel3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {

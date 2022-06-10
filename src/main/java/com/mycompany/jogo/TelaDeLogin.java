@@ -277,7 +277,7 @@ public class TelaDeLogin extends javax.swing.JFrame {
             Jogador jogador = new Jogador(stringTextoUsuario,stringTextoSenha);
             if (dao.verificar(jogador) == true){
                 dao.registrar(stringTextoUsuario,stringTextoSenha);
-
+                dao.pegarPontuacao(stringTextoUsuario);
                 this.dispose();
                 new TelaInicial().setVisible(true);
                 }

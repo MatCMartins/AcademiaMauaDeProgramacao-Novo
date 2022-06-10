@@ -8,13 +8,11 @@ package com.mycompany.jogo;
  *
  * @author bilzi
  */
-
 import java.io.*;
-import java.util.*; 
+import java.util.*;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
 import javax.sound.sampled.*;
-
 
 public class TelaDeFase3Nivel3 extends javax.swing.JFrame {
 
@@ -210,15 +208,13 @@ public class TelaDeFase3Nivel3 extends javax.swing.JFrame {
             clip.open(audioInputStream);
             clip.start();
 
-            if (Ranking.soma9 == 0) {
-                Ranking.pontuacao += 100;
-                Ranking.soma9 += 1;
-                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
-                RankingDAO dao = new RankingDAO();
-                dao.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
-                new TelaInicial().setVisible(true);
-                this.dispose();
-            }
+            Ranking.pontuacao += 100;
+            Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+            RankingDAO dao = new RankingDAO();
+            dao.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+            new TelaInicial().setVisible(true);
+            this.dispose();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

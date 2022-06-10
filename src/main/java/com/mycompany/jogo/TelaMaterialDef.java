@@ -8,6 +8,13 @@ package com.mycompany.jogo;
  *
  * @author Othavio
  */
+
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
+import javax.swing.*;
+import java.io.File;
+
 public class TelaMaterialDef extends javax.swing.JFrame {
 
     /**
@@ -43,7 +50,8 @@ public class TelaMaterialDef extends javax.swing.JFrame {
         defLabel.setForeground(new java.awt.Color(187, 187, 187));
         defLabel.setText("Def");
 
-        materialDef.setText("jLabel2");
+        materialDef.setBackground(new java.awt.Color(0, 0, 0));
+        materialDef.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         botaoVoltar.setBackground(new java.awt.Color(0, 0, 45));
         botaoVoltar.setForeground(new java.awt.Color(0, 0, 45));
@@ -96,6 +104,13 @@ public class TelaMaterialDef extends javax.swing.JFrame {
                 .addComponent(jogarBotao, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46))
         );
+
+        MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
+
+        String material = dao.material(3);
+        byte[] fotoMaterial = Base64.getDecoder().decode(material);
+        Icon iconMaterial = new ImageIcon(fotoMaterial);
+        materialDef.setIcon(iconMaterial);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

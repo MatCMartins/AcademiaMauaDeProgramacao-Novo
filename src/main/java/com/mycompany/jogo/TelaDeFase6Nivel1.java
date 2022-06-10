@@ -6,14 +6,15 @@ package com.mycompany.jogo;
 
 /**
  *
- * @author Othavio
+ * @author mateu
  */
-        
-        
+
 import java.io.*;
-import java.util.*; 
+import java.util.*;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
+import javax.sound.sampled.*;
+
 
 public class TelaDeFase6Nivel1 extends javax.swing.JFrame {
 
@@ -33,70 +34,54 @@ public class TelaDeFase6Nivel1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        painelTelaFase6Nivel1 = new javax.swing.JPanel();
+        painelTelaDeFase6Nivel1 = new javax.swing.JPanel();
         perguntaFase6Nivel1 = new javax.swing.JLabel();
-        primeiraReposta = new javax.swing.JButton();
-        segundaReposta = new javax.swing.JButton();
-        terceiraReposta = new javax.swing.JButton();
-        quartaReposta = new javax.swing.JButton();
+        primeiraResposta = new javax.swing.JButton();
+        segundaResposta = new javax.swing.JButton();
+        terceiraResposta = new javax.swing.JButton();
+        quartaResposta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        painelTelaFase6Nivel1.setBackground(new java.awt.Color(0, 0, 45));
+        painelTelaDeFase6Nivel1.setBackground(new java.awt.Color(0, 0, 45));
 
-        perguntaFase6Nivel1.setBackground(new java.awt.Color(0, 0, 45));
-        perguntaFase6Nivel1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        perguntaFase6Nivel1.setForeground(new java.awt.Color(255, 255, 255));
+        perguntaFase6Nivel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        primeiraReposta.setBackground(new java.awt.Color(0, 0, 0));
-        primeiraReposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        primeiraReposta.setForeground(new java.awt.Color(255, 255, 255));
-
-        segundaReposta.setBackground(new java.awt.Color(0, 0, 0));
-        segundaReposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        segundaReposta.setForeground(new java.awt.Color(255, 255, 255));
-
-        terceiraReposta.setBackground(new java.awt.Color(0, 0, 0));
-        terceiraReposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        terceiraReposta.setForeground(new java.awt.Color(255, 255, 255));
-
-        quartaReposta.setBackground(new java.awt.Color(0, 0, 0));
-        quartaReposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        quartaReposta.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout painelTelaFase6Nivel1Layout = new javax.swing.GroupLayout(painelTelaFase6Nivel1);
-        painelTelaFase6Nivel1.setLayout(painelTelaFase6Nivel1Layout);
-        painelTelaFase6Nivel1Layout.setHorizontalGroup(
-            painelTelaFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelTelaFase6Nivel1Layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addGroup(painelTelaFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(perguntaFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 922, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(painelTelaFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(painelTelaFase6Nivel1Layout.createSequentialGroup()
-                            .addComponent(terceiraReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(quartaReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(painelTelaFase6Nivel1Layout.createSequentialGroup()
-                            .addComponent(primeiraReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(182, 182, 182)
-                            .addComponent(segundaReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(103, Short.MAX_VALUE))
+        javax.swing.GroupLayout painelTelaDeFase6Nivel1Layout = new javax.swing.GroupLayout(painelTelaDeFase6Nivel1);
+        painelTelaDeFase6Nivel1.setLayout(painelTelaDeFase6Nivel1Layout);
+        painelTelaDeFase6Nivel1Layout.setHorizontalGroup(
+            painelTelaDeFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTelaDeFase6Nivel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(painelTelaDeFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelTelaDeFase6Nivel1Layout.createSequentialGroup()
+                        .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelTelaDeFase6Nivel1Layout.createSequentialGroup()
+                        .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaDeFase6Nivel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(perguntaFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(170, 170, 170))
         );
-        painelTelaFase6Nivel1Layout.setVerticalGroup(
-            painelTelaFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelTelaFase6Nivel1Layout.createSequentialGroup()
+        painelTelaDeFase6Nivel1Layout.setVerticalGroup(
+            painelTelaDeFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTelaDeFase6Nivel1Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(perguntaFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addComponent(perguntaFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addGroup(painelTelaFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primeiraReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(segundaReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(painelTelaFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(terceiraReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quartaReposta, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addGroup(painelTelaDeFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(painelTelaDeFase6Nivel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         Fases numero = new Fases(16);
@@ -127,13 +112,13 @@ public class TelaDeFase6Nivel1 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(painelTelaFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painelTelaDeFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(painelTelaFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painelTelaDeFase6Nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -173,16 +158,14 @@ public class TelaDeFase6Nivel1 extends javax.swing.JFrame {
                 new TelaDeFase6Nivel1().setVisible(true);
             }
         });
-    };
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel painelTelaFase6Nivel1;
+    private javax.swing.JPanel painelTelaDeFase6Nivel1;
     private javax.swing.JLabel perguntaFase6Nivel1;
-    private javax.swing.JButton primeiraReposta;
-    private javax.swing.JButton quartaReposta;
-    private javax.swing.JButton segundaReposta;
-    private javax.swing.JButton terceiraReposta;
+    private javax.swing.JButton primeiraResposta;
+    private javax.swing.JButton quartaResposta;
+    private javax.swing.JButton segundaResposta;
+    private javax.swing.JButton terceiraResposta;
     // End of variables declaration//GEN-END:variables
-        
 }

@@ -8,6 +8,13 @@ package com.mycompany.jogo;
  *
  * @author Othavio
  */
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
+import javax.swing.*;
+import java.io.File;
+
+
 public class TelaMaterialWhile extends javax.swing.JFrame {
 
     /**
@@ -30,6 +37,8 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
         painelMaterialWhile = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
+        botaoJogar = new javax.swing.JButton();
+        materialWhile = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +59,18 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
             }
         });
 
+        botaoJogar.setBackground(new java.awt.Color(0, 0, 45));
+        botaoJogar.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        botaoJogar.setForeground(new java.awt.Color(255, 255, 255));
+        botaoJogar.setText("JOGAR");
+        botaoJogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoJogarActionPerformed(evt);
+            }
+        });
+
+        materialWhile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout painelMaterialWhileLayout = new javax.swing.GroupLayout(painelMaterialWhile);
         painelMaterialWhile.setLayout(painelMaterialWhileLayout);
         painelMaterialWhileLayout.setHorizontalGroup(
@@ -60,6 +81,14 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 381, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(514, 514, 514))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialWhileLayout.createSequentialGroup()
+                .addContainerGap(910, Short.MAX_VALUE)
+                .addComponent(botaoJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76))
+            .addGroup(painelMaterialWhileLayout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(materialWhile, javax.swing.GroupLayout.PREFERRED_SIZE, 1001, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelMaterialWhileLayout.setVerticalGroup(
             painelMaterialWhileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,8 +97,19 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
                 .addGroup(painelMaterialWhileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addContainerGap(647, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(materialWhile, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80))
         );
+
+        MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
+
+        String material = dao.material(4);
+        byte[] fotoMaterial = Base64.getDecoder().decode(material);
+        Icon iconMaterial = new ImageIcon(fotoMaterial);
+        materialWhile.setIcon(iconMaterial);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,6 +133,11 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
         new TelaMaterialDeApoio().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
+
+    private void botaoJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoJogarActionPerformed
+        new TelaDeFase4Nivel1().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoJogarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,8 +175,10 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoJogar;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel materialWhile;
     private javax.swing.JPanel painelMaterialWhile;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,6 +8,13 @@ package com.mycompany.jogo;
  *
  * @author Othavio
  */
+
+import java.io.*;
+import java.util.*; 
+import org.apache.commons.io.FileUtils;
+import javax.swing.*;
+import java.io.File;
+
 public class TelaMaterialInput extends javax.swing.JFrame {
 
     /**
@@ -30,12 +37,13 @@ public class TelaMaterialInput extends javax.swing.JFrame {
         painelMaterialInput = new javax.swing.JPanel();
         inputLabel = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        botaoJogar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        materialDef = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         painelMaterialInput.setBackground(new java.awt.Color(0, 0, 45));
-        painelMaterialInput.setPreferredSize(new java.awt.Dimension(1128, 720));
         painelMaterialInput.setVerifyInputWhenFocusTarget(false);
 
         inputLabel.setBackground(new java.awt.Color(0, 0, 45));
@@ -53,42 +61,66 @@ public class TelaMaterialInput extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 45));
-        jButton1.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("PLAY");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botaoJogar.setBackground(new java.awt.Color(0, 0, 45));
+        botaoJogar.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        botaoJogar.setForeground(new java.awt.Color(255, 255, 255));
+        botaoJogar.setText("JOGAR");
+        botaoJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botaoJogarActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("jLabel1");
+
+        materialDef.setText("jLabel2");
 
         javax.swing.GroupLayout painelMaterialInputLayout = new javax.swing.GroupLayout(painelMaterialInput);
         painelMaterialInput.setLayout(painelMaterialInputLayout);
         painelMaterialInputLayout.setHorizontalGroup(
             painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelMaterialInputLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(53, 53, 53)
                 .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(395, 395, 395)
-                .addComponent(inputLabel)
-                .addContainerGap(534, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialInputLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+                .addGroup(painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelMaterialInputLayout.createSequentialGroup()
+                        .addGap(389, 389, 389)
+                        .addComponent(inputLabel))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelMaterialInputLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                        .addComponent(materialDef, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(botaoJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(84, 84, 84))))
+            .addGroup(painelMaterialInputLayout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         painelMaterialInputLayout.setVerticalGroup(
             painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelMaterialInputLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputLabel)
-                    .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 551, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+                .addContainerGap()
+                .addGroup(painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelMaterialInputLayout.createSequentialGroup()
+                        .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(714, 714, 714)
+                        .addComponent(jLabel1))
+                    .addGroup(painelMaterialInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(botaoJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(painelMaterialInputLayout.createSequentialGroup()
+                            .addComponent(inputLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(materialDef, javax.swing.GroupLayout.PREFERRED_SIZE, 699, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
+
+        MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
+
+        String material = dao.material(1);
+        byte[] fotoMaterial = Base64.getDecoder().decode(material);
+        Icon iconMaterial = new ImageIcon(fotoMaterial);
+        materialDef.setIcon(iconMaterial);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,7 +133,7 @@ public class TelaMaterialInput extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(painelMaterialInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painelMaterialInput, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -113,11 +145,11 @@ public class TelaMaterialInput extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_botaoVoltarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botaoJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoJogarActionPerformed
         new TelaDeFase1Nivel1().setVisible(true);
         this.dispose();
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botaoJogarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,9 +187,11 @@ public class TelaMaterialInput extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoJogar;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel inputLabel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel materialDef;
     private javax.swing.JPanel painelMaterialInput;
     // End of variables declaration//GEN-END:variables
 }
