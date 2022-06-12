@@ -109,6 +109,7 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
         );
 
         try{
+            if (new MaterialDeApoioDAO().consultar_material_jogador(Jogador.nomeDoUsuario,2) == false)
             new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,2);
         }
         catch(Exception e){

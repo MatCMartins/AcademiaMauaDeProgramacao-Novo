@@ -116,6 +116,7 @@ public class TelaMaterialInput extends javax.swing.JFrame {
         );
 
         try{
+            if (new MaterialDeApoioDAO().consultar_material_jogador(Jogador.nomeDoUsuario,1)==false)
             new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,1);
         }
         catch(Exception e){

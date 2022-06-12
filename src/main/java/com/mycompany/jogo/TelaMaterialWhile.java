@@ -94,9 +94,9 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
             painelMaterialWhileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelMaterialWhileLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(painelMaterialWhileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                .addGroup(painelMaterialWhileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(botaoVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(43, 43, 43)
                 .addComponent(materialWhile, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -105,7 +105,9 @@ public class TelaMaterialWhile extends javax.swing.JFrame {
         );
 
         try{
-            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,4);
+            if (new MaterialDeApoioDAO().consultar_material_jogador(Jogador.nomeDoUsuario,4)==false){
+                new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,4);
+            }
         }
         catch(Exception e){
             e.printStackTrace();

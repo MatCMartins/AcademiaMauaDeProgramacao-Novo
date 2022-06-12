@@ -105,6 +105,7 @@ public class TelaMaterialDef extends javax.swing.JFrame {
         );
 
         try{
+            if (new MaterialDeApoioDAO().consultar_material_jogador(Jogador.nomeDoUsuario,3))
             new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,3);
         }
         catch(Exception e){

@@ -104,7 +104,7 @@
             <Property name="text" type="java.lang.String" value="Def"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="try{&#xa;        new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,3);&#xa;        }&#xa;catch(Exception e){&#xa;e.printStackTrace();&#xa;}"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="try{&#xa;        if (new MaterialDeApoioDAO().consultar_material_jogador(Jogador.nomeDoUsuario,3))&#xa;            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,3);&#xa;        }&#xa;        catch(Exception e){&#xa;            e.printStackTrace();&#xa;        }"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="materialDef">

@@ -162,6 +162,9 @@ public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            Ranking.tentativas += 1;
+            new JogadorDAO().atualizarTentativas(Jogador.nomeDoUsuario,Ranking.tentativas);
+            new RankingDAO().atualizarTentativas(Ranking.tentativas,Jogador.nomeDoUsuario);
             new TelaInicial().setVisible(true);
             this.dispose();
         } catch (Exception e) {
@@ -176,6 +179,9 @@ public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            Ranking.tentativas += 1;
+            new JogadorDAO().atualizarTentativas(Jogador.nomeDoUsuario,Ranking.tentativas);
+            new RankingDAO().atualizarTentativas(Ranking.tentativas,Jogador.nomeDoUsuario);
             new TelaInicial().setVisible(true);
             this.dispose();
         } catch (Exception e) {
@@ -190,6 +196,9 @@ public class TelaDeFase6Nivel3 extends javax.swing.JFrame {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            Ranking.tentativas += 1;
+            new JogadorDAO().atualizarTentativas(Jogador.nomeDoUsuario,Ranking.tentativas);
+            new RankingDAO().atualizarTentativas(Ranking.tentativas,Jogador.nomeDoUsuario);
             new TelaInicial().setVisible(true);
             this.dispose();
         } catch (Exception e) {

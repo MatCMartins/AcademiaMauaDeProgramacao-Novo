@@ -16,18 +16,19 @@ USE `AcademiaMauaDeProgramacao` ;
 -- -----------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS `Jogador` (
+   `id` INT AUTO_INCREMENT,
   `nome` VARCHAR(30) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `idade` INT NOT NULL,
-  `telefone` VARCHAR(11) NOT NULL,
-  `nomeUsuario` VARCHAR(30) NOT NULL,
+  `telefone` VARCHAR(17) NOT NULL,
+  `nomeUsuario` VARCHAR(50) NOT NULL,
   `senhaUsuario` VARCHAR(20) NOT NULL,
   `tentativas` INT DEFAULT 0 NOT NULL,
   `pontuacao` INT DEFAULT 0 NOT NULL,
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
   UNIQUE INDEX `telefone_UNIQUE` (`telefone` ASC) VISIBLE,
   UNIQUE INDEX `nomeUsuario_UNIQUE` (`nomeUsuario` ASC) VISIBLE,
-  PRIMARY KEY (`nomeUsuario`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 DESCRIBE jogador;
@@ -37,7 +38,7 @@ DESCRIBE jogador;
 
 
 CREATE TABLE IF NOT EXISTS `MaterialDeApoio` (
-  `escopo` VARCHAR(10) NOT NULL,
+  `escopo` VARCHAR(20) NOT NULL,
   `material` MEDIUMTEXT NOT NULL,
   `idMaterial` INT AUTO_INCREMENT NOT NULL,
   PRIMARY KEY (`idMaterial`))
@@ -53,12 +54,10 @@ CREATE TABLE IF NOT EXISTS `Ranking` (
   `posicao` INT AUTO_INCREMENT NOT NULL,
   `pontuacao` INT DEFAULT 0 NOT NULL,
   `tentativas` INT DEFAULT 0 NOT NULL,
-  `Jogador_nomeUsuario` VARCHAR(30) NOT NULL,
-  PRIMARY KEY (`posicao`, `Jogador_nomeUsuario`),
-  INDEX `fk_Ranking_Jogador1_idx` (`Jogador_nomeUsuario` ASC) VISIBLE,
-  CONSTRAINT `fk_Ranking_Jogador1`
+  `Jogador_nomeUsuario` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`posicao`),
     FOREIGN KEY (`Jogador_nomeUsuario`)
-    REFERENCES `academiamauadeprogramacao`.`Jogador` (`nomeUsuario`)
+    REFERENCES Jogador(nomeUsuario)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
@@ -89,7 +88,7 @@ ENGINE = InnoDB;
 
 
 CREATE TABLE IF NOT EXISTS `Jogador_has_Pergunta` (
-  `Jogador_nomeUsuario` VARCHAR(20) NOT NULL,
+  `Jogador_nomeUsuario` VARCHAR(50) NOT NULL,
   `Pergunta_numeroQuestao` INT NOT NULL,
   PRIMARY KEY (`Jogador_nomeUsuario`, `Pergunta_numeroQuestao`),
   INDEX `fk_Jogador_has_Pergunta_Pergunta1_idx` (`Pergunta_numeroQuestao` ASC) VISIBLE,
@@ -116,12 +115,10 @@ CREATE TABLE IF NOT EXISTS `Jogador_has_MaterialDeApoio` (
   PRIMARY KEY (`Jogador_nomeUsuario`, `MaterialDeApoio_idMaterial`),
   INDEX `fk_Jogador_has_MaterialDeApoio_MaterialDeApoio1_idx` (`MaterialDeApoio_idMaterial` ASC) VISIBLE,
   INDEX `fk_Jogador_has_MaterialDeApoio_Jogador1_idx` (`Jogador_nomeUsuario` ASC) VISIBLE,
-  CONSTRAINT `fk_Jogador_has_MaterialDeApoio_Jogador1`
     FOREIGN KEY (`Jogador_nomeUsuario`)
     REFERENCES `academiamauadeprogramacao`.`Jogador` (`nomeUsuario`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_Jogador_has_MaterialDeApoio_MaterialDeApoio1`
     FOREIGN KEY (`MaterialDeApoio_idMaterial`)
     REFERENCES `academiamauadeprogramacao`.`MaterialDeApoio` (`idMaterial`)
     ON DELETE NO ACTION
@@ -132,8 +129,12 @@ ENGINE = InnoDB;
 SELECT * FROM Jogador;
 SELECT * FROM Pergunta;
 SELECT * FROM MaterialDeApoio;
-#DROP DATABASE AcademiaMauaDeProgramacao;
+Select * FROM Jogador_has_MaterialDeApoio;
+SELECT * FROM Ranking;
 SELECT * FROM Jogador_has_Pergunta;
+
+SELECT * FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 5;
+-- DROP DATABASE AcademiaMauaDeProgramacao;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

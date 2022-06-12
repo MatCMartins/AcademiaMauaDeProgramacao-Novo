@@ -108,7 +108,7 @@
             <Property name="text" type="java.lang.String" value="If/Elif/Else"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="try{&#xa;            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,2);&#xa;        }&#xa;        catch(Exception e){&#xa;            e.printStackTrace();&#xa;        }"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="try{&#xa;        if (new MaterialDeApoioDAO().consultar_material_jogador(Jogador.nomeDoUsuario,2) == false)&#xa;            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,2);&#xa;        }&#xa;        catch(Exception e){&#xa;            e.printStackTrace();&#xa;        }"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botaoVoltar">

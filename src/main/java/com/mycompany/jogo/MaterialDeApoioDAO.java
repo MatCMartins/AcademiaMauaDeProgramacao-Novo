@@ -16,7 +16,7 @@ public class MaterialDeApoioDAO {
         try {
             Connection conexao = ConnectionFactory.getConnection();
             //2.Executar comando sql
-            String sql = "SELECT material FROM MaterialDeApoio WHERE idMaterial = ?";
+            String sql = "SELECT material FROM MaterialDeApoio WHERE idMaterial = ?;";
             //3. preparar o comando
             PreparedStatement ps = conexao.prepareStatement(sql);
             //4. substituir os placeholders
@@ -42,7 +42,7 @@ public class MaterialDeApoioDAO {
     }
     public void cadastrar_material_jogador(String nomeUsuario, int idMaterial) throws Exception{
         Connection conexao = ConnectionFactory.getConnection();
-        String sql = "INSERT INTO Jogador_has_MaterialDeApoio(Jogador_nomeUsuario, MaterialDeApoio_idMaterial) VALUES(?,?)";
+        String sql = "INSERT INTO Jogador_has_MaterialDeApoio(Jogador_nomeUsuario, MaterialDeApoio_idMaterial) VALUES(?,?);";
         
         PreparedStatement ps = conexao.prepareStatement(sql);
         
@@ -53,6 +53,24 @@ public class MaterialDeApoioDAO {
         
         ps.close();
         conexao.close();
+    }
+    public boolean consultar_material_jogador(String nomeUsuario, int idMaterial) throws Exception{
+        Connection conexao = ConnectionFactory.getConnection();
+        String sql = "SELECT * FROM Jogador_has_MaterialDeApoio WHERE Jogador_nomeUsuario = ? AND MaterialDeApoio_idMaterial = ?;";
+        
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        
+        ps.setString(1, nomeUsuario);
+        ps.setInt(2, idMaterial);
+        
+        ResultSet rs = ps.executeQuery();
+        boolean usuarioExiste = rs.next();
+        
+        
+        rs.close();
+        ps.close();
+        conexao.close();
+        return usuarioExiste;
     }
     
 }
