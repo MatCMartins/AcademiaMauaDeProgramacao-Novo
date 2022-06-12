@@ -158,7 +158,7 @@ public class FasesDAO {
         }
     }
 
-public void enviar_jogador_pergunta(int idFase, String nomeUsuario) {
+    public void enviar_jogador_pergunta(int idFase, String nomeUsuario) {
         try {
             Connection conexao = ConnectionFactory.getConnection();
             //2.Executar comando sql
@@ -171,18 +171,17 @@ public void enviar_jogador_pergunta(int idFase, String nomeUsuario) {
             //5. executar o comando
             ps.execute();
 
-
             //6. fechar os recursos
             ps.close();
             conexao.close();
 
         } catch (Exception e) {
             e.printStackTrace();
-            
-        }
-    
 
-}
+        }
+
+    }
+
     public boolean verificar_jogador_pergunta(int idFase, String nomeUsuario) {
         try {
             Connection conexao = ConnectionFactory.getConnection();
@@ -208,9 +207,22 @@ public void enviar_jogador_pergunta(int idFase, String nomeUsuario) {
             e.printStackTrace();
             return false;
         }
-    
+
+    }
+    public void alterar_jogador_pergunta(Jogador j, String nomeUsuario) {
+        try{
+            Connection conexao = ConnectionFactory.getConnection();
+            
+            String sql = "UPDATE jogador_has_pergunta SET Jogador_nomeUsuario = ? WHERE Jogador_nomeUsuario = ?";
+            
+            PreparedStatement ps = conexao.prepareStatement(sql);
+            
+            ps.setString(1, j.getNomeUsuario() );
+            ps.setString(2, Jogador.nomeDoUsuario);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 
 }
-
-}
-

@@ -115,6 +115,12 @@ public class TelaMaterialInput extends javax.swing.JFrame {
                 .addContainerGap(104, Short.MAX_VALUE))
         );
 
+        try{
+            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,1);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
 
         String material = dao.material(1);
@@ -133,7 +139,7 @@ public class TelaMaterialInput extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(painelMaterialInput, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painelMaterialInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 

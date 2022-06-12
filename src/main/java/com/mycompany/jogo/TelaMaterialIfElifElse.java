@@ -108,6 +108,12 @@ public class TelaMaterialIfElifElse extends javax.swing.JFrame {
                 .addGap(43, 43, 43))
         );
 
+        try{
+            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,2);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
 
         String material = dao.material(2);

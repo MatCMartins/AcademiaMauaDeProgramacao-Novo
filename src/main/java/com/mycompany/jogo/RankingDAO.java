@@ -4,7 +4,6 @@
  */
 package com.mycompany.jogo;
 
-import java.util.ArrayList;
 import java.sql.*;
 
 /**
@@ -18,7 +17,7 @@ public class RankingDAO {
             //1. abrir conexao com mysql server
             Connection conexao = ConnectionFactory.getConnection();
             //2.Executar comando sql
-            String sql = "INSERT INTO Ranking(nomeUsuario) VALUES(?)";
+            String sql = "INSERT INTO Ranking(Jogador_nomeUsuario) VALUES(?)";
             //3. preparar o comando
             PreparedStatement ps = conexao.prepareStatement(sql);
             //4. substituir os placeholders
@@ -36,7 +35,7 @@ public class RankingDAO {
     public void atualizarPontuacao(int Pontuacao, String nomeUsuario) throws Exception {
         Connection conexao = ConnectionFactory.getConnection();
 
-        String sql = "UPDATE jogador SET pontuacao = ? WHERE nomeUsuario = ?;";
+        String sql = "UPDATE Ranking SET pontuacao = ? WHERE Jogador_nomeUsuario = ?;";
 
         PreparedStatement ps = conexao.prepareStatement(sql);
 
@@ -52,7 +51,7 @@ public class RankingDAO {
     public void atualizarTentativas(int tentativas, String nomeUsuario) throws Exception {
         Connection conexao = ConnectionFactory.getConnection();
 
-        String sql = "UPDATE jogador SET tentativas = ? WHERE nomeUsuario = ?;";
+        String sql = "UPDATE Ranking SET tentativas = ? WHERE Jogador_nomeUsuario = ?;";
 
         PreparedStatement ps = conexao.prepareStatement(sql);
 

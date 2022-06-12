@@ -107,6 +107,12 @@ public class TelaMaterialList extends javax.swing.JFrame {
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
+        try{
+            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,6);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
 
         String material = dao.material(6);

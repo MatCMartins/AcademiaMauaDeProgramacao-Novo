@@ -32,7 +32,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="painelMaterialInput" min="-2" pref="900" max="-2" attributes="0"/>
+              <Component id="painelMaterialInput" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -112,6 +112,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Input"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="try{&#xa;            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,1);&#xa;        }&#xa;        catch(Exception e){&#xa;            e.printStackTrace();&#xa;        }"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botaoVoltar">
           <Properties>

@@ -40,4 +40,19 @@ public class MaterialDeApoioDAO {
             return null;
         }
     }
+    public void cadastrar_material_jogador(String nomeUsuario, int idMaterial) throws Exception{
+        Connection conexao = ConnectionFactory.getConnection();
+        String sql = "INSERT INTO Jogador_has_MaterialDeApoio(Jogador_nomeUsuario, MaterialDeApoio_idMaterial) VALUES(?,?)";
+        
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        
+        ps.setString(1, nomeUsuario);
+        ps.setInt(2, idMaterial);
+        
+        ps.execute();
+        
+        ps.close();
+        conexao.close();
+    }
+    
 }

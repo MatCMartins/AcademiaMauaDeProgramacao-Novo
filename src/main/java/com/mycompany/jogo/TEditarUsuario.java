@@ -1,5 +1,7 @@
 package com.mycompany.jogo;
 
+import javax.swing.JOptionPane;
+
 public class TEditarUsuario extends javax.swing.JFrame {
 
     public TEditarUsuario() {
@@ -214,14 +216,15 @@ public class TEditarUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
-       
+
         new TelaInicial().setVisible(true);
         this.dispose();
 
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void bEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEditarActionPerformed
-        try{
+        try {
+
             String novoNomeUsuario = textNome.getText();
             String novoEmailUsuario = textEmail.getText();
             int novoIdadeUsuario = Integer.parseInt(textIdade.getText());
@@ -229,12 +232,22 @@ public class TEditarUsuario extends javax.swing.JFrame {
             String novoUserUsuario = textUsuario.getText();
             String novaSenhaUsuario = new String(textSenha.getPassword());
             JogadorDAO dao = new JogadorDAO();
-            Jogador jogador = new Jogador(novoNomeUsuario,novoEmailUsuario,novoIdadeUsuario,novaTelefoneUsuario,novoUserUsuario,novaSenhaUsuario,Jogador.nomeDoUsuario);
-            dao.atualizar(jogador);
-            this.dispose();
-            new TelaInicial().setVisible(true);
-        }
-        catch(Exception e){
+            FasesDAO dao2 = new FasesDAO();
+            Jogador jogador = new Jogador(novoUserUsuario, novaSenhaUsuario);
+            
+            
+            
+            if (dao.verificar(jogador) == true) {
+                JOptionPane.showMessageDialog(null, "Esse usuário já existe!");
+            } else {
+                Jogador jogador2 = new Jogador(novoNomeUsuario, novoEmailUsuario, novoIdadeUsuario, novaTelefoneUsuario, novoUserUsuario, novaSenhaUsuario, Jogador.nomeDoUsuario);
+                Jogador jogador3 = new Jogador(novoUserUsuario);
+                dao.atualizar(jogador2);
+                dao2.alterar_jogador_pergunta(jogador3, jogador.nomeDoUsuario);
+                this.dispose();
+                new TelaInicial().setVisible(true);
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }//GEN-LAST:event_bEditarActionPerformed

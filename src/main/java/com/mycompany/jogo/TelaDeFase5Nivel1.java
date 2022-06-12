@@ -162,7 +162,7 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
                 Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
                 JogadorDAO dao = new JogadorDAO();
                 RankingDAO dao2 = new RankingDAO();
-                dao.atualizarPontuacao(Jogador.nomeDoUsuario, Ranking.pontuacao, Ranking.tentativas);
+                dao.atualizarPontuacao(Jogador.nomeDoUsuario, Ranking.pontuacao);
                 dao2.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
             }
             new TelaDeFase5Nivel2().setVisible(true);

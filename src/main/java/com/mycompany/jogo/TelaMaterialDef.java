@@ -8,9 +8,8 @@ package com.mycompany.jogo;
  *
  * @author Othavio
  */
-
 import java.io.*;
-import java.util.*; 
+import java.util.*;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
 import java.io.File;
@@ -105,6 +104,12 @@ public class TelaMaterialDef extends javax.swing.JFrame {
                 .addGap(46, 46, 46))
         );
 
+        try{
+            new MaterialDeApoioDAO().cadastrar_material_jogador(Jogador.nomeDoUsuario,3);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         MaterialDeApoioDAO dao = new MaterialDeApoioDAO();
 
         String material = dao.material(3);

@@ -4,6 +4,8 @@
  */
 package com.mycompany.jogo;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mateu
@@ -366,15 +368,21 @@ public class TelaDeCadastro extends javax.swing.JFrame {
 
             JogadorDAO dao = new JogadorDAO();
             RankingDAO dao2 = new RankingDAO();
-            Ranking ranking = new Ranking(stringTextoNome);
+            Jogador jogador2 = new Jogador(stringTextoUsuario, stringTextoSenha);
+            
+            if (dao.verificar(jogador2)) {
+                JOptionPane.showMessageDialog(null, "Esse usuário já existe!");
+            } else {
+                Ranking ranking = new Ranking(stringTextoUsuario);
 
-            Jogador jogador = new Jogador(stringTextoNome, stringTextoEmail, intTextoIdade, stringTextoTelefone, stringTextoUsuario, stringTextoSenha);
-            dao.criar(jogador);
-            dao.registrar(stringTextoUsuario, stringTextoSenha);
-            dao.pegarPontuacao(stringTextoUsuario);
-
-            new TelaInicial().setVisible(true);
-            this.dispose();
+                Jogador jogador = new Jogador(stringTextoNome, stringTextoEmail, intTextoIdade, stringTextoTelefone, stringTextoUsuario, stringTextoSenha);
+                dao.criar(jogador);
+                dao.registrar(stringTextoUsuario, stringTextoSenha);
+                dao.pegarPontuacao(stringTextoUsuario);
+                dao2.criar(ranking);
+                new TelaInicial().setVisible(true);
+                this.dispose();
+            }
 
         } catch (Exception e) {
             e.printStackTrace();

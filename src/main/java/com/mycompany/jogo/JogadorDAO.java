@@ -151,23 +151,38 @@ public class JogadorDAO {
         ps.close();
         conexao.close();
     }
-    public void atualizarPontuacao(String nomeUsuario, int tentativas, int pontuacao) throws Exception{
-        
-        Connection conexao = ConnectionFactory.getConnection();   
+    public void atualizarPontuacao(String nomeUsuario, int pontuacao) throws Exception{
 
-        String sql = "UPDATE jogador SET pontuacao = ?, tentativas = ? WHERE nomeUsuario = ?";
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "UPDATE jogador SET pontuacao = ? WHERE nomeUsuario = ?";
 
         PreparedStatement ps = conexao.prepareStatement(sql);
-        
+
         ps.setInt(1, Ranking.pontuacao);
-        ps.setInt(2, Ranking.tentativas);
-        ps.setString(3, Jogador.nomeDoUsuario);
+        ps.setString(2, Jogador.nomeDoUsuario);
 
         ps.execute();
-        
+
         ps.close();
         conexao.close();
-        }
+    }
+    public void atualizarTentativas(String nomeUsuario, int tentativas) throws Exception{
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "UPDATE jogador SET tentativas = ? WHERE nomeUsuario = ?";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+
+        ps.setInt(1, Ranking.tentativas);
+        ps.setString(2, Jogador.nomeDoUsuario);
+
+        ps.execute();
+
+        ps.close();
+        conexao.close();
+    }
            
 
 }
