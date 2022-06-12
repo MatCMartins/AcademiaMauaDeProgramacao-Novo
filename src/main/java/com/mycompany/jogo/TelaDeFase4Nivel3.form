@@ -53,18 +53,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="terceiraResposta" min="-2" pref="715" max="-2" attributes="0"/>
                           <EmptySpace pref="7" max="32767" attributes="0"/>
                           <Component id="quartaResposta" min="-2" pref="715" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
+                          <Component id="primeiraResposta" min="-2" pref="715" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="segundaResposta" min="-2" pref="715" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="primeiraResposta" min="-2" pref="715" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -84,8 +83,8 @@
                   <Component id="perguntaFase4Nivel3" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="segundaResposta" min="-2" pref="220" max="-2" attributes="0"/>
                       <Component id="primeiraResposta" min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="segundaResposta" min="-2" pref="220" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -113,20 +112,6 @@
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="Fases numero = new Fases(12);&#xa;FasesDAO dao = new FasesDAO();&#xa;String questao = dao.questao(numero);&#xa;byte[] fotoQuestao = Base64.getDecoder().decode(questao);&#xa;Icon iconQuestao = new ImageIcon(fotoQuestao);&#xa;perguntaFase4Nivel3.setIcon(iconQuestao);"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="primeiraResposta">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[370, 237]"/>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa1 = dao.alternativa1(numero);&#xa;byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);&#xa;Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);&#xa;primeiraResposta.setIcon(iconAlternativa1);"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JButton" name="segundaResposta">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -141,7 +126,24 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="segundaRespostaActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa2 = dao.alternativa2(numero);&#xa;byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);&#xa;Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);&#xa;segundaResposta.setIcon(iconAlternativa2);"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa1 = dao.alternativa1(numero);&#xa;byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);&#xa;Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);&#xa;segundaResposta.setIcon(iconAlternativa1);"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="primeiraResposta">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[370, 237]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="primeiraRespostaActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa2 = dao.alternativa2(numero);&#xa;byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);&#xa;Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);&#xa;primeiraResposta.setIcon(iconAlternativa2);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="terceiraResposta">
@@ -154,6 +156,9 @@
               <Dimension value="[370, 237]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="terceiraRespostaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String alternativa3 = dao.alternativa3(numero);&#xa;byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);&#xa;Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);&#xa;terceiraResposta.setIcon(iconAlternativa3);"/>
           </AuxValues>

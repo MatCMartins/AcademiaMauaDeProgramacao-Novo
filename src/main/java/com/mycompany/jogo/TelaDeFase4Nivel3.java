@@ -10,6 +10,9 @@ package com.mycompany.jogo;
  */
 import java.io.*;
 import java.util.*; 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
 
@@ -34,8 +37,8 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
 
         painelFase4Nivel3 = new javax.swing.JPanel();
         perguntaFase4Nivel3 = new javax.swing.JLabel();
-        primeiraResposta = new javax.swing.JButton();
         segundaResposta = new javax.swing.JButton();
+        primeiraResposta = new javax.swing.JButton();
         terceiraResposta = new javax.swing.JButton();
         quartaResposta = new javax.swing.JButton();
 
@@ -49,10 +52,6 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
         perguntaFase4Nivel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         perguntaFase4Nivel3.setToolTipText("");
 
-        primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
-        primeiraResposta.setToolTipText("");
-        primeiraResposta.setPreferredSize(new java.awt.Dimension(370, 237));
-
         segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
         segundaResposta.setToolTipText("");
         segundaResposta.setPreferredSize(new java.awt.Dimension(370, 237));
@@ -62,9 +61,23 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
             }
         });
 
+        primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
+        primeiraResposta.setToolTipText("");
+        primeiraResposta.setPreferredSize(new java.awt.Dimension(370, 237));
+        primeiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primeiraRespostaActionPerformed(evt);
+            }
+        });
+
         terceiraResposta.setForeground(new java.awt.Color(255, 255, 255));
         terceiraResposta.setToolTipText("");
         terceiraResposta.setPreferredSize(new java.awt.Dimension(370, 237));
+        terceiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terceiraRespostaActionPerformed(evt);
+            }
+        });
 
         quartaResposta.setForeground(new java.awt.Color(255, 255, 255));
         quartaResposta.setToolTipText("");
@@ -80,17 +93,16 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
         painelFase4Nivel3Layout.setHorizontalGroup(
             painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                         .addComponent(quartaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(7, Short.MAX_VALUE))
             .addGroup(painelFase4Nivel3Layout.createSequentialGroup()
@@ -105,8 +117,8 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
                 .addComponent(perguntaFase4Nivel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(primeiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(segundaResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelFase4Nivel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(terceiraResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,11 +135,11 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
         String alternativa1 = dao.alternativa1(numero);
         byte[] fotoAlternativa1 = Base64.getDecoder().decode(alternativa1);
         Icon iconAlternativa1 = new ImageIcon(fotoAlternativa1);
-        primeiraResposta.setIcon(iconAlternativa1);
+        segundaResposta.setIcon(iconAlternativa1);
         String alternativa2 = dao.alternativa2(numero);
         byte[] fotoAlternativa2 = Base64.getDecoder().decode(alternativa2);
         Icon iconAlternativa2 = new ImageIcon(fotoAlternativa2);
-        segundaResposta.setIcon(iconAlternativa2);
+        primeiraResposta.setIcon(iconAlternativa2);
         String alternativa3 = dao.alternativa3(numero);
         byte[] fotoAlternativa3 = Base64.getDecoder().decode(alternativa3);
         Icon iconAlternativa3 = new ImageIcon(fotoAlternativa3);
@@ -156,12 +168,76 @@ public class TelaDeFase4Nivel3 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void quartaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quartaRespostaActionPerformed
-        // TODO add your handling code here:
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaInicial().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_quartaRespostaActionPerformed
 
+    private void primeiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeiraRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioCorreto;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            FasesDAO fases = new FasesDAO();
+            Ranking.tentativas += 1;
+            if (fases.verificar_jogador_pergunta(12, Jogador.nomeDoUsuario) == false) {
+                fases.enviar_jogador_pergunta(12, Jogador.nomeDoUsuario);
+                Ranking.pontuacao += 100;
+                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+                JogadorDAO dao = new JogadorDAO();
+                RankingDAO dao2 = new RankingDAO();
+                dao.atualizarPontuacao(Jogador.nomeDoUsuario, Ranking.pontuacao, Ranking.tentativas);
+                dao2.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+                dao2.atualizarTentativas(Ranking.tentativas,Jogador.nomeDoUsuario);
+            }
+            new TelaInicial().setVisible(true);
+            this.dispose();
+        
+    }
+    catch(Exception e){
+        e.printStackTrace();
+    }
+    }//GEN-LAST:event_primeiraRespostaActionPerformed
+
     private void segundaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundaRespostaActionPerformed
-        // TODO add your handling code here:
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaInicial().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_segundaRespostaActionPerformed
+
+    private void terceiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terceiraRespostaActionPerformed
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaInicial().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }    }//GEN-LAST:event_terceiraRespostaActionPerformed
 
     /**
      * @param args the command line arguments

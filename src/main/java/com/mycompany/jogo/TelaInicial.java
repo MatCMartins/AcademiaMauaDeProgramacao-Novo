@@ -34,6 +34,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jogarButton = new javax.swing.JButton();
         logoMauaLabel = new javax.swing.JLabel();
         materialButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,6 +80,15 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        jButton1.setText("Ranking");
+        jButton1.setToolTipText("");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelTelaInicialLayout = new javax.swing.GroupLayout(painelTelaInicial);
         painelTelaInicial.setLayout(painelTelaInicialLayout);
         painelTelaInicialLayout.setHorizontalGroup(
@@ -88,32 +98,35 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addComponent(nomeJogoLabel)
                 .addContainerGap(223, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaInicialLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logoMauaLabel)
+                .addGap(23, 23, 23))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaInicialLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(painelTelaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jogarButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
                     .addComponent(regraButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
                     .addComponent(configButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                    .addComponent(materialButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(materialButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(502, 502, 502))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaInicialLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logoMauaLabel)
-                .addGap(23, 23, 23))
         );
         painelTelaInicialLayout.setVerticalGroup(
             painelTelaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelTelaInicialLayout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addComponent(nomeJogoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 234, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 254, Short.MAX_VALUE)
                 .addComponent(jogarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(31, 31, 31)
                 .addComponent(materialButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(31, 31, 31)
                 .addComponent(regraButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(31, 31, 31)
                 .addComponent(configButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(31, 31, 31)
+                .addComponent(jButton1)
+                .addGap(9, 9, 9)
                 .addComponent(logoMauaLabel)
                 .addGap(38, 38, 38))
         );
@@ -158,6 +171,11 @@ public class TelaInicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jogarButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new TelaDeRanking().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -195,6 +213,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton configButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jogarButton;
     private javax.swing.JLabel logoMauaLabel;
     private javax.swing.JButton materialButton;

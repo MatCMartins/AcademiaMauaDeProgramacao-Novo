@@ -353,33 +353,33 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_textoUsuarioFocusGained
 
     private void botaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarActionPerformed
-        
-        try{
-        String stringTextoNome = textoNome.getText();
-        String stringTextoEmail = textoEmail.getText();
-        String stringTextoIdade = textoIdade.getText();
-        String stringTextoTelefone = textoTelefone.getText();
-        String stringTextoUsuario = textoUsuario.getText();
-        String stringTextoSenha = new String(textoSenha.getPassword());
-        
-        int intTextoIdade = Integer.parseInt(stringTextoIdade);
-        
-        JogadorDAO envio = new JogadorDAO();
-//        RankingDAO envio2 = new RankingDAO();
-//        Ranking ranking = new Ranking(stringTextoNome);
-        
-        Jogador jogador = new Jogador(stringTextoNome,stringTextoEmail,intTextoIdade,stringTextoTelefone, stringTextoUsuario,stringTextoSenha);
-        envio.criar(jogador);
-        
-        
-        new TelaInicial().setVisible(true);
-        this.dispose();
-        
-        }
-        catch(Exception e){
+
+        try {
+            String stringTextoNome = textoNome.getText();
+            String stringTextoEmail = textoEmail.getText();
+            String stringTextoIdade = textoIdade.getText();
+            String stringTextoTelefone = textoTelefone.getText();
+            String stringTextoUsuario = textoUsuario.getText();
+            String stringTextoSenha = new String(textoSenha.getPassword());
+
+            int intTextoIdade = Integer.parseInt(stringTextoIdade);
+
+            JogadorDAO dao = new JogadorDAO();
+            RankingDAO dao2 = new RankingDAO();
+            Ranking ranking = new Ranking(stringTextoNome);
+
+            Jogador jogador = new Jogador(stringTextoNome, stringTextoEmail, intTextoIdade, stringTextoTelefone, stringTextoUsuario, stringTextoSenha);
+            dao.criar(jogador);
+            dao.registrar(stringTextoUsuario, stringTextoSenha);
+            dao.pegarPontuacao(stringTextoUsuario);
+
+            new TelaInicial().setVisible(true);
+            this.dispose();
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
     }//GEN-LAST:event_botaoEntrarActionPerformed
 
     /**
@@ -408,7 +408,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

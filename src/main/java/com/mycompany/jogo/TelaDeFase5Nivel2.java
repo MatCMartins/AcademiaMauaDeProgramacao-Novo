@@ -11,6 +11,9 @@ package com.mycompany.jogo;
 
 import java.io.*;
 import java.util.*; 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import org.apache.commons.io.FileUtils;
 import javax.swing.*;
 
@@ -51,15 +54,35 @@ public class TelaDeFase5Nivel2 extends javax.swing.JFrame {
 
         primeiraResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         primeiraResposta.setForeground(new java.awt.Color(255, 255, 255));
+        primeiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primeiraRespostaActionPerformed(evt);
+            }
+        });
 
         segundaResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         segundaResposta.setForeground(new java.awt.Color(255, 255, 255));
+        segundaResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                segundaRespostaActionPerformed(evt);
+            }
+        });
 
         terceiraResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         terceiraResposta.setForeground(new java.awt.Color(255, 255, 255));
+        terceiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terceiraRespostaActionPerformed(evt);
+            }
+        });
 
         quartaResposta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         quartaResposta.setForeground(new java.awt.Color(255, 255, 255));
+        quartaResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quartaRespostaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelTelaFase5Nivel2Layout = new javax.swing.GroupLayout(painelTelaFase5Nivel2);
         painelTelaFase5Nivel2.setLayout(painelTelaFase5Nivel2Layout);
@@ -134,6 +157,75 @@ public class TelaDeFase5Nivel2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void primeiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeiraRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioCorreto;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            FasesDAO fases = new FasesDAO();
+            if (fases.verificar_jogador_pergunta(14, Jogador.nomeDoUsuario) == false) {
+                fases.enviar_jogador_pergunta(14, Jogador.nomeDoUsuario);
+                Ranking.pontuacao += 100;
+                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+                JogadorDAO dao = new JogadorDAO();
+                RankingDAO dao2 = new RankingDAO();
+                dao.atualizarPontuacao(Jogador.nomeDoUsuario, Ranking.pontuacao, Ranking.tentativas);
+                dao2.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+            }
+            new TelaDeFase5Nivel3().setVisible(true);
+            this.dispose();
+        
+    }
+    catch(Exception e){
+        e.printStackTrace();
+    }
+    }//GEN-LAST:event_primeiraRespostaActionPerformed
+
+    private void segundaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundaRespostaActionPerformed
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase5Nivel3().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_segundaRespostaActionPerformed
+
+    private void terceiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terceiraRespostaActionPerformed
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase5Nivel3().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }    }//GEN-LAST:event_terceiraRespostaActionPerformed
+
+    private void quartaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quartaRespostaActionPerformed
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase5Nivel3().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }    }//GEN-LAST:event_quartaRespostaActionPerformed
 
     /**
      * @param args the command line arguments

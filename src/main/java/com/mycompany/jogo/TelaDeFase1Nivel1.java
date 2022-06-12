@@ -180,22 +180,26 @@ public class TelaDeFase1Nivel1 extends javax.swing.JFrame {
     }//GEN-LAST:event_primeiraRespostaActionPerformed
 
     private void terceiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terceiraRespostaActionPerformed
-        try{
-        String soundName = Ranking.audioCorreto;    
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioInputStream);
-        clip.start();
-        
-      
-            Ranking.pontuacao += 100;
-            Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
-            JogadorDAO dao = new JogadorDAO();
-            RankingDAO dao2 = new RankingDAO();
-            dao.atualizarPontuacao(Jogador.nomeDoUsuario, Ranking.pontuacao, Ranking.tentativas);
-            dao2.atualizarPontuacao(Ranking.pontuacao,Jogador.nomeDoUsuario);
+        try {
+            String soundName = Ranking.audioCorreto;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            FasesDAO fases = new FasesDAO();
+            if (fases.verificar_jogador_pergunta(1, Jogador.nomeDoUsuario) == false) {
+                fases.enviar_jogador_pergunta(1, Jogador.nomeDoUsuario);
+                Ranking.pontuacao += 100;
+                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+                JogadorDAO dao = new JogadorDAO();
+                RankingDAO dao2 = new RankingDAO();
+                dao.atualizarPontuacao(Jogador.nomeDoUsuario, Ranking.pontuacao, Ranking.tentativas);
+                dao2.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+                
+            }
             new TelaDeFase1Nivel2().setVisible(true);
             this.dispose();
+        
         
     }
     catch(Exception e){

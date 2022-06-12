@@ -58,9 +58,9 @@ CREATE TABLE IF NOT EXISTS `Ranking` (
   INDEX `fk_Ranking_Jogador1_idx` (`Jogador_nomeUsuario` ASC) VISIBLE,
   CONSTRAINT `fk_Ranking_Jogador1`
     FOREIGN KEY (`Jogador_nomeUsuario`)
-    REFERENCES `mydb`.`Jogador` (`nomeUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `academiamauadeprogramacao`.`Jogador` (`nomeUsuario`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -94,19 +94,17 @@ CREATE TABLE IF NOT EXISTS `Jogador_has_Pergunta` (
   PRIMARY KEY (`Jogador_nomeUsuario`, `Pergunta_numeroQuestao`),
   INDEX `fk_Jogador_has_Pergunta_Pergunta1_idx` (`Pergunta_numeroQuestao` ASC) VISIBLE,
   INDEX `fk_Jogador_has_Pergunta_Jogador1_idx` (`Jogador_nomeUsuario` ASC) VISIBLE,
-  CONSTRAINT `fk_Jogador_has_Pergunta_Jogador1`
     FOREIGN KEY (`Jogador_nomeUsuario`)
-    REFERENCES `mydb`.`Jogador` (`nomeUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Jogador_has_Pergunta_Pergunta1`
+    REFERENCES `academiamauadeprogramacao`.`Jogador` (`nomeUsuario`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
     FOREIGN KEY (`Pergunta_numeroQuestao`)
-    REFERENCES `mydb`.`Pergunta` (`numeroQuestao`)
+    REFERENCES `academiamauadeprogramacao`.`Pergunta` (`numeroQuestao`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
+DESCRIBE Jogador_has_Pergunta;
 -- -----------------------------------------------------
 -- Table `mydb`.`Jogador_has_MaterialDeApoio`
 -- -----------------------------------------------------
@@ -120,12 +118,12 @@ CREATE TABLE IF NOT EXISTS `Jogador_has_MaterialDeApoio` (
   INDEX `fk_Jogador_has_MaterialDeApoio_Jogador1_idx` (`Jogador_nomeUsuario` ASC) VISIBLE,
   CONSTRAINT `fk_Jogador_has_MaterialDeApoio_Jogador1`
     FOREIGN KEY (`Jogador_nomeUsuario`)
-    REFERENCES `mydb`.`Jogador` (`nomeUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `academiamauadeprogramacao`.`Jogador` (`nomeUsuario`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Jogador_has_MaterialDeApoio_MaterialDeApoio1`
     FOREIGN KEY (`MaterialDeApoio_idMaterial`)
-    REFERENCES `mydb`.`MaterialDeApoio` (`idMaterial`)
+    REFERENCES `academiamauadeprogramacao`.`MaterialDeApoio` (`idMaterial`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -135,7 +133,7 @@ SELECT * FROM Jogador;
 SELECT * FROM Pergunta;
 SELECT * FROM MaterialDeApoio;
 #DROP DATABASE AcademiaMauaDeProgramacao;
-
+SELECT * FROM Jogador_has_Pergunta;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

@@ -48,6 +48,30 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
         perguntaFase5Nivel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         perguntaFase5Nivel1.setToolTipText("");
 
+        primeiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primeiraRespostaActionPerformed(evt);
+            }
+        });
+
+        segundaResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                segundaRespostaActionPerformed(evt);
+            }
+        });
+
+        terceiraResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terceiraRespostaActionPerformed(evt);
+            }
+        });
+
+        quartaResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quartaRespostaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelFase5Nivel1Layout = new javax.swing.GroupLayout(painelFase5Nivel1);
         painelFase5Nivel1.setLayout(painelFase5Nivel1Layout);
         painelFase5Nivel1Layout.setHorizontalGroup(
@@ -123,6 +147,75 @@ public class TelaDeFase5Nivel1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void quartaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quartaRespostaActionPerformed
+        try {
+            String soundName = Ranking.audioCorreto;
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            FasesDAO fases = new FasesDAO();
+            if (fases.verificar_jogador_pergunta(13, Jogador.nomeDoUsuario) == false) {
+                fases.enviar_jogador_pergunta(13, Jogador.nomeDoUsuario);
+                Ranking.pontuacao += 100;
+                Ranking ranking = new Ranking(Jogador.nomeDoUsuario);
+                JogadorDAO dao = new JogadorDAO();
+                RankingDAO dao2 = new RankingDAO();
+                dao.atualizarPontuacao(Jogador.nomeDoUsuario, Ranking.pontuacao, Ranking.tentativas);
+                dao2.atualizarPontuacao(Ranking.pontuacao, Jogador.nomeDoUsuario);
+            }
+            new TelaDeFase5Nivel2().setVisible(true);
+            this.dispose();
+        
+    }
+    catch(Exception e){
+        e.printStackTrace();
+    }
+    }//GEN-LAST:event_quartaRespostaActionPerformed
+
+    private void primeiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeiraRespostaActionPerformed
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase5Nivel2().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_primeiraRespostaActionPerformed
+
+    private void segundaRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundaRespostaActionPerformed
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase5Nivel2().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }    }//GEN-LAST:event_segundaRespostaActionPerformed
+
+    private void terceiraRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terceiraRespostaActionPerformed
+        try{
+            String soundName = Ranking.audioErrado;    
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+            new TelaDeFase5Nivel2().setVisible(true);
+            this.dispose();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }    }//GEN-LAST:event_terceiraRespostaActionPerformed
 
     /**
      * @param args the command line arguments
