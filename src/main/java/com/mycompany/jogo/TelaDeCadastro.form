@@ -374,7 +374,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="bb" green="bb" red="bb" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Min - 4 , Max - 20,1 Letra Maiuscula, 1 N&#xfa;mero, 1 Caracter Especial"/>
+            <Property name="text" type="java.lang.String" value="Min - 8 , Max - 20,1 Letra Maiuscula, 1 N&#xfa;mero, 1 Caracter Especial"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="tituloPaginaCadastro">

@@ -5,6 +5,9 @@
 package com.mycompany.jogo;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -84,14 +87,274 @@ public class RankingDAO {
         conexao.close();
     }
 
-    public void consultarRanking1(int pontuacao, int tentativas) {
-        try {
-            Connection conexao = ConnectionFactory.getConnection();
+    public String consultarRankingTop5Jogador5() throws Exception {
 
-            String sql = "SELECT Jogador_nomeUsuario, pontuacao, tentativas FROM Ranking WHERE Jogador_nomeUsuario = ?;";
-        } catch (Exception e) {
-            e.printStackTrace();
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT Jogador_nomeUsuario FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 5";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        String nomeUsuario = "";
+        while (rs.next()) {
+            nomeUsuario = rs.getString("Jogador_nomeUsuario");
+
         }
+        return nomeUsuario;
+
     }
-    
+
+    public String consultarRankingTop5Jogador4() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT Jogador_nomeUsuario FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 4";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        String nomeUsuario = "";
+        while (rs.next()) {
+            nomeUsuario = rs.getString("Jogador_nomeUsuario");
+
+        }
+        return nomeUsuario;
+
+    }
+
+    public String consultarRankingTop5Jogador3() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT Jogador_nomeUsuario FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 3";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        String nomeUsuario = "";
+        while (rs.next()) {
+            nomeUsuario = rs.getString("Jogador_nomeUsuario");
+
+        }
+        return nomeUsuario;
+
+    }
+
+    public String consultarRankingTop5Jogador2() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT Jogador_nomeUsuario FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 2";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        String nomeUsuario = "";
+        while (rs.next()) {
+            nomeUsuario = rs.getString("Jogador_nomeUsuario");
+
+        }
+        return nomeUsuario;
+
+    }
+
+    public String consultarRankingTop5Jogador1() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT Jogador_nomeUsuario FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 1";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        String nomeUsuario = "";
+        while (rs.next()) {
+            nomeUsuario = rs.getString("Jogador_nomeUsuario");
+
+        }
+        return nomeUsuario;
+
+    }
+
+    public int consultarRankingTop5Pontuacao5() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT pontuacao FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 5";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int pontuacao = 0;
+        while (rs.next()) {
+            pontuacao = rs.getInt("pontuacao");
+
+        }
+        return pontuacao;
+
+    }
+
+    public int consultarRankingTop5Pontuacao4() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT pontuacao FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 4";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int pontuacao = 0;
+        while (rs.next()) {
+            pontuacao = rs.getInt("pontuacao");
+
+        }
+        return pontuacao;
+
+    }
+
+    public int consultarRankingTop5Pontuacao3() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT pontuacao FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 3";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int pontuacao = 0;
+        while (rs.next()) {
+            pontuacao = rs.getInt("pontuacao");
+
+        }
+        return pontuacao;
+
+    }
+
+    public int consultarRankingTop5Pontuacao2() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT pontuacao FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 2";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int pontuacao = 0;
+        while (rs.next()) {
+            pontuacao = rs.getInt("pontuacao");
+
+        }
+        return pontuacao;
+
+    }
+
+    public int consultarRankingTop5Pontuacao1() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT pontuacao FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 1";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int pontuacao = 0;
+        while (rs.next()) {
+            pontuacao = rs.getInt("pontuacao");
+
+        }
+        return pontuacao;
+
+    }
+
+    public int consultarRankingTop5Tentativas5() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT tentativas FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 5";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int tentativas = 0;
+        while (rs.next()) {
+            tentativas = rs.getInt("tentativas");
+
+        }
+        return tentativas;
+
+    }
+
+    public int consultarRankingTop5Tentativas4() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT tentativas FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 4";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int tentativas = 0;
+        while (rs.next()) {
+            tentativas = rs.getInt("tentativas");
+
+        }
+        return tentativas;
+
+    }
+
+    public int consultarRankingTop5Tentativas3() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT tentativas FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 3";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int tentativas = 0;
+        while (rs.next()) {
+            tentativas = rs.getInt("tentativas");
+
+        }
+        return tentativas;
+
+    }
+
+    public int consultarRankingTop5Tentativas2() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT tentativas FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 2";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int tentativas = 0;
+        while (rs.next()) {
+            tentativas = rs.getInt("tentativas");
+
+        }
+        return tentativas;
+
+    }
+
+    public int consultarRankingTop5Tentativas1() throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+
+        String sql = "SELECT tentativas FROM Ranking ORDER BY pontuacao  DESC,tentativas ASC LIMIT 1";
+
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        int tentativas = 0;
+        while (rs.next()) {
+            tentativas = rs.getInt("tentativas");
+
+        }
+        return tentativas;
+
+    }
+
 }

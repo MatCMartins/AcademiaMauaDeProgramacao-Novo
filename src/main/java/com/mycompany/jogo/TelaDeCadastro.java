@@ -5,6 +5,7 @@
 package com.mycompany.jogo;
 
 import javax.swing.JOptionPane;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  *
@@ -169,7 +170,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
 
         descricaoSenha.setFont(new java.awt.Font("Segoe UI", 3, 10)); // NOI18N
         descricaoSenha.setForeground(new java.awt.Color(187, 187, 187));
-        descricaoSenha.setText("Min - 4 , Max - 20,1 Letra Maiuscula, 1 Número, 1 Caracter Especial");
+        descricaoSenha.setText("Min - 8 , Max - 20,1 Letra Maiuscula, 1 Número, 1 Caracter Especial");
 
         tituloPaginaCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         tituloPaginaCadastro.setForeground(new java.awt.Color(187, 187, 187));
@@ -363,16 +364,72 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             String stringTextoTelefone = textoTelefone.getText();
             String stringTextoUsuario = textoUsuario.getText();
             String stringTextoSenha = new String(textoSenha.getPassword());
-
-            int intTextoIdade = Integer.parseInt(stringTextoIdade);
-
+            int intTextoIdade = 1;
+            int soma = 0;
+            try {
+                intTextoIdade = Integer.parseInt(stringTextoIdade);
+            } catch (Exception e) {
+                soma = 1;
+            }
             JogadorDAO dao = new JogadorDAO();
             RankingDAO dao2 = new RankingDAO();
             Jogador jogador2 = new Jogador(stringTextoUsuario, stringTextoSenha);
-            
+
+            char[] senhaChar = stringTextoSenha.toCharArray();
+            char[] usuarioChar = stringTextoUsuario.toCharArray();
+            char[] telefoneChar = stringTextoTelefone.toCharArray();
+
+            boolean eNumero = false;
+            for (char c : senhaChar) {
+                if (Character.isDigit(c)) {
+                    eNumero = true;
+                }
+            }
+            boolean eCaracterEspecial = false;
+            String specialCharactersString2 = "!@#$%&*()'+,-./:;<=>?[]^`{|}_";
+            String underscore = "_";
+            for (char c : senhaChar) {
+                if (specialCharactersString2.contains(Character.toString(c))) {
+                    eCaracterEspecial = true;
+                }
+            }
+            boolean eCaracterEspecial2 = false;
+            for (char c : usuarioChar) {
+                if (underscore.contains(Character.toString(c))) {
+                    eCaracterEspecial2 = true;
+                }
+            }
+
+            boolean eNumero2 = true;
+            for (char c : telefoneChar) {
+                if (Character.isDigit(c) == false) {
+                    eNumero2 = false;
+                }
+            }
             if (dao.verificar(jogador2)) {
                 JOptionPane.showMessageDialog(null, "Esse usuário já existe!");
             } else {
+                if (stringTextoEmail.contains("@")) {
+                    int posicao_arroba = stringTextoEmail.indexOf("@");
+                    if (stringTextoEmail.length() < 3) {
+                        JOptionPane.showMessageDialog(null, "O email inserido não é válido!");
+                        soma = 2;
+                    }
+                } else{
+                    JOptionPane.showMessageDialog(null, "O email inserido não é válido!");
+                    soma = 2;
+                }
+            }
+            if (stringTextoTelefone.length() != 11 || eNumero2 == false) {
+                JOptionPane.showMessageDialog(null, "O telefone inserido não é válido!");
+            } else if (stringTextoUsuario.length() < 4 || eCaracterEspecial2 == false) {
+                JOptionPane.showMessageDialog(null, "O username inserido não é válido!");
+            } else if (stringTextoSenha.length() < 8 && stringTextoSenha.length() > 20 || eNumero == false || eCaracterEspecial == false) {
+                JOptionPane.showMessageDialog(null, "A senha inserida não é válida!");
+            } else if (soma == 1) {
+                JOptionPane.showMessageDialog(null, "A idade inserida não é válida!");
+
+            } else if (soma != 2) {
                 Ranking ranking = new Ranking(stringTextoUsuario);
 
                 Jogador jogador = new Jogador(stringTextoNome, stringTextoEmail, intTextoIdade, stringTextoTelefone, stringTextoUsuario, stringTextoSenha);
@@ -383,7 +440,6 @@ public class TelaDeCadastro extends javax.swing.JFrame {
                 new TelaInicial().setVisible(true);
                 this.dispose();
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -404,16 +460,24 @@ public class TelaDeCadastro extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

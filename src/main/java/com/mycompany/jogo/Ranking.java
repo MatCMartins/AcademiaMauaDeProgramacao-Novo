@@ -48,8 +48,7 @@ public class Ranking {
         this.tentativas = tentativas;
     }
 
-    public Ranking(int posicao, String nomeUsuario, int pontuacao, int tentativas) {
-        this.posicao = posicao;
+    public Ranking( String nomeUsuario, int pontuacao, int tentativas) {
         this.nomeUsuario = nomeUsuario;
         this.pontuacao = pontuacao;
         this.tentativas = tentativas;
